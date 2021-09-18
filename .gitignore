@@ -4,9 +4,24 @@
 .DS_Store
 artifacts
 .ansible
+.history
 
 **/artifacts
 **/.ansible
+
+git
+git-cola
+.git
+
+**/git
+**/git-cola
+**/.git
+
+configstore
+**/configstore
+
+# Temporarily
+octave
 
 #################
 ## IDE / Editor #
@@ -24,6 +39,11 @@ artifacts
 .vim/plugged
 .vim/.netrwhist
 .vim/autoload/plug.vim
+
+# NeoVIM
+.nvim/plugged
+.nvim/.netrwhist
+.nvim/autoload/plug.vim
 
 # nano
 .nano/search_history
