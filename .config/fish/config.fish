@@ -3,7 +3,7 @@
 ###################################
 
 ## Variables
-# set -gx fish_greeting ""
+set -gx fish_greeting ""
 
 # Fish paths
 set -gx FISH_PATH "$HOME/.config/fish"
