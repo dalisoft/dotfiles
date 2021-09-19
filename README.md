@@ -11,3 +11,7 @@
 - On-demand commands
 - Auto ENV and PATH for apps
 - nFanCurve for Linux (NVIDIA GPU)
+
+## License
+
+Apache-2.0 License
