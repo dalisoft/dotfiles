@@ -1,3 +1,13 @@
 # dotfiles
 
-My dotfiles, some of them is sync with Ansible linking (can be manually too)
+@dalisoft dot-files for better productivity
+
+## Features
+
+- Lighting-Fast entering
+- Fish + starship support
+- fnm (nvm alternative) support
+- n/vim and nano support
+- On-demand commands
+- Auto ENV and PATH for apps
+- nFanCurve for Linux (NVIDIA GPU)
