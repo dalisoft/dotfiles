@@ -1,7 +1,7 @@
 [user]
   name = Davlatjon Shavkatov
-  email = git@dalisoft.uz
-  signingKey = E6218B01DB37B6CB1AF81CD256EBDCA6BB2E5B3D
+  email = dalisoft.dev@gmail.com
+  signingKey = 2B47FD15064C6CCCC90CA251E833E64EF42E8DEA
 [commit]
   gpgsign = true
 [tag]
