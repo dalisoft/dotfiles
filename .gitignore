@@ -5,6 +5,7 @@
 artifacts
 .ansible
 .history
+.gnupg
 
 **/artifacts
 **/.ansible
