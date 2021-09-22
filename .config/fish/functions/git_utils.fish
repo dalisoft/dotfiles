@@ -82,5 +82,5 @@ function git_remap_tag --argument commit_hash tag
   git push origin refs/tags/$tag --force --no-verify
 end
 
-alias git_rebase='git rebase -S --committer-date-is-author-date'
+alias git_rebase='git rebase --gpg-sign=(git config --global --get-all user.email) --committer-date-is-author-date'
 alias gitsuf='git submodule update --init --recursive --remote --force --checkout'
