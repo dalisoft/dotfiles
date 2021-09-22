@@ -91,6 +91,7 @@ end
 # **** fnm ****
 if type -q fnm
   fnm env --shell=fish | source
+  fnm use system
 end
 
 # **** starship ****
