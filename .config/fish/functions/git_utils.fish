@@ -1,26 +1,6 @@
-function gitstat
-  git status --show-stash -b -uall --renames
-end
-
-function gitre
-  git reflog expire --expire=now --all
-end
-
-function gitra
-  git repack -ad
-end
-
-function gitp
-  git prune
-end
-
 function gitp_branch
     set branch (git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@");
     git branch --merged $branch | grep -v "^[ *]*$branch" | xargs git branch -d
-end
-
-function gitsi
-  git submodule update --init --recursive --remote --rebase
 end
 
 function gitsu
@@ -31,16 +11,6 @@ function gitsu
     git checkout ${branch}; \
     git reset origin/${branch} --soft;\
     ';
-end
-
-function gitf
-  git fetch --all --prune
-end
-
-function git_prb
-  gitf
-  git pull --rebase --committer-date-is-author-date
-  gitsu
 end
 
 function git_sign_tags
@@ -82,5 +52,3 @@ function git_remap_tag --argument commit_hash tag
   git push origin refs/tags/$tag --force --no-verify
 end
 
-alias git_rebase='git rebase --gpg-sign=(git config --global --get-all user.email) --committer-date-is-author-date'
-alias gitsuf='git submodule update --init --recursive --remote --force --checkout'

@@ -20,6 +20,9 @@ set -gx LANG "en_US.UTF-8"
 set -gx LANGUAGE "en_US.UTF-8"
 set -gx LC_ALL "en_US.UTF-8"
 
+# GnuPG
+set -gx GPG_SIGNING_KEY (git config --global --get-all user.signingKey)
+
 # Rust / Cargo
 set -gx CARGO_INSTALL_ROOT "$HOME/.cargo"
 set -gx CARGO_HOME "$HOME/.cargo"
@@ -59,6 +62,9 @@ set -gx PATH "$ANDROID_HOME/tools/bin" $PATH
 set -gx PATH "$ANDROID_HOME/platform-tools" $PATH
 set -gx PATH "$JAVA_HOME/bin" $PATH # Java
 
+# Load aliases
+source $FISH_PATH/alias.fish
+
 # Load some functions
 source $FISH_FUNCTIONS_PATH/git_utils.fish
 source $FISH_FUNCTIONS_PATH/brew_utils.fish
@@ -74,8 +80,18 @@ set -gx PKG_CONFIG_PATH "/usr/local/opt/openssl@1.1/lib/pkgconfig"
 
 ########## init scripts ###########
 
-# Load aliases
-source $FISH_PATH/alias.fish
+# Load Conda
+eval (brew --prefix)/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
+
+# **** PyEnv ****
+if test -d (pwd)/env/bin
+  source (pwd)/env/bin/activate.fish
+end
+
+# **** fnm ****
+if type -q fnm
+  fnm env --shell=fish | source
+end
 
 # **** starship ****
 if type -q starship
