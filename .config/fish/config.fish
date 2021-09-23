@@ -80,22 +80,8 @@ set -gx PKG_CONFIG_PATH "/usr/local/opt/openssl@1.1/lib/pkgconfig"
 
 ########## init scripts ###########
 
-# Load Conda
-eval (brew --prefix)/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
-
-# **** PyEnv ****
-if test -d (pwd)/env/bin
-  source (pwd)/env/bin/activate.fish
-end
-
-# **** fnm ****
-if type -q fnm
-  fnm env --shell=fish | source
-  fnm use system
-end
-
 # **** starship ****
 if type -q starship
-    starship init fish | source
+    starship init fish --print-full-init | source
 end
 

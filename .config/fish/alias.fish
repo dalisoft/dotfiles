@@ -26,6 +26,11 @@ end
 # **** Programming Language ****
 alias python=python3
 
+# **** Programming Environments ***
+alias use_conda='eval (brew --prefix)/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source'
+alias use_node='fnm env --shell=fish | source && fnm use'
+alias pyenv='source (pwd)/env/bin/activate.fish'
+
 # **** Docker ****
 alias docker_run='docker run -ti --net=bridge'
 alias docker_run_tmp='docker run -ti --rm --net=bridge'
