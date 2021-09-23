@@ -21,7 +21,7 @@ set -gx LANGUAGE "en_US.UTF-8"
 set -gx LC_ALL "en_US.UTF-8"
 
 # GnuPG
-set -gx GPG_SIGNING_KEY (git config --global --get-all user.signingKey)
+set -gx GPG_SIGNING_KEY (git config --global --get user.signingKey)
 
 # Rust / Cargo
 set -gx CARGO_INSTALL_ROOT "$HOME/.cargo"
@@ -43,6 +43,7 @@ set -gx ANDROID_AVD_HOME "$HOME/.android/avd"
 # ********************************
 
 # Homebrew
+set -gx PATH "/usr/local/bin" $PATH
 set -gx PATH "/usr/local/sbin" $PATH
 set -gx PATH "/opt/homebrew/bin" $PATH
 set -gx PATH "/opt/homebrew/sbin" $PATH
@@ -55,7 +56,7 @@ set -gx PATH "$NPM_CONFIG_PREFIX/bin" $PATH
 set -gx PATH "$HOME/.fnm" $PATH
 
 # Android SDK
-set -gx PATH "/opt/homebrew/opt/openjdk/bin" $PATH
+set -gx PATH "$BREW_PREFIX/opt/openjdk/bin" $PATH
 set -gx PATH "$ANDROID_HOME/emulator" $PATH
 set -gx PATH "$ANDROID_HOME/tools" $PATH
 set -gx PATH "$ANDROID_HOME/tools/bin" $PATH
