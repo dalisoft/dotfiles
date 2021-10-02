@@ -102,6 +102,7 @@ tmp
 styleguide/
 
 .yarn/*
+yarn/*
 !.yarn/releases
 !.yarn/plugins
 !.yarn/sdks
@@ -125,6 +126,7 @@ styleguide/
 **/styleguide/
 
 **/.yarn/*
+**/yarn/*
 **/!.yarn/releases
 **/!.yarn/plugins
 **/!.yarn/sdks

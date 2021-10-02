@@ -6,8 +6,6 @@
   gpgsign = true
 [tag]
   forceSignAnnotated = true
-[alias]
-  commit = commit -S
 [cola]
   spellcheck = true
 [filter "lfs"]
