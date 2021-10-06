@@ -1,1 +1,1 @@
-include ~/.nano/nanorc/nanorc
+include "~/.nano/*.nanorc"
