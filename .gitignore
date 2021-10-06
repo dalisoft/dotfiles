@@ -221,5 +221,14 @@ assets/css/bundle*
 # TypeScript v1 declaration files
 typings/
 
-## GNU Ignore unneeded file
+## Security files
 .gnupg
+.ssh
+
+# Some needed tools files excluding
+.fnm
+.pm2
+
+# Bash history
+.bash*
+.profile
