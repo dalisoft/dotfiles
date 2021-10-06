@@ -232,3 +232,9 @@ typings/
 # Bash history
 .bash*
 .profile
+
+# Linux (Debian, Ubuntu) binaries folder
+.local
+
+# neofetch config
+.config/neofetch
