@@ -1,7 +1,7 @@
 # Don't print a new line at the start of the prompt
 add_newline = false
 scan_timeout = 0
-command_timeout = 3000
+command_timeout = 30
 
 [battery]
 disabled = true

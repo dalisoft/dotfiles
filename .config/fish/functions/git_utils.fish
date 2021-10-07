@@ -13,6 +13,15 @@ function gitsu
     ';
 end
 
+function gitsc
+    git submodule foreach --recursive '\
+      git fetch --depth=100; \
+      git reflog expire --expire-unreachable=now --all; \
+      git gc --aggressive --prune=all; \
+      git repack -a -f -F -d; \
+    ';
+end
+
 function git_sign_tags
   git tag -l | while read -l tag
     set COMMIT_HASH (git rev-list -1 $tag)

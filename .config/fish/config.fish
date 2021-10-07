@@ -4,6 +4,9 @@
 
 ## Variables
 set -gx fish_greeting ""
+set TERM "xterm-256color"
+set EDITOR "nvim"
+set VISUAL "nvim"
 
 # Fish paths
 set -gx FISH_PATH "$HOME/.config/fish"
@@ -12,16 +15,12 @@ set -gx FISH_FUNCTIONS_PATH "$FISH_PATH/functions"
 set -gx BAT_THEME "ansi" # bat/batcat theme
 set -gx MOZ_USE_OMTC 1 # Firefox for Linux patch
 set -gx NFANCURVE_PATH "$HOME/nfancurve" # nFanCurve Linux patch
-set -gx GPG_TTY (tty) # GnuPG auto-load
 set -gx HOMEBREW_NO_ANALYTICS 1 # Homebrew disable telemetry
 
 # Mosh / OS SSH fix
 set -gx LANG "en_US.UTF-8"
 set -gx LANGUAGE "en_US.UTF-8"
 set -gx LC_ALL "en_US.UTF-8"
-
-# GnuPG
-set -gx GPG_SIGNING_KEY (git config --global --get user.signingKey)
 
 # Rust / Cargo
 set -gx CARGO_INSTALL_ROOT "$HOME/.cargo"
