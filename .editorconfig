@@ -10,3 +10,7 @@ insert_final_newline = true
 
 [Brewfile]
 insert_final_newline = false
+
+[.git*]
+indent_style = tab
+indent_size = 1

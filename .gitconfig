@@ -1,21 +1,21 @@
 [user]
-  name = Davlatjon Shavkatov
-  email = dalisoft.dev@gmail.com
-  signingKey = 2B47FD15064C6CCCC90CA251E833E64EF42E8DEA
+	name = Davlatjon Shavkatov
+	email = dalisoft.dev@gmail.com
+	signingKey = 2B47FD15064C6CCCC90CA251E833E64EF42E8DEA
 [commit]
-  gpgsign = true
+	gpgsign = true
 [tag]
-  forceSignAnnotated = true
+	forceSignAnnotated = true
 [cola]
-  spellcheck = true
+	spellcheck = true
 [filter "lfs"]
-  process = git-lfs filter-process
-  required = true
-  clean = git-lfs clean -- %f
-  smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
 [init]
-  defaultBranch = master
+	defaultBranch = master
 [core]
-  ignorecase = false
+	ignorecase = false
 [advice]
-  ignoredHook = false
+	ignoredHook = false
