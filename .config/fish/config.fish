@@ -4,9 +4,10 @@
 
 ## Variables
 set -gx fish_greeting ""
-set TERM "xterm-256color"
-set EDITOR "nvim"
-set VISUAL "nvim"
+set -gx TERM "xterm-256color"
+set -gx EDITOR "nvim"
+set -gx VISUAL "nvim"
+set -gx DOCKER_HOST "ssh://pi4"
 
 # Fish paths
 set -gx FISH_PATH "$HOME/.config/fish"
