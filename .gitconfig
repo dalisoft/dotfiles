@@ -9,7 +9,7 @@
 [cola]
 	spellcheck = true
 [diff]
- ignoreSubmodules = dirty
+	ignoreSubmodules = dirty
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
