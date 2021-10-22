@@ -2,7 +2,7 @@
 switch (uname)
     case Darwin
         set -gx JAVA_HOME (/usr/libexec/java_home)
-        set -gx DOCKER_HOST "ssh://pi4"
+        set -gx DOCKER_HOST "ssh://pi4-eth"
 
         alias cat=bat # bat
     case Linux
