@@ -45,18 +45,6 @@ alias get_storage="smartctl -a disk1s2 | rg 'Data Unit|Available|Percentage|Temp
 alias reload_ssh_agent='killall ssh-agent; eval (ssh-agent -c)'
 alias sshg='ssh-keygen -o -a 100 -t ed25519 -C dalisoft@mail.ru'
 
-# **** Git ***
-alias gitstat='git status --show-stash -b -uall --renames'
-alias gitre='git reflog expire --expire=now --all'
-alias gitra='git repack -ad'
-alias gitp='git prune'
-alias gitsru='git submodule update --init --recursive --remote'
-alias gitsi='gitsru --rebase'
-alias git_rebase='git rebase --gpg-sign=$GPG_SIGNING_KEY --committer-date-is-author-date'
-alias gitsuf='gitsru --force --checkout'
-alias gitf='git fetch --all --prune'
-alias git_prb='gitf && git pull --rebase --committer-date-is-author-date && gitsu'
-
 # **** GnuPG ***
 alias gpg_show_keys='gpg -K --keyid-format LONG'
 alias gpg_print='gpg --armor --export'

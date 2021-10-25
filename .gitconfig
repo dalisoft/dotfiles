@@ -13,6 +13,18 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
+[alias]
+	stat = status --show-stash -b -uall --renames
+	re = reflog expire --expire=now --expire-unreachable=now --all
+	ra = repack -ad
+	p = prune --expire=now
+	f = fetch --all --prune
+	opt = !git gc --aggressive --prune=all && git ra && git re && git p && git fsck
+	sru = submodule update --init --recursive --remote
+	si = sru --rebase
+	suf = sru --force --checkout
+	rb = rebase --committer-date-is-author-date
+	prb = !git pull --rebase --committer-date-is-author-date && git su
 [init]
 	defaultBranch = master
 [core]
