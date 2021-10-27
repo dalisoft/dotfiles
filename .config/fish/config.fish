@@ -4,15 +4,15 @@
 
 ## Variables
 set -gx fish_greeting ""
-set -gx TERM "xterm-256color"
-set -gx EDITOR "nvim"
-set -gx VISUAL "nvim"
+set -gx TERM xterm-256color
+set -gx EDITOR nvim
+set -gx VISUAL nvim
 
 # Fish paths
 set -gx FISH_PATH "$HOME/.config/fish"
 set -gx FISH_FUNCTIONS_PATH "$FISH_PATH/functions"
 
-set -gx BAT_THEME "ansi" # bat/batcat theme
+set -gx BAT_THEME ansi # bat/batcat theme
 set -gx MOZ_USE_OMTC 1 # Firefox for Linux patch
 set -gx NFANCURVE_PATH "$HOME/nfancurve" # nFanCurve Linux patch
 set -gx HOMEBREW_NO_ANALYTICS 1 # Homebrew disable telemetry
@@ -42,14 +42,14 @@ set -gx ANDROID_AVD_HOME "$HOME/.android/avd"
 # ********************************
 
 # Homebrew
-set -gx PATH "/bin" $PATH
-set -gx PATH "/sbin" $PATH
-set -gx PATH "/usr/bin" $PATH
-set -gx PATH "/usr/sbin" $PATH
-set -gx PATH "/usr/local/bin" $PATH
-set -gx PATH "/usr/local/sbin" $PATH
-set -gx PATH "/opt/homebrew/bin" $PATH
-set -gx PATH "/opt/homebrew/sbin" $PATH
+set -gx PATH /bin $PATH
+set -gx PATH /sbin $PATH
+set -gx PATH /usr/bin $PATH
+set -gx PATH /usr/sbin $PATH
+set -gx PATH /usr/local/bin $PATH
+set -gx PATH /usr/local/sbin $PATH
+set -gx PATH /opt/homebrew/bin $PATH
+set -gx PATH /opt/homebrew/sbin $PATH
 
 set -gx PATH "$HOME/.cargo/bin" $PATH # Rust
 set -gx PATH "$HOME/go/bin" $PATH # Go
@@ -88,4 +88,3 @@ set -gx PKG_CONFIG_PATH "/usr/local/opt/openssl@1.1/lib/pkgconfig"
 if type -q starship
     starship init fish --print-full-init | source
 end
-
