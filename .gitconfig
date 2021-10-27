@@ -14,7 +14,7 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 [alias]
-	stat = status --show-stash -b -uall --renames
+	stat = status --show-stash -b -uall --renames --ignore-submodules=none --untracked-files=all
 	re = reflog expire --expire=now --expire-unreachable=now --all
 	ra = repack -ad
 	p = prune --expire=now
@@ -29,5 +29,10 @@
 	defaultBranch = master
 [core]
 	ignorecase = false
+	preloadIndex = true
+[status]
+	showUntrackedFiles = all
+[diff]
+	ignoreSubmodules = none
 [advice]
 	ignoredHook = false
