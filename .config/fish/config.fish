@@ -88,3 +88,9 @@ set -gx PKG_CONFIG_PATH "/usr/local/opt/openssl@1.1/lib/pkgconfig"
 if type -q starship
     starship init fish --print-full-init | source
 end
+
+# *** fnm ***
+if type -q fnm
+    fnm env --shell=fish | source
+    fnm use system >>/dev/null
+end
