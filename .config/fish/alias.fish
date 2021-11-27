@@ -4,6 +4,10 @@ switch (uname)
         set -gx JAVA_HOME (/usr/libexec/java_home)
         set -gx DOCKER_HOST "ssh://pi4-eth"
 
+        if type -q brew
+            set -gx HOMEBREW_PREFIX (brew --prefix)
+        end
+
         alias cat=bat # bat
     case Linux
         # bat

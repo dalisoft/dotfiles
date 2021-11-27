@@ -77,9 +77,9 @@ source $FISH_FUNCTIONS_PATH/brew_utils.fish
 # ********* shell flags **********
 # ********************************
 
-set -gx LDFLAGS "-L/usr/local/opt/openssl@1.1/lib"
-set -gx CPPFLAGS "-I/usr/local/opt/openssl@1.1/include"
-set -gx PKG_CONFIG_PATH "/usr/local/opt/openssl@1.1/lib/pkgconfig"
+set -gx LDFLAGS "-L/$HOMEBREW_PREFIX/opt/openssl@1.1/lib"
+set -gx CPPFLAGS "-I/$HOMEBREW_PREFIX/opt/openssl@1.1/include"
+set -gx PKG_CONFIG_PATH "/$HOMEBREW_PREFIX/opt/openssl@1.1/lib/pkgconfig"
 
 
 ########## init scripts ###########
