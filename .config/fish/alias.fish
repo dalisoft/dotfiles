@@ -30,6 +30,7 @@ end
 
 # **** Programming Language ****
 alias python=python3
+alias octave_gui='octave --force-gui'
 
 # **** Programming Environments ***
 alias use_conda='eval (brew --prefix)/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source'
