@@ -49,7 +49,6 @@ octave
 # nano
 .nano/search_history
 
-
 #################
 #####  Logs #####
 #################
@@ -238,3 +237,6 @@ typings/
 
 # neofetch config
 .config/neofetch
+
+# qBittorrent
+.config/qBittorrent
