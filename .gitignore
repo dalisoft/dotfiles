@@ -240,3 +240,6 @@ typings/
 
 # qBittorrent
 .config/qBittorrent
+
+# fish
+.config/fish/fish_vairables
