@@ -2,7 +2,7 @@
 switch (uname)
     case Darwin
         set -gx JAVA_HOME (/usr/libexec/java_home)
-        set -gx DOCKER_HOST "ssh://pi4-eth"
+        # set -gx DOCKER_HOST "ssh://pi4-eth"
 
         if type -q brew
             set -gx HOMEBREW_PREFIX (brew --prefix)
