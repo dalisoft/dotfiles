@@ -54,6 +54,8 @@ set -gx PATH /opt/homebrew/sbin $PATH
 set -gx PATH "$HOME/.cargo/bin" $PATH # Rust
 set -gx PATH "$HOME/go/bin" $PATH # Go
 
+set -gx PATH "$HOME/.local/bin" $PATH # pipx
+
 # npm / fnm
 set -gx PATH "$NPM_CONFIG_PREFIX/bin" $PATH
 set -gx PATH "$HOME/.fnm" $PATH
