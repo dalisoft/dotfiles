@@ -29,6 +29,9 @@ set -gx CARGO_HOME "$HOME/.cargo"
 # npm
 set -gx NPM_CONFIG_PREFIX "$HOME/.npm-global"
 
+# bun
+set -gx BUN_INSTALL "$HOME/.bun"
+
 # Go
 set -gx GOPATH "$HOME/go"
 
@@ -59,6 +62,9 @@ set -gx PATH "$HOME/.local/bin" $PATH # pipx
 # npm / fnm
 set -gx PATH "$NPM_CONFIG_PREFIX/bin" $PATH
 set -gx PATH "$HOME/.fnm" $PATH
+
+# bun
+set -gx PATH $BUN_INSTALL/bin $PATH
 
 # Android SDK
 set -gx PATH "$BREW_PREFIX/opt/openjdk/bin" $PATH

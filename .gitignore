@@ -243,3 +243,6 @@ typings/
 
 # fish
 .config/fish/fish_variables
+
+# nodemon?
+.config/simple-update-notifier
