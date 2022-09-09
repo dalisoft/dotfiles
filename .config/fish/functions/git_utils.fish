@@ -61,3 +61,8 @@ function git_remap_tag --argument commit_hash tag
     git tag -s -a -f $tag -m"$COMMIT_MSG" $commit_hash
     git push origin refs/tags/$tag --force --no-verify
 end
+
+function git_branch_prune
+    git branch --v | grep "\[gone\]" | awk '{print $1}' | xargs git branch -D
+    git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d
+end

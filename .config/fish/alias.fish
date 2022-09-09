@@ -1,8 +1,8 @@
 # Aliases based on OS
 switch (uname)
     case Darwin
-        if type -q /usr/libexec/java_home
-            set -gx JAVA_HOME (/usr/libexec/java_home)
+        if type -q java_home
+            set -gx JAVA_HOME (which java_home)
         end
         # set -gx DOCKER_HOST "ssh://pi4-eth"
 
