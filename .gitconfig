@@ -25,8 +25,20 @@
 	suf = sru --force --checkout
 	rb = rebase --committer-date-is-author-date
 	prb = !git pull --rebase --committer-date-is-author-date && git su
+	tags = tag -l
+	branches = branch -a
+	remotes = remote -v
+	pull = pull --ff-only
 [init]
 	defaultBranch = master
+[branch]
+	autosetuprebase = always
+[pull]
+	rebase = preserve
+[fetch]
+	recurseSubmodules = on-demand
+	prune = true
+	pruneTags = true
 [core]
 	ignorecase = false
 	preloadIndex = true

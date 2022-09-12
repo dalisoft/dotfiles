@@ -246,3 +246,6 @@ typings/
 
 # nodemon?
 .config/simple-update-notifier
+
+# Modern CSV
+.config/Modern CSV
