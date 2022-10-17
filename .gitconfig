@@ -34,7 +34,7 @@
 [branch]
 	autosetuprebase = always
 [pull]
-	rebase = preserve
+	rebase = merges
 [fetch]
 	recurseSubmodules = on-demand
 	prune = true
