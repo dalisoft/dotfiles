@@ -33,8 +33,6 @@
 	defaultBranch = master
 [branch]
 	autosetuprebase = always
-[pull]
-	rebase = merges
 [fetch]
 	recurseSubmodules = on-demand
 	prune = true
