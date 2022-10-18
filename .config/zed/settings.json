@@ -1,0 +1,37 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `open default settings` command
+// from the command palette or from `Zed` application menu.
+{
+  "autosave": "on_focus_change",
+  "format_on_save": "language_server",
+  "formatter": "language_server",
+  "buffer_font_size": 14,
+  "buffer_font_family": "zed-mono, Fira Code",
+  "enable_language_server": true,
+  "lsp": {},
+  "hard_tabs": false,
+  "hover_popover_enabled": true,
+  "show_completions_on_input": true,
+  "tab_size": 2,
+  "theme": "one-light",
+  "preferred_line_length": 80,
+  "projects_online_by_default": false,
+  "soft_wrap": "preferred_line_length",
+  "vim_mode": false,
+  "terminal": {
+    "shell": "system",
+    "working_directory": "current_project_directory",
+    "font_size": 14,
+    "font_family": "zed-mono, Fira Code",
+    "blinking": "terminal_controlled",
+    "alternate_scroll": "on",
+    "option_as_meta": false,
+    "copy_on_select": false
+  },
+  "default_dock_anchor": "bottom"
+}
