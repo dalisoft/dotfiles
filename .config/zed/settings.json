@@ -26,8 +26,8 @@
   "terminal": {
     "shell": "system",
     "working_directory": "current_project_directory",
-    "font_size": 14,
-    "font_family": "zed-mono, Fira Code",
+    "font_size": 13,
+    "font_family": "Fira Code",
     "blinking": "terminal_controlled",
     "alternate_scroll": "on",
     "option_as_meta": false,
