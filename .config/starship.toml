@@ -1,6 +1,6 @@
 # Don't print a new line at the start of the prompt
 add_newline = false
-scan_timeout = 0
+scan_timeout = 50
 command_timeout = 5000
 
 [battery]
@@ -18,5 +18,11 @@ disabled = true
 [dotnet]
 disabled = true
 
+[erlang]
+symbol = "erl "
+
 [nodejs]
-symbol = "⬢ "
+symbol = "[⬢](bold green) "
+
+[pulumi]
+symbol = "pulumi "
