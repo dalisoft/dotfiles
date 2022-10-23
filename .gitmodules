@@ -4,6 +4,6 @@
   branch = master
 
 [submodule "nfancurve"]
-  path = nfancurve
-  url = https://github.com/nan0s7/nfancurve.git
+	path = nfancurve
+	url = https://github.com/nan0s7/nfancurve.git
   branch = master
