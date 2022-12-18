@@ -74,6 +74,9 @@ set -gx PATH "$ANDROID_HOME/tools/bin" $PATH
 set -gx PATH "$ANDROID_HOME/platform-tools" $PATH
 set -gx PATH "$JAVA_HOME/bin" $PATH # Java
 
+# LLVM
+set -gx PATH "$HOMEBREW_PREFIX/opt/llvm/bin" $PATH
+
 # Load aliases
 source $FISH_PATH/alias.fish
 
@@ -85,9 +88,12 @@ source $FISH_FUNCTIONS_PATH/brew_utils.fish
 # ********* shell flags **********
 # ********************************
 
-set -gx LDFLAGS "-L/$HOMEBREW_PREFIX/opt/openssl@3/lib"
-set -gx CPPFLAGS "-I/$HOMEBREW_PREFIX/opt/openssl@3/include"
+set -gx LDFLAGS "-L$HOMEBREW_PREFIX/opt/openssl@3/lib"
+set -gx CPPFLAGS "-I$HOMEBREW_PREFIX/opt/openssl@3/include"
 set -gx PKG_CONFIG_PATH "/$HOMEBREW_PREFIX/opt/openssl@3/lib/pkgconfig"
+
+set -gx LDFLAGS "-L$HOMEBREW_PREFIX/opt/llvm/lib"
+set -gx CPPFLAGS "-I$HOMEBREW_PREFIX/opt/llvm/include"
 
 
 ########## init scripts ###########
