@@ -105,5 +105,5 @@ end
 
 # *** fnm ***
 if type -q fnm
-    fnm env --shell=fish | source
+    fnm env --shell=fish --use-on-cd | source
 end
