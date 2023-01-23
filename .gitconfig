@@ -29,6 +29,7 @@
 	branches = branch -a
 	remotes = remote -v
 	pull = pull --ff-only
+	branch-parent = !"git branch --contains $(cat .git/ORIG_HEAD)"
 [init]
 	defaultBranch = master
 [branch]
