@@ -47,3 +47,5 @@
 	ignoreSubmodules = none
 [advice]
 	ignoredHook = false
+[url "ssh://git@"]
+	insteadOf = git://
