@@ -31,7 +31,7 @@ if type -q rg
 end
 
 # **** Programming Language ****
-alias python=python3
+# alias python=python3
 alias octave_gui='octave --force-gui'
 
 # **** Programming Environments ***
