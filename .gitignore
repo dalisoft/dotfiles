@@ -243,6 +243,7 @@ typings/
 
 # fish
 .config/fish/fish_variables
+.config/fish/completions
 
 # nodemon?
 .config/simple-update-notifier
@@ -250,5 +251,7 @@ typings/
 # Modern CSV
 .config/Modern CSV
 
-# osxphotos
+# macOS Files
 .config/osxphotos
+.config/raycast
+.config/jgit
