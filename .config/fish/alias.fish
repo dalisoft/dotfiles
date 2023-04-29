@@ -54,3 +54,6 @@ alias sshg='ssh-keygen -o -a 100 -t ed25519 -C dalisoft@mail.ru'
 # **** GnuPG ***
 alias gpg_show_keys='gpg -K --keyid-format LONG'
 alias gpg_print='gpg --armor --export'
+
+# **** AntiAss ***
+alias rm='echo "BRUH >_<! REMEMBER THAT DAY YOU GET FUCKET UP"\n'
