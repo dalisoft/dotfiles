@@ -11,6 +11,9 @@ switch (uname)
         end
 
         alias cat=bat # bat
+
+        # **** Anti Ass ***
+        alias rm='trash -F'
     case Linux
         # bat
         if type -q batcat
@@ -19,6 +22,9 @@ switch (uname)
         if type -q bat
             alias cat=bat
         end
+
+        # **** Anti Ass ***
+        alias rm='trash'
 end
 
 # **** Terminal stuffs ****
@@ -54,6 +60,3 @@ alias sshg='ssh-keygen -o -a 100 -t ed25519 -C dalisoft@mail.ru'
 # **** GnuPG ***
 alias gpg_show_keys='gpg -K --keyid-format LONG'
 alias gpg_print='gpg --armor --export'
-
-# **** AntiAss ***
-alias rm='echo "BRUH >_<! REMEMBER THAT DAY YOU GET FUCKET UP"\n'
