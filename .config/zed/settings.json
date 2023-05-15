@@ -30,7 +30,7 @@
   "terminal": {
     "shell": "system",
     "working_directory": "current_project_directory",
-    "font_size": 12,
+    "font_size": 13,
     "font_family": "JetBrains Mono",
     "blinking": "terminal_controlled",
     "alternate_scroll": "on",
