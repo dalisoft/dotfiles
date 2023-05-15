@@ -39,12 +39,25 @@
 	prune = true
 	pruneTags = true
 [core]
+	pager = delta
 	ignorecase = false
 	preloadIndex = true
+[interactive]
+	diffFilter = delta --color-only
 [status]
 	showUntrackedFiles = all
 [diff]
 	ignoreSubmodules = none
+	colorMoved = default
+[delta]
+	navigate = true
+	light = true
+	side-by-side = true
+	line-numbers = true
+	hyperlinks = true
+	hyperlinks-file-link-format = "file-line://{path}:{line}"
+[merge]
+	conflictStyle = diff3
 [advice]
 	ignoredHook = false
 [url "ssh://git@"]
