@@ -1,9 +1,23 @@
+[core]
+	pager = delta
+	ignorecase = false
+	preloadIndex = true
 [user]
 	name = Davlatjon Shavkatov
 	email = dalisoft.dev@gmail.com
 	signingKey = 2B47FD15064C6CCCC90CA251E833E64EF42E8DEA
 [commit]
 	gpgsign = true
+[init]
+	defaultBranch = master
+[branch]
+	autosetuprebase = always
+[fetch]
+	recurseSubmodules = on-demand
+	prune = true
+	pruneTags = true
+[push]
+	autoSetupRemote = true
 [tag]
 	forceSignAnnotated = true
 [cola]
@@ -30,18 +44,6 @@
 	remotes = remote -v
 	pull = pull --ff-only
 	branch-parent = !"git branch --contains $(cat .git/ORIG_HEAD)"
-[init]
-	defaultBranch = master
-[branch]
-	autosetuprebase = always
-[fetch]
-	recurseSubmodules = on-demand
-	prune = true
-	pruneTags = true
-[core]
-	pager = delta
-	ignorecase = false
-	preloadIndex = true
 [interactive]
 	diffFilter = delta --color-only
 [status]
