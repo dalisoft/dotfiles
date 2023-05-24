@@ -255,12 +255,3 @@ typings/
 .config/osxphotos
 .config/raycast
 .config/jgit
-
-# User folders
-.ssh
-desktop
-documents
-pictures
-movies
-music
-public
