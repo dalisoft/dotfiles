@@ -255,3 +255,9 @@ typings/
 .config/osxphotos
 .config/raycast
 .config/jgit
+
+# User folders
+desktop
+documents
+pictures
+movies
