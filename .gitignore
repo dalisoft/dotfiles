@@ -257,7 +257,10 @@ typings/
 .config/jgit
 
 # User folders
+.ssh
 desktop
 documents
 pictures
 movies
+music
+public
