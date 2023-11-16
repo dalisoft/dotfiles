@@ -28,8 +28,8 @@ switch (uname)
 end
 
 # **** Terminal stuffs ****
-if type -q exa
-    alias ls=exa
+if type -q eza
+    alias ls=eza
     alias ll="ls -hlaS --extended --git --time-style=long-iso"
 end
 if type -q rg
