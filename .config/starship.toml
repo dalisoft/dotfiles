@@ -23,6 +23,3 @@ symbol = "erl "
 
 [nodejs]
 symbol = "[⬢](bold green) "
-
-[pulumi]
-symbol = "pulumi "
