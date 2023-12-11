@@ -255,3 +255,6 @@ typings/
 .config/osxphotos
 .config/raycast
 .config/jgit
+
+# zed
+.config/zed/embeddings
