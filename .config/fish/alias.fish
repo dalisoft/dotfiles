@@ -24,7 +24,7 @@ switch (uname)
         end
 
         # **** Anti Ass ***
-        alias rm='trash'
+        # alias rm='trash'
 end
 
 # **** Terminal stuffs ****
