@@ -47,16 +47,16 @@ set -gx ANDROID_AVD_HOME "$HOME/.android/avd"
 # ********* PATH of env **********
 # ********************************
 
-# Homebrew
+# Erase for full correctness
+set -e PATH
+
+# System binaries
 set -gx PATH /bin $PATH
 set -gx PATH /sbin $PATH
 set -gx PATH /usr/bin $PATH
 set -gx PATH /usr/sbin $PATH
-set -gx PATH /usr/local/bin $PATH
-set -gx PATH /usr/local/sbin $PATH
-set -gx PATH /opt/homebrew/bin $PATH
-set -gx PATH /opt/homebrew/sbin $PATH
 
+# Programming language
 set -gx PATH "$HOME/.cargo/bin" $PATH # Rust
 set -gx PATH "$HOME/go/bin" $PATH # Go
 
@@ -79,6 +79,12 @@ set -gx PATH "$JAVA_HOME/bin" $PATH # Java
 
 # LLVM
 set -gx PATH "$HOMEBREW_PREFIX/opt/llvm/bin" $PATH
+
+# Homebrew
+set -gx PATH /usr/local/bin $PATH
+set -gx PATH /usr/local/sbin $PATH
+set -gx PATH /opt/homebrew/bin $PATH
+set -gx PATH /opt/homebrew/sbin $PATH
 
 # Load aliases
 source $FISH_PATH/alias.fish
