@@ -51,9 +51,6 @@ set -gx ANDROID_AVD_HOME "$HOME/.android/avd"
 # ********* PATH of env **********
 # ********************************
 
-# Erase for full correctness
-set -e PATH
-
 # System binaries
 set -gx PATH /bin $PATH
 set -gx PATH /sbin $PATH
