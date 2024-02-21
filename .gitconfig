@@ -64,5 +64,5 @@
 	ignoredHook = false
 [url "ssh://git@"]
 	insteadOf = git://
-[includeIf "gitdir:~/Desktop/Open_Source"]
+[includeIf "gitdir:~/Desktop/Open_Source/"]
 	path = ~/Desktop/Open_Source/.gitconfig
