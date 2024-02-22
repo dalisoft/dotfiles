@@ -75,6 +75,10 @@
   "theme": "One Light",
   "vim_mode": false,
   "project_panel": {
+    "auto_reveal_entries": true,
+    "file_icons": true,
+    "folder_icons": true,
+    "indent_size": 8,
     "dock": "left",
     "git_status": true,
     "default_width": 300
