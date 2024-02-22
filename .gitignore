@@ -257,4 +257,5 @@ typings/
 .config/jgit
 
 # zed
-.config/zed/embeddings
+.config/zed
+!.config/zed/settings.json
