@@ -7,35 +7,76 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "active_pane_magnification": 1.0,
+  "autosave": "on_focus_change",
+  "auto_update": false,
+  "buffer_font_family": "Zed Mono",
+  "buffer_font_features": null,
+  "buffer_font_size": 15,
+  "confirm_quit": false,
+  "copilot": {
+    "disabled_globs": [
+      ".env"
+    ]
+  },
+  "cursor_blink": true,
+  "default_dock_anchor": "bottom",
+  "enable_language_server": true,
+  "ensure_final_newline_on_save": true,
+  "lsp": {},
+  "format_on_save": "on",
+  "formatter": "language_server",
+  "git": {
+    "git_gutter": "tracked_files"
+  },
+  "hard_tabs": false,
+  "hover_popover_enabled": true,
+  "inlay_hints": {
+    "enabled": false,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true
+  },
+  "journal": {
+    "path": "~",
+    "hour_format": "hour24"
+  },
+  "language_overrides": {},
+  "preferred_line_length": 80,
+  "projects_online_by_default": true,
+  "remove_trailing_whitespace_on_save": true,
+  "semantic_index": {
+    "enabled": true
+  },
+  "show_call_status_icon": true,
+  "show_completions_on_input": true,
+  "show_completion_documentation": true,
+  "completion_documentation_secondary_query_debounce": 300,
+  "show_copilot_suggestions": true,
+  "show_whitespaces": "all",
+  "soft_wrap": "preferred_line_length",
+  "tab_size": 2,
   "telemetry": {
     "metrics": false,
     "diagnostics": false
   },
-  "autosave": "on_focus_change",
-  "format_on_save": "language_server",
-  "formatter": "language_server",
-  "buffer_font_size": 14,
-  "buffer_font_family": "zed-mono, JetBrains Mono NL",
-  "enable_language_server": true,
-  "lsp": {},
-  "hard_tabs": false,
-  "hover_popover_enabled": true,
-  "show_completions_on_input": true,
-  "tab_size": 2,
-  "theme": "One Light",
-  "preferred_line_length": 80,
-  "projects_online_by_default": false,
-  "soft_wrap": "preferred_line_length",
-  "vim_mode": false,
   "terminal": {
-    "shell": "system",
-    "working_directory": "current_project_directory",
-    "font_size": 13,
-    "font_family": "JetBrains Mono",
-    "blinking": "terminal_controlled",
     "alternate_scroll": "on",
+    "blinking": "terminal_controlled",
+    "copy_on_select": false,
+    "env": {},
+    "font_family": "Zed Mono",
+    "font_features": null,
+    "font_size": 14,
     "option_as_meta": false,
-    "copy_on_select": false
+    "shell": "system",
+    "working_directory": "current_project_directory"
   },
-  "default_dock_anchor": "bottom"
+  "theme": "One Light",
+  "vim_mode": false,
+  "project_panel": {
+    "dock": "left",
+    "git_status": true,
+    "default_width": 300
+  },
 }
