@@ -12,6 +12,7 @@
 	defaultBranch = master
 [branch]
 	autosetuprebase = always
+	sort = --committerdate
 [fetch]
 	recurseSubmodules = on-demand
 	prune = true
@@ -51,6 +52,7 @@
 [diff]
 	ignoreSubmodules = none
 	colorMoved = default
+	algorithm = histogram
 [delta]
 	navigate = true
 	light = true
@@ -62,6 +64,10 @@
 	conflictStyle = diff3
 [advice]
 	ignoredHook = false
+[rerere]
+	enabled = true
+[column]
+	ui = auto
 [url "ssh://git@"]
 	insteadOf = git://
 [includeIf "gitdir:~/Desktop/Open_Source/"]
