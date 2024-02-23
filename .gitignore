@@ -248,6 +248,9 @@ typings/
 # nodemon?
 .config/simple-update-notifier
 
+# php / composer
+.config/composer
+
 # Modern CSV
 .config/Modern CSV
 
