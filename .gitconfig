@@ -12,7 +12,7 @@
 	defaultBranch = master
 [branch]
 	autosetuprebase = always
-	sort = --committerdate
+	sort = -committerdate
 [fetch]
 	recurseSubmodules = on-demand
 	prune = true
