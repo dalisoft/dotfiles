@@ -63,7 +63,7 @@ set -gx PATH /usr/sbin $PATH
 # Programming language
 set -gx PATH "$HOME/.cargo/bin" $PATH # Rust
 set -gx PATH "$HOME/go/bin" $PATH # Go
-set -gx PATH "$HOME/.gem/bin" $PATH # Ruby
+set -gx PATH "$HOME/.gem/bin" $PATH # Ruby binaries
 
 set -gx PATH "$HOME/.local/bin" $PATH # pipx
 
@@ -84,6 +84,9 @@ set -gx PATH "$JAVA_HOME/bin" $PATH # Java
 
 # LLVM
 set -gx PATH "$HOMEBREW_PREFIX/opt/llvm/bin" $PATH
+
+# Ruby
+set -gx PATH "$HOMEBREW_PREFIX/opt/ruby/bin" $PATH
 
 # Homebrew
 set -gx PATH /usr/local/bin $PATH
