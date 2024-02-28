@@ -42,6 +42,9 @@ set -gx BUN_INSTALL "$HOME/.bun"
 # Go
 set -gx GOPATH "$HOME/go"
 
+# Ruby
+set -gx GEM_HOME "$HOME/.gem"
+
 # Android SDK
 set -gx ANDROID_HOME "$HOME/Library/Android/sdk"
 set -gx ANDROID_SDK_ROOT "$HOME/Library/Android/sdk"
@@ -60,6 +63,7 @@ set -gx PATH /usr/sbin $PATH
 # Programming language
 set -gx PATH "$HOME/.cargo/bin" $PATH # Rust
 set -gx PATH "$HOME/go/bin" $PATH # Go
+set -gx PATH "$HOME/.gem/bin" $PATH # Ruby
 
 set -gx PATH "$HOME/.local/bin" $PATH # pipx
 
