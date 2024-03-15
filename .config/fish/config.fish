@@ -8,10 +8,6 @@ set -gx TERM xterm-256color
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 
-# Compatibility patch
-set -gx BASH_VERSION (bash -c 'echo $BASH_VERSION')
-set -gx ZSH_VERSION (zsh -c 'echo $ZSH_VERSION')
-
 # Fish paths
 set -gx FISH_PATH "$HOME/.config/fish"
 set -gx FISH_FUNCTIONS_PATH "$FISH_PATH/functions"
