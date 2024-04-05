@@ -30,7 +30,7 @@ end
 # **** Terminal stuffs ****
 if type -q eza
     alias ls=eza
-    alias ll="ls -hlaS --extended --git --time-style=long-iso"
+    alias ll="ls -hlaST --git --git-repos --octal-permissions --time-style=long-iso --ignore-glob=.git"
 end
 if type -q rg
     alias grep=rg
