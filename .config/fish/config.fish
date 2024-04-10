@@ -35,6 +35,9 @@ set -gx NPM_CONFIG_PREFIX "$HOME/.npm-global"
 # bun
 set -gx BUN_INSTALL "$HOME/.bun"
 
+# Python
+set -gx PIPX_HOME "$HOME/.local/pipx"
+
 # Go
 set -gx GOPATH "$HOME/go"
 
