@@ -72,7 +72,7 @@
     "shell": "system",
     "working_directory": "current_project_directory"
   },
-  "theme": "One Light",
+  "theme": "macOS Classic Light",
   "vim_mode": false,
   "project_panel": {
     "auto_reveal_entries": true,
