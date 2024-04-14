@@ -52,6 +52,7 @@
 	submoduleSummary = true
 [diff]
 	ignoreSubmodules = none
+	submodule = log
 	colorMoved = default
 	algorithm = histogram
 [delta]
