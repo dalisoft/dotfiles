@@ -49,6 +49,7 @@
 	diffFilter = delta --color-only
 [status]
 	showUntrackedFiles = all
+	submoduleSummary = true
 [diff]
 	ignoreSubmodules = none
 	colorMoved = default
