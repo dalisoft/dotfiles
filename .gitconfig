@@ -49,10 +49,10 @@
 	diffFilter = delta --color-only
 [status]
 	showUntrackedFiles = all
-	submoduleSummary = true
+	submoduleSummary = false
 [diff]
 	ignoreSubmodules = none
-	submodule = short
+	submodule = log
 	colorMoved = default
 	algorithm = histogram
 [delta]
