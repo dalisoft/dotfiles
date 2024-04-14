@@ -71,5 +71,5 @@
 	ui = auto
 [url "ssh://git@"]
 	insteadOf = git://
-[includeIf "gitdir:~/Desktop/Open_Source/"]
-	path = ~/Desktop/Open_Source/.gitconfig
+[includeIf "gitdir:~/Desktop/open_source/"]
+	path = ~/Desktop/open_source/.gitconfig
