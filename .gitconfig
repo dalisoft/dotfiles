@@ -47,6 +47,8 @@
 	branch-parent = !"git branch --contains $(cat .git/ORIG_HEAD)"
 [interactive]
 	diffFilter = delta --color-only
+[submodule]
+	recurse = true
 [status]
 	showUntrackedFiles = all
 	submoduleSummary = false
