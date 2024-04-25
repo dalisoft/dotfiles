@@ -4,7 +4,7 @@ switch (uname)
         if type -q java_home
             set -gx JAVA_HOME (which java_home)
         end
-        # set -gx DOCKER_HOST "ssh://pi4-eth"
+        set -gx DOCKER_HOST "ssh://ubuntu-vm"
 
         if type -q brew
             set -gx HOMEBREW_PREFIX (brew --prefix)
