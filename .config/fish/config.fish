@@ -16,8 +16,6 @@ set -gx BAT_THEME ansi # bat/batcat theme
 set -gx MOZ_USE_OMTC 1 # Firefox for Linux patch
 set -gx NFANCURVE_PATH "$HOME/nfancurve" # nFanCurve Linux patch
 set -gx HOMEBREW_NO_ANALYTICS 1 # Homebrew disable telemetry
-set -gx HOMEBREW_NO_GOOGLE_ANALYTICS 1 # Homebrew Google telemetry
-set -gx HOMEBREW_NO_INSTALL_FROM_API 1 # Use Git for immediate changes
 set -gx HOMEBREW_NO_ENV_HINTS 1 # Hide hints for cleaner logs
 
 # Mosh / OS SSH fix
