@@ -2,10 +2,10 @@
 	pager = delta
 	ignorecase = false
 	preloadIndex = true
-	fsmonitor = true
-	untrackedCache = true
+	fsmonitor = false
+	untrackedCache = false
 [feature]
-	manyFiles = true
+	manyFiles = false
 [user]
 	name = Davlatjon Shavkatov
 	email = dalisoft.dev@gmail.com
