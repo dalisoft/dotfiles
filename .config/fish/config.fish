@@ -72,7 +72,7 @@ set -gx PATH "$HOME/.fnm" $PATH
 set -gx PATH $BUN_INSTALL/bin $PATH
 
 # Android SDK
-set -gx PATH "$BREW_PREFIX/opt/openjdk/bin" $PATH
+set -gx PATH "$HOMEBREW_PREFIX/opt/openjdk/bin" $PATH
 set -gx PATH "$ANDROID_HOME/emulator" $PATH
 set -gx PATH "$ANDROID_HOME/tools" $PATH
 set -gx PATH "$ANDROID_HOME/tools/bin" $PATH
