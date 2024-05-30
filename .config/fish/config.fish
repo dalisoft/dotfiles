@@ -17,6 +17,7 @@ set -gx MOZ_USE_OMTC 1 # Firefox for Linux patch
 set -gx NFANCURVE_PATH "$HOME/nfancurve" # nFanCurve Linux patch
 set -gx HOMEBREW_NO_ANALYTICS 1 # Homebrew disable telemetry
 set -gx HOMEBREW_NO_ENV_HINTS 1 # Hide hints for cleaner logs
+set -gx DO_NOT_TRACK 1 # Disable Bun.js tracking
 
 # Mosh / OS SSH fix
 set -gx LANG "en_US.UTF-8"
