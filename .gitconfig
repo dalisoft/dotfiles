@@ -4,6 +4,8 @@
 	preloadIndex = true
 	fsmonitor = false
 	untrackedCache = false
+[pager]
+	difftool = true
 [feature]
 	manyFiles = false
 [user]
@@ -62,6 +64,11 @@
 	submodule = log
 	colorMoved = default
 	algorithm = histogram
+	tool = difftastic
+[difftool]
+	prompt = false
+[difftool "difftastic"]
+	cmd = difft "$LOCAL" "$REMOTE"
 [delta]
 	navigate = true
 	light = true
