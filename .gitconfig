@@ -53,7 +53,7 @@
 	branch-parent = !"git branch --contains $(cat .git/ORIG_HEAD)"
 	permission-reset = !git diff -p -R --no-ext-diff --no-color --diff-filter=M | /usr/bin/grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
 [interactive]
-	diffFilter = delta --color-only
+	diffFilter = delta --color-only --features=interactive
 [submodule]
 	recurse = true
 [status]
@@ -63,6 +63,8 @@
 	ignoreSubmodules = none
 	submodule = log
 	colorMoved = default
+	colorMovedWS = allow-indentation-change
+	renameLimit = 5000
 	algorithm = histogram
 	tool = difftastic
 [difftool]
@@ -76,6 +78,7 @@
 	line-numbers = true
 	hyperlinks = true
 	hyperlinks-file-link-format = "file-line://{path}:{line}"
+	diff-so-fancy = true
 [merge]
 	conflictStyle = diff3
 [advice]
