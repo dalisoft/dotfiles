@@ -78,7 +78,7 @@
 	line-numbers = true
 	hyperlinks = true
 	hyperlinks-file-link-format = "file-line://{path}:{line}"
-	diff-so-fancy = true
+	diff-so-fancy = false
 [merge]
 	conflictStyle = diff3
 [advice]
