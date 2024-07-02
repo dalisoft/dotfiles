@@ -238,6 +238,9 @@ typings/
 # neofetch config
 .config/neofetch
 
+# htoprc
+.config/htop/htoprc
+
 # qBittorrent
 .config/qBittorrent
 
