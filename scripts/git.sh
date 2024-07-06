@@ -6,7 +6,7 @@ Darwin)
   ;;
 Linux)
   if [ "$(command -v apt-get)" ]; then
-    sudo add-apt-repository ppa:git-core/ppa
+    sudo add-apt-repository -y ppa:git-core/ppa
     sudo apt update -y
     sudo apt install -y git
   elif [ "$(command -v dnf)" ]; then

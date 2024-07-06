@@ -15,3 +15,7 @@ Linux)
   echo "unsupported environment"
   ;;
 esac
+
+FISH_SHELL_PATH=$(which fish)
+sudo chsh -s "$FISH_SHELL_PATH"         # change for root
+sudo chsh -s "$FISH_SHELL_PATH" "$USER" # change for current user
