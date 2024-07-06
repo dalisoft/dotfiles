@@ -265,3 +265,6 @@ typings/
 # zed
 .config/zed
 !.config/zed/settings.json
+
+# cody AI
+.config/cody-ai
