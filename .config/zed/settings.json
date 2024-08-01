@@ -65,14 +65,14 @@
     "blinking": "terminal_controlled",
     "copy_on_select": false,
     "env": {},
-    "font_family": "Zed Mono",
-    "font_features": null,
+    "font_family": "Zed Plex Mono",
+    // "font_features": null,
     "font_size": 14,
     "option_as_meta": false,
     "shell": "system",
     "working_directory": "current_project_directory"
   },
-  "theme": "macOS Classic Light",
+  "theme": "One Light",
   "vim_mode": false,
   "project_panel": {
     "auto_reveal_entries": true,
@@ -83,4 +83,19 @@
     "git_status": true,
     "default_width": 300
   },
+  "load_direnv": "shell_hook",
+  "inline_completions": {
+    "disabled_globs": [
+      ".env"
+    ]
+  },
+  "current_line_highlight": "all",
+  "scrollbar": {
+    "cursors": true,
+    "git_diff": true,
+    "search_results": true,
+    "selected_symbol": true,
+    "show": "always",
+    "diagnostics": true
+  }
 }
