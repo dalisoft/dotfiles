@@ -10,8 +10,8 @@
   "active_pane_magnification": 1.0,
   "autosave": "on_focus_change",
   "auto_update": false,
-  "buffer_font_family": "Zed Mono",
-  "buffer_font_features": null,
+  "buffer_font_family": "Zed Plex Mono",
+  // "buffer_font_features": null,
   "buffer_font_size": 15,
   "confirm_quit": false,
   "copilot": {
@@ -65,7 +65,7 @@
     "blinking": "terminal_controlled",
     "copy_on_select": false,
     "env": {},
-    "font_family": "Zed Plex Mono",
+    "font_family": "Fira Code",
     // "font_features": null,
     "font_size": 14,
     "option_as_meta": false,
@@ -97,5 +97,19 @@
     "selected_symbol": true,
     "show": "always",
     "diagnostics": true
+  },
+  "tabs": {
+    "close_position": "right",
+    "file_icons": true,
+    "git_status": true
+  },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": true
+  },
+  "toolbar": {
+    "breadcrumbs": true,
+    "quick_actions": true,
+    "selections_menu": true
   }
 }
