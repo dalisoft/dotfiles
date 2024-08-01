@@ -73,12 +73,13 @@
 	cmd = difft "$LOCAL" "$REMOTE"
 [delta]
 	navigate = true
-	light = true
+	# dark = true
 	side-by-side = true
 	line-numbers = true
 	hyperlinks = true
 	hyperlinks-file-link-format = "file-line://{path}:{line}"
 	diff-so-fancy = false
+	theme = GitHub
 [merge]
 	conflictStyle = diff3
 [advice]
