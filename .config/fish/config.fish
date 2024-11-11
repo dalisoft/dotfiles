@@ -24,6 +24,12 @@ set -gx HOMEBREW_NO_ENV_HINTS 1 # Hide hints for cleaner logs
 set -gx DO_NOT_TRACK 1 # Disable Bun.js tracking
 set -gx NEXT_TELEMETRY_DISABLED 1 # Disable Next.js global tracking
 
+# Ollama
+set -gx OLLAMA_FLASH_ATTENTION 1
+set -gx OLLAMA_KEEP_ALIVE 15m
+set -gx OLLAMA_MAX_LOADED 2
+set -gx OLLAMA_NUM_PARALLEL 4
+set -gx OLLAMA_HOST "127.0.0.1"
 
 # Mosh / OS SSH fix
 set -gx LANG "en_US.UTF-8"
@@ -128,3 +134,6 @@ end
 if type -q fnm
     fnm env --shell=fish --use-on-cd | source
 end
+
+# Added by LM Studio CLI (lms)
+set -gx PATH $PATH /Users/dalisoft/.cache/lm-studio/bin
