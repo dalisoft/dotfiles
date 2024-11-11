@@ -71,6 +71,8 @@
 	prompt = false
 [difftool "difftastic"]
 	cmd = difft "$LOCAL" "$REMOTE"
+[difftool "diffsitter"]
+	cmd = diffsitter "$LOCAL" "$REMOTE"
 [delta]
 	navigate = true
 	# dark = true
