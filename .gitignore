@@ -268,3 +268,7 @@ typings/
 
 # cody AI
 .config/cody-ai
+
+# iTerm2
+*.itermexport
+.config/iterm2
