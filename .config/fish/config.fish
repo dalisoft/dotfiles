@@ -26,10 +26,10 @@ set -gx NEXT_TELEMETRY_DISABLED 1 # Disable Next.js global tracking
 
 # Ollama
 set -gx OLLAMA_FLASH_ATTENTION 1
-set -gx OLLAMA_KEEP_ALIVE 1m
+set -gx OLLAMA_KEEP_ALIVE 5m
 set -gx OLLAMA_MAX_LOADED_MODELS 1
 set -gx OLLAMA_NUM_PARALLEL 1
-set -gx OLLAMA_MAX_QUEUE 256
+set -gx OLLAMA_MAX_QUEUE 128
 set -gx OLLAMA_HOST "127.0.0.1"
 set -gx OLLAMA_NOHISTORY 1
 
