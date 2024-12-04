@@ -26,6 +26,7 @@ set -gx NEXT_TELEMETRY_DISABLED 1 # Disable Next.js global tracking
 
 # Ollama
 set -gx OLLAMA_FLASH_ATTENTION 1
+set -gx OLLAMA_KV_CACHE_TYPE q8_0
 set -gx OLLAMA_KEEP_ALIVE 5m
 set -gx OLLAMA_MAX_LOADED_MODELS 1
 set -gx OLLAMA_NUM_PARALLEL 1
