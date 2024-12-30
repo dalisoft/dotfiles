@@ -107,6 +107,9 @@ set -gx PATH /usr/local/sbin $PATH
 set -gx PATH /opt/homebrew/bin $PATH
 set -gx PATH /opt/homebrew/sbin $PATH
 
+# curl HTTP3
+set -gx PATH "$HOMEBREW_PREFIX/opt/curl/bin" $PATH
+
 # Load aliases
 source $FISH_PATH/alias.fish
 
@@ -137,6 +140,3 @@ end
 if type -q fnm
     fnm env --shell=fish --use-on-cd | source
 end
-
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/dalisoft/.cache/lm-studio/bin

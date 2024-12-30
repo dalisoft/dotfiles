@@ -272,3 +272,9 @@ typings/
 # iTerm2
 *.itermexport
 .config/iterm2
+
+# G Cloud
+.config/gcloud
+
+# GitHub Copilot
+.config/github-copilot
