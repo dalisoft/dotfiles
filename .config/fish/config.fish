@@ -13,8 +13,8 @@ set -gx FISH_PATH "$HOME/.config/fish"
 set -gx FISH_FUNCTIONS_PATH "$FISH_PATH/functions"
 
 set -gx BAT_THEME ansi # bat/batcat theme
-set -gx BAT_PAGER "less -R --mouse"
-set -gx DELTA_PAGER "less -R --mouse"
+set -gx BAT_PAGER "less -R --mouse --quit-if-one-screen"
+set -gx DELTA_PAGER "less -R --mouse --quit-if-one-screen"
 set -gx MOZ_USE_OMTC 1 # Firefox for Linux patch
 set -gx NFANCURVE_PATH "$HOME/nfancurve" # nFanCurve Linux patch
 
