@@ -1,4 +1,3 @@
-let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_ngdoc = 1
 let python_highlight_all = 1
 
@@ -49,7 +48,7 @@ autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,
 
 set mousehide
 set mouse=a
-set termencoding=utf-8
+" set termencoding=utf-8
 set novisualbell
 set t_vb=
 set backspace=indent,eol,start whichwrap+=<,>,[,]
