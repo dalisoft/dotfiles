@@ -278,3 +278,9 @@ typings/
 
 # GitHub Copilot
 .config/github-copilot
+
+# Geany?
+.config/geany
+
+# btop
+.config/btop
