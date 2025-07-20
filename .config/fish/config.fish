@@ -128,7 +128,6 @@ set -gx PKG_CONFIG_PATH "/$HOMEBREW_PREFIX/opt/openssl@3/lib/pkgconfig"
 set -gx LDFLAGS "-L$HOMEBREW_PREFIX/opt/llvm/lib"
 set -gx CPPFLAGS "-I$HOMEBREW_PREFIX/opt/llvm/include"
 
-
 ########## init scripts ###########
 
 # **** starship ****
