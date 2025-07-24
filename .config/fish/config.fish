@@ -24,6 +24,9 @@ set -gx HOMEBREW_NO_ENV_HINTS 1 # Hide hints for cleaner logs
 set -gx DO_NOT_TRACK 1 # Disable Bun.js tracking
 set -gx NEXT_TELEMETRY_DISABLED 1 # Disable Next.js global tracking
 
+# Updater settings
+set -gx DISABLE_AUTOUPDATER 1
+
 # Ollama
 set -gx OLLAMA_FLASH_ATTENTION 1
 set -gx OLLAMA_KV_CACHE_TYPE q8_0
