@@ -48,6 +48,7 @@ set -gx CARGO_HOME "$HOME/.cargo"
 
 # npm
 set -gx NPM_CONFIG_PREFIX "$HOME/.npm-global"
+set -gx NODE_PATH "$NPM_CONFIG_PREFIX/lib/node_modules"
 
 # bun
 set -gx BUN_INSTALL "$HOME/.bun"
@@ -142,3 +143,7 @@ end
 if type -q fnm
     fnm env --shell=fish --use-on-cd | source
 end
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init.fish 2>/dev/null || :

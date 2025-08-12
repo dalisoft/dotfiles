@@ -19,6 +19,7 @@ end
 function update_all
     brew_upgrade
     brew_cleanup
-    npm update -g
+    uv tool upgrade --all
+    bun x npm-check --global --update-all
     update_repos
 end
