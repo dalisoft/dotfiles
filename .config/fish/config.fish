@@ -49,6 +49,7 @@ set -gx CARGO_HOME "$HOME/.cargo"
 # npm
 set -gx NPM_CONFIG_PREFIX "$HOME/.npm-global"
 set -gx NODE_PATH "$NPM_CONFIG_PREFIX/lib/node_modules"
+set -gx NPM_CHECK_INSTALLER bun
 
 # bun
 set -gx BUN_INSTALL "$HOME/.bun"
