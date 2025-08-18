@@ -68,6 +68,10 @@ set -gx ANDROID_HOME "$HOME/Library/Android/sdk"
 set -gx ANDROID_SDK_ROOT "$HOME/Library/Android/sdk"
 set -gx ANDROID_AVD_HOME "$HOME/.android/avd"
 
+# Claude Code
+set -gx CLAUDE_BASH_TIMEOUT 86400
+set -gx CLAUDE_MAX_EXECUTION_TIME 86400
+
 # ********************************
 # ********* PATH of env **********
 # ********************************
