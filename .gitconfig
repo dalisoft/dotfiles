@@ -82,6 +82,7 @@
 	hyperlinks-file-link-format = "file-line://{path}:{line}"
 	diff-so-fancy = false
 	theme = GitHub
+	true-color = always
 [merge]
 	conflictStyle = zdiff3
 [merge "mergiraf"]
