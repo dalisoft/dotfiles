@@ -66,7 +66,7 @@
 	colorMovedWS = allow-indentation-change
 	renameLimit = 5000
 	algorithm = histogram
-	tool = difftastic
+	tool = diffsitter
 [difftool]
 	prompt = false
 [difftool "difftastic"]
@@ -83,7 +83,10 @@
 	diff-so-fancy = false
 	theme = GitHub
 [merge]
-	conflictStyle = diff3
+	conflictStyle = zdiff3
+[merge "mergiraf"]
+	name = mergiraf
+	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
 [advice]
 	ignoredHook = false
 [rerere]
