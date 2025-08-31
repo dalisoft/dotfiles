@@ -53,7 +53,7 @@
 	branch-parent = !"git branch --contains $(cat .git/ORIG_HEAD)"
 	permission-reset = !git diff -p -R --no-ext-diff --no-color --diff-filter=M | /usr/bin/grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
 [interactive]
-	diffFilter = delta --color-only --features=interactive
+	diffFilter = delta --color-only interactive
 [submodule]
 	recurse = true
 [status]
