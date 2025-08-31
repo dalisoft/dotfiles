@@ -66,7 +66,7 @@
 	colorMovedWS = allow-indentation-change
 	renameLimit = 5000
 	algorithm = histogram
-	tool = diffsitter
+	tool = difftastic
 [difftool]
 	prompt = false
 [difftool "difftastic"]
