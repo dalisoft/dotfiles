@@ -120,6 +120,9 @@ set -gx PATH /opt/homebrew/sbin $PATH
 # curl HTTP3
 set -gx PATH "$HOMEBREW_PREFIX/opt/curl/bin" $PATH
 
+# SQLite (3)
+set -gx PATH "$HOMEBREW_PREFIX/opt/sqlite/bin" $PATH
+
 # Load aliases
 source $FISH_PATH/alias.fish
 
@@ -149,7 +152,3 @@ end
 if type -q fnm
     fnm env --shell=fish --use-on-cd | source
 end
-
-# Added by OrbStack: command-line tools and integration
-# This won't be added again if you remove it.
-source ~/.orbstack/shell/init.fish 2>/dev/null || :
