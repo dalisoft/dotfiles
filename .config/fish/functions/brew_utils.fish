@@ -16,6 +16,7 @@ function tool_cleanup
     yarn cache clean
     bun pm cache rm --global
 
+    python3 -m pip cache purge
     uv cache prune --force
     uv cache clean --force
 end
