@@ -19,6 +19,8 @@ function tool_cleanup
     python3 -m pip cache purge
     uv cache prune --force
     uv cache clean --force
+
+    go clean -cache
 end
 
 function brew_upgrade
