@@ -54,6 +54,7 @@ set -gx NPM_CHECK_INSTALLER bun
 
 # bun
 set -gx BUN_INSTALL "$HOME/.bun"
+set -gx BUM_INSTALL "$HOME/.bum"
 
 # Python
 set -gx PIPX_HOME "$HOME/.local/pipx"
@@ -83,6 +84,24 @@ set -gx PATH /sbin $PATH
 set -gx PATH /usr/bin $PATH
 set -gx PATH /usr/sbin $PATH
 
+# Homebrew
+set -gx PATH /usr/local/bin $PATH
+set -gx PATH /usr/local/sbin $PATH
+set -gx PATH /opt/homebrew/bin $PATH
+set -gx PATH /opt/homebrew/sbin $PATH
+
+# LLVM
+set -gx PATH "$HOMEBREW_PREFIX/opt/llvm/bin" $PATH
+
+# Ruby
+set -gx PATH "$HOMEBREW_PREFIX/opt/ruby/bin" $PATH
+
+# curl HTTP3
+set -gx PATH "$HOMEBREW_PREFIX/opt/curl/bin" $PATH
+
+# SQLite (3)
+set -gx PATH "$HOMEBREW_PREFIX/opt/sqlite/bin" $PATH
+
 # Programming language
 set -gx PATH "$HOME/.cargo/bin" $PATH # Rust
 set -gx PATH "$HOME/go/bin" $PATH # Go
@@ -95,7 +114,8 @@ set -gx PATH "$NPM_CONFIG_PREFIX/bin" $PATH
 set -gx PATH "$HOME/.fnm" $PATH
 
 # bun
-set -gx PATH $BUN_INSTALL/bin $PATH
+set -gx PATH "$BUN_INSTALL/bin" $PATH
+set -gx PATH "$BUM_INSTALL/bin" $PATH
 
 # Android SDK
 set -gx PATH "$HOMEBREW_PREFIX/opt/openjdk/bin" $PATH
@@ -104,24 +124,6 @@ set -gx PATH "$ANDROID_HOME/tools" $PATH
 set -gx PATH "$ANDROID_HOME/tools/bin" $PATH
 set -gx PATH "$ANDROID_HOME/platform-tools" $PATH
 set -gx PATH "$JAVA_HOME/bin" $PATH # Java
-
-# LLVM
-set -gx PATH "$HOMEBREW_PREFIX/opt/llvm/bin" $PATH
-
-# Ruby
-set -gx PATH "$HOMEBREW_PREFIX/opt/ruby/bin" $PATH
-
-# Homebrew
-set -gx PATH /usr/local/bin $PATH
-set -gx PATH /usr/local/sbin $PATH
-set -gx PATH /opt/homebrew/bin $PATH
-set -gx PATH /opt/homebrew/sbin $PATH
-
-# curl HTTP3
-set -gx PATH "$HOMEBREW_PREFIX/opt/curl/bin" $PATH
-
-# SQLite (3)
-set -gx PATH "$HOMEBREW_PREFIX/opt/sqlite/bin" $PATH
 
 # Load aliases
 source $FISH_PATH/alias.fish
