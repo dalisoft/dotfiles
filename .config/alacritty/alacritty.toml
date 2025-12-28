@@ -1,0 +1,48 @@
+[general]
+import = [
+    "~/.config/alacritty/themes/themes/monokai.toml"
+]
+working_directory = "None"
+live_config_reload = true
+ipc_socket = true
+
+[env]
+term = "xterm-256color"
+
+[window]
+dynamic_padding = false
+decorations = "Full"
+blur = false
+startup_mode = "Fullscreen"
+dynamic_title = true
+decorations_theme_variant = "None"
+resize_increments = true
+option_as_alt = "OnlyLeft"
+level = "Normal"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font]
+normal = { family = "JetBrains Mono", style = "Regular" }
+bold = { family = "JetBrains Mono", style = "Bold" }
+size = 14
+builtin_box_drawing = true
+
+[colors]
+transparent_background_colors = false
+draw_bold_text_with_bright_colors = true
+
+[bell]
+animation = "Ease"
+duration = 0
+
+[selection]
+save_to_clipboard = false
+
+[cursor]
+style = { shape = "Block", blinking = "On" }
+
+[mouse]
+hide_when_typing = false

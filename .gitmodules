@@ -7,3 +7,6 @@
 	path = nfancurve
 	url = https://github.com/nan0s7/nfancurve.git
   branch = master
+[submodule ".config/alacritty/themes"]
+	path = .config/alacritty/themes
+	url = https://github.com/alacritty/alacritty-theme
