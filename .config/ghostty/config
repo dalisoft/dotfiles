@@ -23,7 +23,7 @@ background-opacity = 1
 background-blur = false
 window-padding-x = 8
 window-padding-y = 8
-window-vsync = false
+window-vsync = true
 window-theme = system
 window-colorspace = srgb
 window-decoration = auto
@@ -59,7 +59,7 @@ bold-color = bright
 
 # Clipboard
 copy-on-select = false
-clipboard-read = allow
+clipboard-read = ask
 clipboard-write = allow
 clipboard-paste-protection = true
 clipboard-paste-bracketed-safe = false
