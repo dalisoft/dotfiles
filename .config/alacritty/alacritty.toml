@@ -1,7 +1,5 @@
 [general]
-import = [
-    "~/.config/alacritty/themes/themes/monokai.toml"
-]
+import = ["~/.config/alacritty/themes/themes/snazzy.toml"]
 working_directory = "None"
 live_config_reload = true
 ipc_socket = true
@@ -10,19 +8,21 @@ ipc_socket = true
 term = "xterm-256color"
 
 [window]
+opacity = 1
+blur = false
+padding = { x = 8, y = 8 }
 dynamic_padding = false
 decorations = "Full"
-blur = false
-startup_mode = "Fullscreen"
+startup_mode = "Windowed"
 dynamic_title = true
 decorations_theme_variant = "None"
-resize_increments = true
+resize_increments = false
 option_as_alt = "OnlyLeft"
 level = "Normal"
 
 [scrolling]
 history = 10000
-multiplier = 3
+multiplier = 4
 
 [font]
 normal = { family = "JetBrains Mono", style = "Regular" }
