@@ -1,3 +1,6 @@
+# See https://alacritty.org/config-alacritty.html
+# to read and understand configuration file
+
 [general]
 import = ["~/.config/alacritty/themes/themes/snazzy.toml"]
 working_directory = "None"
