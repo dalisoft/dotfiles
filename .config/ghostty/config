@@ -1,4 +1,5 @@
-# See https://ghostty.org/docs/config.
+# See https://ghostty.org/docs/config
+# to read and understand configuration file
 
 # General
 auto-update = off
