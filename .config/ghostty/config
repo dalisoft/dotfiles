@@ -49,6 +49,7 @@ font-feature = -calt
 # Colors
 theme = Snazzy
 osc-color-report-format = 16-bit
+bold-color = bright
 
 # Bell
 
