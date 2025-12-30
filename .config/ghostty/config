@@ -26,6 +26,7 @@ window-padding-y = 8
 window-vsync = false
 window-theme = system
 window-colorspace = srgb
+window-decoration = auto
 window-new-tab-position = current
 window-show-tab-bar = auto
 fullscreen = false
