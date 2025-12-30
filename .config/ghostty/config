@@ -29,6 +29,7 @@ window-colorspace = srgb
 window-decoration = auto
 window-new-tab-position = current
 window-show-tab-bar = auto
+window-save-state = default
 fullscreen = false
 maximize = false
 macos-window-shadow = false
