@@ -1,0 +1,63 @@
+# See https://ghostty.org/docs/config.
+
+# General
+auto-update = off
+async-backend = auto
+working-directory = home
+macos-hidden = never
+
+# Animation
+custom-shader-animation = false
+
+# Env
+term = "xterm-256color"
+
+# Shell integration
+shell-integration = detect
+shell-integration-features = true
+
+# Window
+background-opacity = 1
+background-blur = false
+window-padding-x = 8
+window-padding-y = 8
+window-vsync = false
+window-theme = system
+window-colorspace = srgb
+window-new-tab-position = current
+window-show-tab-bar = auto
+fullscreen = false
+maximize = false
+macos-window-shadow = false
+macos-titlebar-style = native
+macos-non-native-fullscreen = false
+macos-dock-drop-behavior = new-tab
+macos-option-as-alt = true
+
+# Scrolling
+scrollback-limit = 10000
+mouse-scroll-multiplier = 4
+
+# Font
+font-family = "JetBrains Mono"
+font-family-bold = "JetBrains Mono"
+font-size = 14
+font-feature = -calt
+
+# Colors
+theme = Snazzy
+osc-color-report-format = 16-bit
+
+# Bell
+
+# Selection
+
+# Cursor
+cursor-style = block
+cursor-style-blink = true
+
+# Mouse
+
+
+
+
