@@ -9,6 +9,7 @@ ipc_socket = true
 
 [env]
 term = "xterm-256color"
+COLORTERM = "truecolor"
 
 [window]
 opacity = 1

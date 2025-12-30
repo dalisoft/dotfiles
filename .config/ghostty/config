@@ -13,6 +13,7 @@ custom-shader-animation = false
 
 # Env
 term = "xterm-256color"
+COLORTERM = "truecolor"
 
 # Shell integration
 shell-integration = detect
