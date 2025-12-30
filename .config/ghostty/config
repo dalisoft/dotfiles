@@ -5,6 +5,7 @@ auto-update = off
 async-backend = auto
 working-directory = home
 macos-hidden = never
+image-storage-limit = 26214400
 
 # Animation
 custom-shader-animation = false
@@ -52,12 +53,19 @@ osc-color-report-format = 16-bit
 
 # Selection
 
+# Clipboard
+copy-on-select = false
+clipboard-read = allow
+clipboard-write = allow
+clipboard-paste-protection = true
+clipboard-paste-bracketed-safe = false
+
 # Cursor
 cursor-style = block
 cursor-style-blink = true
 
 # Mouse
-
+mouse-hide-while-typing = false
 
 
 
