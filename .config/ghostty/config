@@ -13,7 +13,6 @@ custom-shader-animation = false
 
 # Env
 term = "xterm-256color"
-COLORTERM = "truecolor"
 
 # Shell integration
 shell-integration = detect
@@ -50,7 +49,7 @@ font-size = 14
 font-feature = -calt
 
 # Colors
-theme = Snazzy
+theme = Snazzy Soft
 osc-color-report-format = 16-bit
 bold-color = bright
 
