@@ -1,0 +1,86 @@
+# See https://rioterm.com/docs/config
+# to read and understand configuration file
+
+# TODO: Back to here after these bugs will be fixed
+# - https://github.com/raphamorim/rio/issues/616
+# - https://github.com/raphamorim/rio/issues/1060
+# - https://github.com/raphamorim/rio/issues/1192
+# - https://github.com/raphamorim/rio/issues/1357
+# - https://github.com/raphamorim/rio/issues/1359
+# - https://github.com/raphamorim/rio/issues/1396
+
+# General
+confirm-before-quit = false
+
+# Colors
+theme = "Snazzy Soft"
+draw-bold-text-with-light-colors = true
+
+[renderer]
+backend = "Automatic"
+performance = "Low"
+strategy = "events"
+
+# Animation
+
+# Env
+
+# Shell integration
+
+[window]
+mode = "Windowed"
+opacity = 1
+decorations = "enabled"
+blur = false
+macos-use-unified-titlebar = true
+macos-use-shadow = false
+
+[scroll]
+multiplier = 4.0
+divider = 1.0
+
+# Font
+[fonts]
+features = []
+use-drawable-chars = true
+symbol-map = []
+disable-warnings-not-found = false
+additional-dirs = []
+
+[fonts.regular]
+family = "JetBrains Mono"
+style = "Normal"
+weight = 400
+
+[fonts.bold]
+family = "JetBrains Mono"
+style = "Normal"
+width = "Normal"
+weight = 700
+
+[fonts.italic]
+family = "JetBrains Mono"
+style = "Italic"
+weight = 400
+
+[fonts.bold-italic]
+family = "JetBrains Mono"
+style = "Italic"
+width = "Normal"
+weight = 700
+
+
+# Bell
+
+# Selection
+
+# Clipboard
+
+# Cursor
+[cursor]
+size = 14
+shape = 'block'
+blinking = true
+blinking-interval = 800
+
+# Mouse
