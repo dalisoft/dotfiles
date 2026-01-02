@@ -20,6 +20,7 @@ shell-integration-features = true
 
 # Window
 background-opacity = 1
+unfocused-split-opacity = 1
 background-blur = false
 window-padding-x = 8
 window-padding-y = 8
@@ -39,7 +40,7 @@ macos-dock-drop-behavior = new-tab
 macos-option-as-alt = true
 
 # Scrolling
-scrollback-limit = 10000
+scrollback-limit = 10000000
 mouse-scroll-multiplier = 4
 
 # Font
@@ -52,6 +53,8 @@ font-feature = -calt
 theme = Snazzy Soft
 osc-color-report-format = 16-bit
 bold-color = bright
+alpha-blending = linear-corrected
+minimum-contrast = 1.0
 
 # Bell
 
@@ -67,9 +70,12 @@ clipboard-paste-bracketed-safe = false
 # Cursor
 cursor-style = block
 cursor-style-blink = true
+cursor-click-to-move = true
 
 # Mouse
 mouse-hide-while-typing = false
+mouse-shift-capture = never
 
-
-
+# Link / Previews
+link-url = true
+link-previews = osc8
