@@ -8,11 +8,12 @@ working-directory = home
 macos-hidden = never
 image-storage-limit = 26214400
 
-# Animation
-custom-shader-animation = false
-
 # Env
 term = "xterm-256color"
+
+# Animation
+custom-shader-animation = false
+quick-terminal-animation-duration = 0
 
 # Shell integration
 shell-integration = detect
