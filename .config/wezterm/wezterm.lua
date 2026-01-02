@@ -22,6 +22,7 @@ config.term = "xterm-256color"
 config.prefer_egl = true
 config.front_end = 'WebGpu'
 config.max_fps = 60
+config.animation_fps = 10
 config.webgpu_power_preference = "LowPower"
 
 --- Colors
@@ -41,5 +42,10 @@ config.scrollback_lines = 10000
 config.font = wezterm.font 'JetBrains Mono'
 config.font_size = 14
 config.freetype_load_target = "Light"
+
+--- Cursor
+config.default_cursor_style = 'BlinkingBlock'
+config.cursor_blink_ease_in = 'Constant'
+config.cursor_blink_ease_out = 'Constant'
 
 return config

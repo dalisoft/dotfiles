@@ -17,7 +17,7 @@ quick-terminal-animation-duration = 0
 
 # Shell integration
 shell-integration = detect
-shell-integration-features = true
+shell-integration-features = no-cursor
 
 # Window
 background-opacity = 1
