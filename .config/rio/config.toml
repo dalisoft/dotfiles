@@ -14,7 +14,7 @@ confirm-before-quit = false
 
 # Colors
 theme = "Snazzy Soft"
-draw-bold-text-with-light-colors = true
+draw-bold-text-with-light-colors = false
 
 [renderer]
 backend = "Automatic"

@@ -52,7 +52,7 @@ font-feature = -calt
 # Colors
 theme = Snazzy Soft
 osc-color-report-format = 16-bit
-bold-color = bright
+# bold-color = bright
 alpha-blending = linear-corrected
 minimum-contrast = 1.0
 
