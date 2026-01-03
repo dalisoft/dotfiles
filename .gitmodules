@@ -2,7 +2,6 @@
   path = .nano
   url = https://github.com/scopatz/nanorc.git
   branch = master
-
 [submodule "nfancurve"]
 	path = nfancurve
 	url = https://github.com/nan0s7/nfancurve.git
