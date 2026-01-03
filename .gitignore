@@ -263,7 +263,7 @@ typings/
 .config/jgit
 
 # zed
-.config/zed
+.config/zed/*
 !.config/zed/settings.json
 
 # cody AI
