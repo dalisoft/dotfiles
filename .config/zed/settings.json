@@ -22,8 +22,9 @@
   },
   "icon_theme": "Material Icon Theme",
   "terminal": {
+    "line_height": "standard",
     "option_as_meta": false,
-    "minimum_contrast": 45.0,
+    "minimum_contrast": 0,
     "font_size": 14.0,
     "font_family": "JetBrains Mono",
     "font_fallbacks": ["Fira Code", "Monaco"],
@@ -57,7 +58,7 @@
   "theme": "Quiet Light",
   "agent": {
     "enabled": false,
-    "button": false,
+    "button": true,
     "model_parameters": []
   },
   "preview_tabs": {
