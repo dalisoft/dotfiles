@@ -1,4 +1,5 @@
 {
+  "$schema": "zed://schemas/settings",
   "bottom_dock_layout": "contained",
   "disable_ai": true,
   "title_bar": {
@@ -31,7 +32,10 @@
     "cursor_shape": "block",
     "blinking": "on",
     "copy_on_select": false,
-    "max_scroll_history_lines": 10000
+    "max_scroll_history_lines": 10000,
+    "env": {
+      "GIT_EDITOR": "zed --wait"
+    }
   },
   "telemetry": {
     "diagnostics": false,
@@ -104,16 +108,23 @@
   "buffer_font_fallbacks": ["Fira Code", "Monaco"],
   "buffer_font_family": "JetBrains Mono NL",
   "file_types": {
-    "typescript": ["*.ts"],
-    "javascript": ["*.js"],
-    "gitmodules": [".gitmodules"],
-    "jsonc": ["*.sublime-settings"]
+    "TypeScript": ["*.ts"],
+    "JavaScript": ["*.js"],
+    "Git Modules": [".gitmodules"],
+    "JSONC": ["*.sublime-settings", ".prettierrc"],
+    "Git Attributes": ["**/{git,.git,.git/info}/attributes"],
+    "Git Config": [
+      "*.gitconfig",
+      "**/{git,.git/modules,.git/modules/*}/config"
+    ],
+    "Git Ignore": ["**/{git,.git}/ignore", "**/.git/info/exclude"]
   },
   "colorize_brackets": true,
   "show_completions_on_input": true,
   "auto_indent_on_paste": false,
   "linked_edits": true,
   "use_on_type_format": false,
+  "format_on_save": "on",
   "show_whitespaces": "all",
   "show_edit_predictions": true,
   "ensure_final_newline_on_save": false,
@@ -124,7 +135,31 @@
   },
   "wrap_guides": [80, 100, 120],
   "preferred_line_length": 80,
-  "soft_wrap": "prefer_line",
+  "soft_wrap": "preferred_line_length",
   "hard_tabs": false,
-  "tab_size": 2
+  "tab_size": 2,
+  "prettier": {
+    "allowed": false
+  },
+  "languages": {
+    "Markdown": {
+      "formatter": "prettier"
+    },
+    "JSON": {
+      "prettier": { "allowed": true },
+      "formatter": "prettier"
+    },
+    "JSONC": {
+      "prettier": { "allowed": true },
+      "formatter": "prettier"
+    },
+    "JavaScript": {
+      "prettier": { "allowed": true },
+      "formatter": "prettier"
+    },
+    "TypeScript": {
+      "prettier": { "allowed": true },
+      "formatter": "prettier"
+    }
+  }
 }
