@@ -287,3 +287,6 @@ typings/
 
 # LiteXL
 .config/lite-xl
+
+# Mole
+.config/mole
