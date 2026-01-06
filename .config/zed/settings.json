@@ -146,12 +146,14 @@
       "formatter": "prettier"
     },
     "JSON": {
-      "prettier": { "allowed": true },
-      "formatter": "prettier"
+      "formatter": {
+        "language_server": { "name": "biome" }
+      }
     },
     "JSONC": {
-      "prettier": { "allowed": true },
-      "formatter": "prettier"
+      "formatter": {
+        "language_server": { "name": "biome" }
+      }
     },
     "JavaScript": {
       "prettier": { "allowed": true },
