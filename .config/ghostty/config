@@ -34,11 +34,15 @@ window-show-tab-bar = auto
 window-save-state = default
 fullscreen = false
 maximize = false
+# macOS features
 macos-window-shadow = false
 macos-titlebar-style = native
 macos-non-native-fullscreen = false
 macos-dock-drop-behavior = new-tab
 macos-option-as-alt = true
+# Linux features
+gtk-single-instance = true
+
 
 # Scrolling
 scrollback-limit = 15000000
