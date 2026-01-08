@@ -8,6 +8,7 @@
   },
   "go_to_definition_fallback": "none",
   "git_panel": {
+    "tree_view": true,
     "dock": "left",
     "collapse_untracked_diff": false,
     "status_style": "label_color",
@@ -102,6 +103,7 @@
   "max_tabs": 10,
   "use_system_path_prompts": true,
   "restore_on_file_reopen": true,
+  "restore_on_startup": "last_session",
   "autosave": "on_window_change",
   "confirm_quit": true,
   "buffer_font_size": 14.0,
