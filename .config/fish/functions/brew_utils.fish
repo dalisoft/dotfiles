@@ -31,7 +31,7 @@ end
 
 function tool_upgrade
     uv tool upgrade --all
-    bun x npm-check --global --update-all --ignore '@sourcegraph/amp'
+    bun update --global --interactive --recursive
 end
 
 function update_all
