@@ -31,7 +31,7 @@ end
 
 function tool_upgrade
     uv tool upgrade --all
-    bun update --global --interactive --recursive
+    bun update --global --latest --recursive
 end
 
 function update_all
