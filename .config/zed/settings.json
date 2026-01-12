@@ -149,12 +149,12 @@
     },
     "JSON": {
       "formatter": {
-        "language_server": { "name": "biome" }
+        "language_server": { "name": "oxfmt" }
       }
     },
     "JSONC": {
       "formatter": {
-        "language_server": { "name": "biome" }
+        "language_server": { "name": "oxfmt" }
       }
     },
     "JavaScript": {
