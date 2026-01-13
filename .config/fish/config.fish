@@ -73,6 +73,8 @@ set -gx ANDROID_AVD_HOME "$HOME/.android/avd"
 # Claude Code
 set -gx CLAUDE_BASH_TIMEOUT 86400
 set -gx CLAUDE_MAX_EXECUTION_TIME 86400
+set -gx CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC 1
+set -gx API_TIMEOUT_MS 3000000
 
 # ********************************
 # ********* PATH of env **********
