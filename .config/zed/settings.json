@@ -33,10 +33,7 @@
     "cursor_shape": "block",
     "blinking": "on",
     "copy_on_select": false,
-    "max_scroll_history_lines": 10000,
-    "env": {
-      "GIT_EDITOR": "zed --wait"
-    }
+    "max_scroll_history_lines": 10000
   },
   "telemetry": {
     "diagnostics": false,
