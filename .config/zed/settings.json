@@ -103,6 +103,7 @@
   "restore_on_startup": "last_session",
   "autosave": "on_window_change",
   "confirm_quit": true,
+  "text_rendering_mode": "platform_default",
   "buffer_font_size": 14.0,
   "buffer_font_fallbacks": ["Fira Code", "Monaco"],
   "buffer_font_family": "JetBrains Mono NL",
@@ -142,25 +143,28 @@
   },
   "languages": {
     "Markdown": {
-      "formatter": "prettier"
+      "prettier": { "allowed": true },
+        "formatter": "prettier"
     },
     "JSON": {
       "formatter": {
-        "language_server": { "name": "oxfmt" }
+        "language_server": { "name": "biome" }
       }
     },
     "JSONC": {
       "formatter": {
-        "language_server": { "name": "oxfmt" }
+        "language_server": { "name": "biome" }
       }
     },
     "JavaScript": {
-      "prettier": { "allowed": true },
-      "formatter": "prettier"
+      "formatter": {
+        "language_server": { "name": "biome" }
+      }
     },
     "TypeScript": {
-      "prettier": { "allowed": true },
-      "formatter": "prettier"
+      "formatter": {
+        "language_server": { "name": "biome" }
+      }
     }
   }
 }
