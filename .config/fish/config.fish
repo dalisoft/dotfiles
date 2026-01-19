@@ -75,6 +75,7 @@ set -gx CLAUDE_BASH_TIMEOUT 86400
 set -gx CLAUDE_MAX_EXECUTION_TIME 86400
 set -gx CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC 1
 set -gx API_TIMEOUT_MS 3000000
+set -gx ENABLE_TOOL_SEARCH true
 
 # ********************************
 # ********* PATH of env **********
