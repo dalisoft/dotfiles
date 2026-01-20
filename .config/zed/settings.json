@@ -6,7 +6,6 @@
     "html": true,
     "toml": true,
     "php": true,
-    "pylsp": true,
     "ruby": true,
     "r": true,
     "sql": true,
@@ -23,6 +22,7 @@
     "mermaid": true,
     "biome": true,
     "oxc": true,
+    "dprint": true,
     "factory-droid": true
   },
   "bottom_dock_layout": "contained",
