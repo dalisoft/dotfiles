@@ -396,6 +396,146 @@
               "prompt_cache_key": true,
               "chat_completions": true
             }
+          },
+          {
+            "name": "gpt-5.2(low)",
+            "display_name": "GPT-5.2 (Low)",
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 65536,
+            "max_tokens": 400000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "gpt-5.2(medium)",
+            "display_name": "GPT-5.2 (Medium)",
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 65536,
+            "max_tokens": 400000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "gpt-5.2(High)",
+            "display_name": "GPT-5.2 (High)",
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 65536,
+            "max_tokens": 400000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "gpt-5.2(xhigh)",
+            "display_name": "GPT-5.2 (Extra High)",
+            "max_output_tokens": 131072,
+            "max_completion_tokens": 131072,
+            "max_tokens": 400000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "gpt-5.2-codex(low)",
+            "display_name": "GPT-5.2 Codex (Low)",
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 65536,
+            "max_tokens": 400000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "gpt-5.2-codex(medium)",
+            "display_name": "GPT-5.2 Codex (Medium)",
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 65536,
+            "max_tokens": 400000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "gpt-5.2-codex(High)",
+            "display_name": "GPT-5.2 Codex (High)",
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 65536,
+            "max_tokens": 400000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "gpt-5.2-codex(xhigh)",
+            "display_name": "GPT-5.2 Codex (Extra High)",
+            "max_output_tokens": 131072,
+            "max_completion_tokens": 131072,
+            "max_tokens": 400000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "gpt-5.1-codex-mini(medium)",
+            "display_name": "GPT-5.1 Codex Mini (Medium)",
+            "max_output_tokens": 64000,
+            "max_completion_tokens": 64000,
+            "max_tokens": 256000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "gpt-5.1-codex-mini(high)",
+            "display_name": "GPT-5.1 Codex Mini (High)",
+            "max_output_tokens": 64000,
+            "max_completion_tokens": 64000,
+            "max_tokens": 256000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
           }
         ]
       }
@@ -405,17 +545,21 @@
     "agents_panel_dock": "right",
     "enabled": true,
     "default_model": {
-      "model": "claude-opus-4-5(0)",
+      "model": "gpt-5.2(xhigh)",
       "provider": "CLIProxyAPI"
     },
     "inline_assistant_model": {
       "model": "claude-sonnet-4-5(0)",
-      "provider": "cliproxyapi"
+      "provider": "CLIProxyAPI"
     },
     "inline_alternatives": [
       {
         "model": "gemini-3-flash-preview(minimal)",
-        "provider": "cliproxyapi"
+        "provider": "CLIProxyAPI"
+      },
+      {
+        "model": "gpt-5.1-codex-mini(medium)",
+        "provider": "CLIProxyAPI"
       }
     ],
     "default_profile": "minimal",
