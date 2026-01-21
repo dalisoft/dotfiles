@@ -45,24 +45,6 @@
     "restore_unsaved_buffers": false
   },
   "icon_theme": "Material Icon Theme",
-  "terminal": {
-    "line_height": "standard",
-    "option_as_meta": false,
-    "minimum_contrast": 0,
-    "font_size": 14.0,
-    "font_family": "JetBrains Mono",
-    "font_fallbacks": ["Fira Code", "Monaco"],
-    "cursor_shape": "block",
-    "blinking": "on",
-    "copy_on_select": false,
-    "max_scroll_history_lines": 10000,
-    "detect_venv": {
-      "on": {
-        "directories": [".env", "env", ".venv", "venv"],
-        "activate_script": "default"
-      }
-    }
-  },
   "telemetry": {
     "diagnostics": false,
     "metrics": false
@@ -161,6 +143,7 @@
     "collapse_untracked_diff": false,
     "status_style": "label_color",
     "sort_by_path": true,
+    "button": true,
     "default_width": 320
   },
   "project_panel": {
@@ -168,6 +151,7 @@
     "git_status": true,
     "auto_reveal_entries": true,
     "auto_fold_dirs": true,
+    "button": true,
     "default_width": 320
   },
   "outline_panel": {
@@ -183,14 +167,38 @@
   },
   "notification_panel": {
     "dock": "right",
-    "default_width": 360,
-    "button": true
+    "button": true,
+    "default_width": 360
+  },
+  "terminal": {
+    "line_height": "standard",
+    "option_as_meta": false,
+    "minimum_contrast": 0,
+    "font_size": 14.0,
+    "font_family": "JetBrains Mono",
+    "font_fallbacks": ["Fira Code", "Monaco"],
+    "cursor_shape": "block",
+    "blinking": "on",
+    "copy_on_select": false,
+    "max_scroll_history_lines": 10000,
+    "shell": "system",
+    "detect_venv": {
+      "on": {
+        "directories": [".env", "env", ".venv", "venv"],
+        "activate_script": "default"
+      }
+    },
+    "toolbar": {
+      "breadcrumbs": false
+    },
+    "scroll_multiplier": 4,
+    "button": true,
+    "default_height": 420
   },
   "disable_ai": false,
   "agent": {
     "agents_panel_dock": "right",
     "enabled": true,
-    "button": true,
     "default_model": {
       "model": "claude-sonnet-4-5-thinking-latest",
       "provider": "anthropic"
@@ -212,6 +220,7 @@
     "default_profile": "minimal",
     "default_view": "thread",
     "always_allow_tool_actions": true,
+    "button": true,
     "default_width": 540
   },
   "agent_servers": {
@@ -280,13 +289,13 @@
       }
     },
     "JavaScript": {
-      "language_servers": ["tsgo", "vtsls"],
+      "language_servers": ["tsgo"],
       "formatter": {
         "language_server": { "name": "biome" }
       }
     },
     "TypeScript": {
-      "language_servers": ["tsgo", "vtsls"],
+      "language_servers": ["tsgo"],
       "formatter": {
         "language_server": { "name": "biome" }
       }
