@@ -20,6 +20,7 @@
     "fish": true,
     "nginx": true,
     "mermaid": true,
+    "tsgo": true,
     "biome": true,
     "oxc": true,
     "dprint": true,
@@ -218,6 +219,51 @@
       "ignore_system_version": false
     }
   },
+  "lsp": {
+    "typos": {
+      "initialization_options": {
+        "diagnosticSeverity": "Hint",
+        "logLevel": "info"
+      }
+    },
+    "tsgo": {
+      "settings": {
+        "goMemLimit": "4GiB",
+        "trace": { "server": "off" }
+      }
+    },
+    "vtsls": {
+      "settings": {
+        "vtsls": {
+          "autoUseWorkspaceTsdk": true,
+          "experimental": {
+            "completion": {
+              "enableServerSideFuzzyMatch": true,
+              "entriesLimit": 10
+            }
+          }
+        },
+        "typescript": {
+          "preferGoToSourceDefinition": true,
+          "tsserver": {
+            "useSyntaxServer": "never",
+            "maxTsServerMemory": 4096,
+            "enableTracing": false,
+            "log": "off"
+          }
+        },
+        "javascript": {
+          "preferGoToSourceDefinition": true,
+          "tsserver": {
+            "useSyntaxServer": "never",
+            "maxTsServerMemory": 4096,
+            "enableTracing": false,
+            "log": "off"
+          }
+        }
+      }
+    }
+  },
   "languages": {
     "Markdown": {
       "prettier": { "allowed": true },
@@ -234,11 +280,13 @@
       }
     },
     "JavaScript": {
+      "language_servers": ["tsgo", "vtsls"],
       "formatter": {
         "language_server": { "name": "biome" }
       }
     },
     "TypeScript": {
+      "language_servers": ["tsgo", "vtsls"],
       "formatter": {
         "language_server": { "name": "biome" }
       }
