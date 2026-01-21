@@ -196,25 +196,226 @@
     "default_height": 420
   },
   "disable_ai": false,
+  "language_models": {
+    "openai_compatible": {
+      "CLIProxyAPI": {
+        "api_url": "http://localhost:8317/v1",
+        "available_models": [
+          {
+            "name": "claude-opus-4-5(0)",
+            "display_name": "CC: Claude Opus 4.5",
+            "max_output_tokens": 64000,
+            "max_completion_tokens": 64000,
+            "max_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "claude-opus-4-5-thinking(8192)",
+            "display_name": "AG: Claude Opus 4.5 (Low)",
+            "max_output_tokens": 64000,
+            "max_completion_tokens": 64000,
+            "max_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "claude-opus-4-5-thinking(32768)",
+            "display_name": "AG: Claude Opus 4.5 (Max)",
+            "max_output_tokens": 64000,
+            "max_completion_tokens": 64000,
+            "max_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "claude-sonnet-4-5(0)",
+            "display_name": "Claude Sonnet 4.5",
+            "max_output_tokens": 8192,
+            "max_completion_tokens": 8192,
+            "max_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "claude-sonnet-4-5-thinking(4000)",
+            "display_name": "Claude Sonnet 4.5 (Think)",
+            "max_output_tokens": 64000,
+            "max_completion_tokens": 64000,
+            "max_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "claude-sonnet-4-5-thinking(10000)",
+            "display_name": "Claude Sonnet 4.5 (Harder)",
+            "max_output_tokens": 64000,
+            "max_completion_tokens": 64000,
+            "max_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "claude-sonnet-4-5-thinking(32000)",
+            "display_name": "Claude Sonnet 4.5 (Ultra)",
+            "max_output_tokens": 64000,
+            "max_completion_tokens": 64000,
+            "max_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "claude-haiku-4-5",
+            "display_name": "Claude Haiku 4.5",
+            "max_output_tokens": 32000,
+            "max_completion_tokens": 32000,
+            "max_tokens": 200000,
+            "capabilities": {
+              "tools": true,
+              "images": false,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "gemini-3-flash-preview(minimal)",
+            "display_name": "Gemini 3 Flash (Minimal)",
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 65536,
+            "max_tokens": 1048576,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "gemini-3-flash-preview(low)",
+            "display_name": "Gemini 3 Flash (Low)",
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 65536,
+            "max_tokens": 1048576,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "gemini-3-flash-preview(medium)",
+            "display_name": "Gemini 3 Flash (Medium)",
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 65536,
+            "max_tokens": 1048576,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "gemini-3-flash-preview(high)",
+            "display_name": "Gemini 3 Flash (High)",
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 65536,
+            "max_tokens": 1048576,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "gemini-3-pro-preview(low)",
+            "display_name": "Gemini 3 Pro (Low)",
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 65536,
+            "max_tokens": 1048576,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          },
+          {
+            "name": "gemini-3-pro-preview(high)",
+            "display_name": "Gemini 3 Pro (High)",
+            "max_output_tokens": 65536,
+            "max_completion_tokens": 65536,
+            "max_tokens": 1048576,
+            "capabilities": {
+              "tools": true,
+              "images": true,
+              "parallel_tool_calls": true,
+              "prompt_cache_key": true,
+              "chat_completions": true
+            }
+          }
+        ]
+      }
+    }
+  },
   "agent": {
     "agents_panel_dock": "right",
     "enabled": true,
     "default_model": {
-      "model": "claude-sonnet-4-5-thinking-latest",
-      "provider": "anthropic"
+      "model": "claude-opus-4-5(0)",
+      "provider": "CLIProxyAPI"
     },
     "inline_assistant_model": {
-      "model": "claude-sonnet-4-5-thinking-latest",
-      "provider": "anthropic"
+      "model": "claude-sonnet-4-5(0)",
+      "provider": "cliproxyapi"
     },
     "inline_alternatives": [
       {
-        "model": "gpt-4.1-mini",
-        "provider": "openai"
-      },
-      {
-        "model": "google/gemini-3-flash-preview",
-        "provider": "openrouter"
+        "model": "gemini-3-flash-preview(minimal)",
+        "provider": "cliproxyapi"
       }
     ],
     "default_profile": "minimal",
