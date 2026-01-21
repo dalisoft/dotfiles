@@ -190,9 +190,24 @@
     "enabled": true,
     "button": true,
     "default_model": {
-      "model": "gpt-5.2",
-      "provider": "openai"
+      "model": "claude-sonnet-4-5-thinking-latest",
+      "provider": "anthropic"
     },
+    "inline_assistant_model": {
+      "model": "claude-sonnet-4-5-thinking-latest",
+      "provider": "anthropic"
+    },
+    "inline_alternatives": [
+      {
+        "model": "gpt-4.1-mini",
+        "provider": "openai"
+      },
+      {
+        "model": "google/gemini-3-flash-preview",
+        "provider": "openrouter"
+      }
+    ],
+    "default_profile": "minimal",
     "default_view": "thread",
     "always_allow_tool_actions": true,
     "default_width": 540
