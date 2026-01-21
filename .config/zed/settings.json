@@ -25,6 +25,9 @@
     "dprint": true,
     "factory-droid": true
   },
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
   "bottom_dock_layout": "contained",
   "title_bar": {
     "show_menus": true,
