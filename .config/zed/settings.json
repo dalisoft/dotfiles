@@ -23,6 +23,7 @@
     "biome": true,
     "oxc": true,
     "dprint": true,
+    "typos": true,
     "factory-droid": true
   },
   "features": {
