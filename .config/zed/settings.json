@@ -125,9 +125,11 @@
   "show_edit_predictions": false,
   "ensure_final_newline_on_save": false,
   "indent_guides": {
-    "background_coloring": "indent_aware",
+    "background_coloring": "disabled",
     "coloring": "indent_aware",
-    "enabled": true
+    "enabled": true,
+    "active_line_width": 1,
+    "line_width": 1
   },
   "wrap_guides": [80, 100, 120],
   "preferred_line_length": 80,
@@ -545,7 +547,7 @@
     "agents_panel_dock": "right",
     "enabled": true,
     "default_model": {
-      "model": "gpt-5.2(xhigh)",
+      "model": "gemini-3-flash-preview(minimal)",
       "provider": "CLIProxyAPI"
     },
     "inline_assistant_model": {
