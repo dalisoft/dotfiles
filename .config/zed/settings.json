@@ -27,8 +27,8 @@
     "typos": true,
     "factory-droid": true
   },
-  "features": {
-    "edit_prediction_provider": "zed"
+  "edit_predictions": {
+    "provider": "zed"
   },
   "bottom_dock_layout": "contained",
   "title_bar": {
@@ -566,7 +566,9 @@
     ],
     "default_profile": "minimal",
     "default_view": "thread",
-    "always_allow_tool_actions": true,
+    "tool_permissions": {
+      "default": "allow"
+    },
     "button": true,
     "default_width": 540
   },
