@@ -67,7 +67,7 @@
 	renameLimit = 5000
 	algorithm = histogram
 	tool = difftastic
-	guitool = jetbrains
+	guitool = meld
 [difftool]
 	prompt = false
 [difftool "difftastic"]
@@ -79,8 +79,6 @@
 [difftool "kdiff3"]
 	cmd = kdiff3 "$LOCAL" "$REMOTE"
 	trustExitCode = false
-[difftool "jetbrains"]
-  cmd = webstorm diff "$LOCAL" "$REMOTE"
 [delta]
 	navigate = true
 	# dark = true
@@ -103,8 +101,6 @@
 	cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output="$MERGED"
 [mergetool "kdiff3"]
  cmd = kdiff3 "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
-[mergetool "jetbrains"]
-	cmd = webstorm merge "$LOCAL" "$REMOTE" "$BASE" "$MERGED"
 	trustExitCode = false
 [advice]
 	ignoredHook = false
