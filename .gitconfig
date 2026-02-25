@@ -67,12 +67,18 @@
 	renameLimit = 5000
 	algorithm = histogram
 	tool = difftastic
+	guitool = meld
 [difftool]
 	prompt = false
 [difftool "difftastic"]
 	cmd = difft "$LOCAL" "$REMOTE"
 [difftool "diffsitter"]
 	cmd = diffsitter "$LOCAL" "$REMOTE"
+[difftool "meld"]
+	cmd = meld "$LOCAL" "$REMOTE"
+[difftool "kdiff3"]
+	cmd = kdiff3 "$LOCAL" "$REMOTE"
+	trustExitCode = false
 [delta]
 	navigate = true
 	# dark = true
@@ -88,6 +94,14 @@
 [merge "mergiraf"]
 	name = mergiraf
 	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
+[mergetool]
+	prompt = false
+	keepBackup = false
+[mergetool "meld"]
+	cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output="$MERGED"
+[mergetool "kdiff3"]
+ cmd = kdiff3 "$BASE" "$LOCAL" "$REMOTE" "$MERGED"
+	trustExitCode = false
 [advice]
 	ignoredHook = false
 [rerere]
