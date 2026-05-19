@@ -33,7 +33,8 @@
 	"bottom_dock_layout": "contained",
 	"title_bar": {
 		"show_menus": true,
-		"show_branch_icon": true
+
+		"show_branch_status_icon": true
 	},
 	"go_to_definition_fallback": "none",
 	"toolbar": {
@@ -149,6 +150,7 @@
 		"default_width": 320
 	},
 	"project_panel": {
+		"dock": "left",
 		"hide_gitignore": false,
 		"git_status": true,
 		"auto_reveal_entries": true,
@@ -543,7 +545,11 @@
 			}
 		}
 	},
+	"collaboration_panel": {
+		"dock": "left"
+	},
 	"agent": {
+		"dock": "right",
 		"agents_panel_dock": "right",
 		"enabled": true,
 		"default_model": {
