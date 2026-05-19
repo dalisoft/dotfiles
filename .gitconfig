@@ -83,6 +83,8 @@
 [difftool "kdiff3"]
 	cmd = kdiff3 "$LOCAL" "$REMOTE"
 	trustExitCode = false
+[difftool "tkdiff"]
+	cmd = tkdiff "$LOCAL" "$REMOTE"
 [delta]
 	navigate = true
 	# dark = true
