@@ -25,6 +25,7 @@ set -gx HOMEBREW_NO_ENV_HINTS 1 # Hide hints for cleaner logs
 set -gx DO_NOT_TRACK 1 # Disable Bun.js tracking
 set -gx NEXT_TELEMETRY_DISABLED 1 # Disable Next.js global tracking
 set -gx HOMEBREW_NO_REQUIRE_TAP_TRUST 1 # Allow all taps be trusted
+set -gx HOMEBREW_NO_ASK 1 # Allow upgrades without ask
 
 # Updater settings
 set -gx DISABLE_AUTOUPDATER 1
