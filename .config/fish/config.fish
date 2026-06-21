@@ -92,51 +92,51 @@ set -gx FORCE_AUTOUPDATE_PLUGINS true
 # ********************************
 
 # System binaries
-set -gx PATH /bin $PATH
-set -gx PATH /sbin $PATH
-set -gx PATH /usr/bin $PATH
-set -gx PATH /usr/sbin $PATH
+fish_add_path -g /bin
+fish_add_path -g /sbin
+fish_add_path -g /usr/bin
+fish_add_path -g /usr/sbin
 
 # Homebrew
-set -gx PATH /usr/local/bin $PATH
-set -gx PATH /usr/local/sbin $PATH
-set -gx PATH /opt/homebrew/bin $PATH
-set -gx PATH /opt/homebrew/sbin $PATH
+fish_add_path -g /usr/local/bin
+fish_add_path -g /usr/local/sbin
+fish_add_path -g /opt/homebrew/bin
+fish_add_path -g /opt/homebrew/sbin
 
 # LLVM
-set -gx PATH "$HOMEBREW_PREFIX/opt/llvm/bin" $PATH
+fish_add_path -g "$HOMEBREW_PREFIX/opt/llvm/bin"
 
 # Ruby
-set -gx PATH "$HOMEBREW_PREFIX/opt/ruby/bin" $PATH
+fish_add_path -g "$HOMEBREW_PREFIX/opt/ruby/bin"
 
 # curl HTTP3
-set -gx PATH "$HOMEBREW_PREFIX/opt/curl/bin" $PATH
+fish_add_path -g "$HOMEBREW_PREFIX/opt/curl/bin"
 
 # SQLite (3)
-set -gx PATH "$HOMEBREW_PREFIX/opt/sqlite/bin" $PATH
+fish_add_path -g "$HOMEBREW_PREFIX/opt/sqlite/bin"
 
 # Programming language
-set -gx PATH "$HOME/.cargo/bin" $PATH # Rust
-set -gx PATH "$HOME/go/bin" $PATH # Go
-set -gx PATH "$HOME/.gem/bin" $PATH # Ruby binaries
+fish_add_path -g "$HOME/.cargo/bin" # Rust
+fish_add_path -g "$HOME/go/bin" # Go
+fish_add_path -g "$HOME/.gem/bin" # Ruby binaries
 
-set -gx PATH "$HOME/.local/bin" $PATH # pipx
+fish_add_path -g "$HOME/.local/bin" # pipx
 
 # npm / fnm
-set -gx PATH "$NPM_CONFIG_PREFIX/bin" $PATH
-set -gx PATH "$HOME/.fnm" $PATH
+fish_add_path -g "$NPM_CONFIG_PREFIX/bin"
+fish_add_path -g "$HOME/.fnm"
 
 # bun
-set -gx PATH "$BUN_INSTALL/bin" $PATH
-set -gx PATH "$BUM_INSTALL/bin" $PATH
+fish_add_path -g "$BUN_INSTALL/bin"
+fish_add_path -g "$BUM_INSTALL/bin"
 
 # Android SDK
-set -gx PATH "$HOMEBREW_PREFIX/opt/openjdk/bin" $PATH
-set -gx PATH "$ANDROID_HOME/emulator" $PATH
-set -gx PATH "$ANDROID_HOME/tools" $PATH
-set -gx PATH "$ANDROID_HOME/tools/bin" $PATH
-set -gx PATH "$ANDROID_HOME/platform-tools" $PATH
-set -gx PATH "$JAVA_HOME/bin" $PATH # Java
+fish_add_path -g "$HOMEBREW_PREFIX/opt/openjdk/bin"
+fish_add_path -g "$ANDROID_HOME/emulator"
+fish_add_path -g "$ANDROID_HOME/tools"
+fish_add_path -g "$ANDROID_HOME/tools/bin"
+fish_add_path -g "$ANDROID_HOME/platform-tools"
+fish_add_path -g "$JAVA_HOME/bin" # Java
 
 # Load aliases
 source $FISH_PATH/alias.fish
@@ -167,7 +167,3 @@ end
 if type -q fnm
     fnm env --shell=fish --use-on-cd | source
 end
-
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/dalisoft/.cache/lm-studio/bin
-# End of LM Studio CLI section
