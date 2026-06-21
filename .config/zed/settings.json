@@ -28,6 +28,7 @@
 		"factory-droid": true
 	},
 	"edit_predictions": {
+		"allow_data_collection": "no",
 		"provider": "zed"
 	},
 	"bottom_dock_layout": "contained",
@@ -579,6 +580,9 @@
 		"default_width": 540
 	},
 	"agent_servers": {
+		"factory-droid": {
+			"type": "registry"
+		},
 		"gemini-custom": {
 			"type": "custom",
 			"command": "gemini"
