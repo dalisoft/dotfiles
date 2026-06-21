@@ -3,10 +3,18 @@
   "plugin": [],
   "mode": {
     "plan": {
-      "model": "openai/gpt-5.5"
+      "model": "openai/gpt-5.5",
+      "variant": "xhigh"
     },
     "build": {
-      "model": "openai/gpt-5.3-codex"
+      "model": "opencode-go/deepseek-v4-pro",
+      "variant": "max"
     }
+  },
+  "compaction": {
+    "auto": true,
+    "prune": false,
+    "reserved": 16384,
+    "preserve_recent_tokens": 0
   }
 }
