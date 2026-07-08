@@ -290,3 +290,12 @@ typings/
 
 # Mole
 .config/mole
+
+# Goose
+.config/goose
+
+# Kilo Code
+.config/kilo/kilo.jsonc
+
+# 1Password
+.config/op
