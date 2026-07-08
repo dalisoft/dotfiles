@@ -135,7 +135,7 @@
 	},
 	"wrap_guides": [80, 100, 120],
 	"preferred_line_length": 80,
-	"soft_wrap": "preferred_line_length",
+	"soft_wrap": "bounded",
 	"hard_tabs": false,
 	"tab_size": 2,
 	"prettier": {
@@ -146,7 +146,8 @@
 		"dock": "left",
 		"collapse_untracked_diff": false,
 		"status_style": "label_color",
-		"sort_by_path": true,
+		"sort_by": "path",
+		"group_by": "status",
 		"button": true,
 		"default_width": 320
 	},
@@ -169,11 +170,6 @@
 		"auto_reveal_entries": false,
 		"button": true,
 		"default_width": 320
-	},
-	"notification_panel": {
-		"dock": "right",
-		"button": true,
-		"default_width": 360
 	},
 	"terminal": {
 		"line_height": "standard",
@@ -547,11 +543,12 @@
 		}
 	},
 	"collaboration_panel": {
+		"button": false,
 		"dock": "left"
 	},
 	"agent": {
+		"flexible": false,
 		"dock": "right",
-		"agents_panel_dock": "right",
 		"enabled": true,
 		"default_model": {
 			"model": "gemini-3-flash-preview(minimal)",
@@ -572,22 +569,13 @@
 			}
 		],
 		"default_profile": "minimal",
-		"default_view": "thread",
 		"tool_permissions": {
 			"default": "allow"
 		},
-		"button": true,
+		"button": false,
 		"default_width": 540
 	},
-	"agent_servers": {
-		"factory-droid": {
-			"type": "registry"
-		},
-		"gemini-custom": {
-			"type": "custom",
-			"command": "gemini"
-		}
-	},
+	"agent_servers": {},
 	"lsp": {
 		"typos": {
 			"initialization_options": {

@@ -1,0 +1,611 @@
+{
+  "name": "custom_cliproxyapi",
+  "engine": "openai",
+  "display_name": "cliproxyapi",
+  "description": "CLIProxyAPI Proxy",
+  "api_key_env": "CUSTOM_CLIPROXYAPI_API_KEY",
+  "base_url": "https://cliproxyapi.management.dalisoft.uz",
+  "models": [
+    {
+      "name": "opencode-go/qwen3.7-plus",
+      "context_limit": 256000,
+      "input_token_cost": 0.0000004,
+      "output_token_cost": 0.0000016,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "qwen-ambassador/qwen3.7-plus",
+      "context_limit": 1000000,
+      "input_token_cost": 0.0000004,
+      "output_token_cost": 0.0000016,
+      "currency": "USD",
+      "supports_cache_control": false,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/qwen3.5-plus",
+      "context_limit": 262144,
+      "input_token_cost": 0.0000002,
+      "output_token_cost": 0.0000012,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/mimo-v2-pro",
+      "context_limit": 1048576,
+      "input_token_cost": 0.000001,
+      "output_token_cost": 0.000003,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/hy3-preview",
+      "context_limit": 262144,
+      "input_token_cost": 0.000000066,
+      "output_token_cost": 0.00000026,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "qwen-ambassador/qwen3.6-27b",
+      "context_limit": 262144,
+      "input_token_cost": 0.00000032,
+      "output_token_cost": 0.0000032,
+      "currency": "USD",
+      "supports_cache_control": false,
+      "reasoning": true
+    },
+    {
+      "name": "qwen-ambassador/qwen3.6-flash",
+      "context_limit": 1000000,
+      "input_token_cost": 0.0000001875,
+      "output_token_cost": 0.000001125,
+      "currency": "USD",
+      "supports_cache_control": false,
+      "reasoning": true
+    },
+    {
+      "name": "qwen-ambassador/qwen3.6-plus",
+      "context_limit": 1000000,
+      "input_token_cost": 0.000000325,
+      "output_token_cost": 0.00000195,
+      "currency": "USD",
+      "supports_cache_control": false,
+      "reasoning": true
+    },
+    {
+      "name": "mimo/mimo-v2.5-pro",
+      "context_limit": 1048576,
+      "input_token_cost": 0.000000435,
+      "output_token_cost": 0.00000087,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "codex/gpt-5.4-mini",
+      "context_limit": 272000,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "codex/gpt-image-2",
+      "context_limit": 128000,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": false,
+      "reasoning": false
+    },
+    {
+      "name": "codex/codex-auto-review",
+      "context_limit": 272000,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "antigravity/gemini-3.1-flash-image",
+      "context_limit": 65536,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": false,
+      "reasoning": true
+    },
+    {
+      "name": "mimo/mimo-v2.5-tts-voiceclone",
+      "context_limit": 8192,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": false,
+      "reasoning": false
+    },
+    {
+      "name": "deepseek/deepseek-v4-pro",
+      "context_limit": 1048576,
+      "input_token_cost": 0.000000435,
+      "output_token_cost": 0.00000087,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "cerebras/gpt-oss-120b",
+      "context_limit": 131072,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": false,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/minimax-m2.5",
+      "context_limit": 204800,
+      "input_token_cost": 0.0000003,
+      "output_token_cost": 0.0000012,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "z-ai/glm-5.1",
+      "context_limit": 202752,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "mimo/mimo-v2.5-pro-ultraspeed",
+      "context_limit": 1048576,
+      "input_token_cost": 0.000001305,
+      "output_token_cost": 0.00000261,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "mimo/mimo-v2.5-tts",
+      "context_limit": 8192,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": false,
+      "reasoning": false
+    },
+    {
+      "name": "codex/gpt-5.4",
+      "context_limit": 272000,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "z-ai/glm-4.7",
+      "context_limit": 202752,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "z-ai/glm-5",
+      "context_limit": 202752,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "qwen-ambassador/qwen3.5-livetranslate-flash-realtime",
+      "context_limit": 128000,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": false,
+      "reasoning": false
+    },
+    {
+      "name": "qwen-ambassador/qwen3.7-max-preview",
+      "context_limit": 1000000,
+      "input_token_cost": 0.0000025,
+      "output_token_cost": 0.0000075,
+      "currency": "USD",
+      "supports_cache_control": false,
+      "reasoning": true
+    },
+    {
+      "name": "mimo/mimo-v2.5",
+      "context_limit": 1048576,
+      "input_token_cost": 0.00000014,
+      "output_token_cost": 0.00000028,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "cerebras/glm-4.7",
+      "context_limit": 202752,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/minimax-2.7",
+      "context_limit": 204800,
+      "input_token_cost": 0.0000003,
+      "output_token_cost": 0.0000012,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/mimo-v2.5-pro",
+      "context_limit": 1048576,
+      "input_token_cost": 0.00000174,
+      "output_token_cost": 0.00000348,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "qwen-ambassador/qwen3.7-max",
+      "context_limit": 1000000,
+      "input_token_cost": 0.0000025,
+      "output_token_cost": 0.0000075,
+      "currency": "USD",
+      "supports_cache_control": false,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/glm-5.2",
+      "context_limit": 1000000,
+      "input_token_cost": 0.0000014,
+      "output_token_cost": 0.0000044,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/glm-5",
+      "context_limit": 202752,
+      "input_token_cost": 0.000001,
+      "output_token_cost": 0.0000032,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "codex/gpt-image-1.5",
+      "context_limit": 128000,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": false,
+      "reasoning": false
+    },
+    {
+      "name": "deepseek/deepseek-v4-flash",
+      "context_limit": 1048576,
+      "input_token_cost": 0.00000014,
+      "output_token_cost": 0.00000028,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "openrouter/cohere/north-mini-code:free",
+      "context_limit": 128000,
+      "input_token_cost": 0,
+      "output_token_cost": 0,
+      "currency": "USD",
+      "supports_cache_control": null,
+      "reasoning": false
+    },
+    {
+      "name": "gemini-3.1-pro-low",
+      "context_limit": 1048576,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "mimo/mimo-v2.5-tts-voicedesign",
+      "context_limit": 8192,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": false,
+      "reasoning": false
+    },
+    {
+      "name": "kilo/stepfun/step-3.7-flash:free",
+      "context_limit": 128000,
+      "input_token_cost": 0,
+      "output_token_cost": 0,
+      "currency": "USD",
+      "supports_cache_control": null,
+      "reasoning": false
+    },
+    {
+      "name": "opencode-go/kimi-k2.5",
+      "context_limit": 262144,
+      "input_token_cost": 0.0000006,
+      "output_token_cost": 0.000003,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/mimo-v2-omni",
+      "context_limit": 262144,
+      "input_token_cost": 0.0000004,
+      "output_token_cost": 0.000002,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "codex/gpt-5.5",
+      "context_limit": 272000,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/kimi-k2.6",
+      "context_limit": 262144,
+      "input_token_cost": 0.00000095,
+      "output_token_cost": 0.000004,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/minimax-m3",
+      "context_limit": 1000000,
+      "input_token_cost": 0.0000003,
+      "output_token_cost": 0.0000012,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/qwen3.7-max",
+      "context_limit": 1000000,
+      "input_token_cost": 0.0000025,
+      "output_token_cost": 0.0000075,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/deepseek-v4-pro",
+      "context_limit": 1000000,
+      "input_token_cost": 0.00000174,
+      "output_token_cost": 0.00000348,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/mimo-v2.5",
+      "context_limit": 1000000,
+      "input_token_cost": 0.00000014,
+      "output_token_cost": 0.00000028,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/deepseek-v4-flash",
+      "context_limit": 1000000,
+      "input_token_cost": 0.00000014,
+      "output_token_cost": 0.00000028,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "z-ai/glm-5-turbo",
+      "context_limit": 200000,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "openrouter/nvidia/nemotron-3-ultra-550b-a55b:free",
+      "context_limit": 128000,
+      "input_token_cost": 0,
+      "output_token_cost": 0,
+      "currency": "USD",
+      "supports_cache_control": null,
+      "reasoning": false
+    },
+    {
+      "name": "qwen-ambassador/qwen3.6-35b-a3b",
+      "context_limit": 262144,
+      "input_token_cost": 0.00000015,
+      "output_token_cost": 0.000001,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "kilo-auto/balanced",
+      "context_limit": 262144,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": null,
+      "reasoning": true
+    },
+    {
+      "name": "kilo-auto/efficient",
+      "context_limit": 262144,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": null,
+      "reasoning": true
+    },
+    {
+      "name": "kilo-auto/frontier",
+      "context_limit": 262144,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": null,
+      "reasoning": true
+    },
+    {
+      "name": "antigravity/gemini-3.1-flash-lite",
+      "context_limit": 1048576,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "kilo-auto/free",
+      "context_limit": 128000,
+      "input_token_cost": 0,
+      "output_token_cost": 0,
+      "currency": "USD",
+      "supports_cache_control": null,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/qwen3.6-plus",
+      "context_limit": 256000,
+      "input_token_cost": 0.0000005,
+      "output_token_cost": 0.000003,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "qwen-ambassador/qwen3.6-max-preview",
+      "context_limit": 262144,
+      "input_token_cost": 0.00000104,
+      "output_token_cost": 0.00000624,
+      "currency": "USD",
+      "supports_cache_control": false,
+      "reasoning": true
+    },
+    {
+      "name": "mimo/mimo-v2.5-asr",
+      "context_limit": 8192,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": false,
+      "reasoning": false
+    },
+    {
+      "name": "antigravity/gemini-3.5-flash-medium",
+      "context_limit": 1048576,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "antigravity/gemini-3.5-flash-low",
+      "context_limit": 1048576,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/kimi-k2.7-code",
+      "context_limit": 262144,
+      "input_token_cost": 0.00000095,
+      "output_token_cost": 0.000004,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/glm-5.1",
+      "context_limit": 202752,
+      "input_token_cost": 0.0000014,
+      "output_token_cost": 0.0000044,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "opencode-go/minimax-m2.7",
+      "context_limit": 204800,
+      "input_token_cost": 0.0000003,
+      "output_token_cost": 0.0000012,
+      "currency": "USD",
+      "supports_cache_control": true,
+      "reasoning": true
+    },
+    {
+      "name": "qwen-ambassador/qwen3.5-livetranslate-flash-realtime-2026-05-19",
+      "context_limit": 128000,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": false,
+      "reasoning": false
+    },
+    {
+      "name": "antigravity/gemini-3.1-pro-agent-high",
+      "context_limit": 1048576,
+      "input_token_cost": null,
+      "output_token_cost": null,
+      "currency": null,
+      "supports_cache_control": true,
+      "reasoning": true
+    }
+  ],
+  "headers": {},
+  "timeout_seconds": null,
+  "supports_streaming": true,
+  "requires_auth": true,
+  "catalog_provider_id": null,
+  "base_path": null,
+  "env_vars": null,
+  "dynamic_models": null,
+  "skip_canonical_filtering": false,
+  "model_doc_link": "https://models.dev/",
+  "setup_steps": [
+    "Set CUSTOM_CLIPROXYAPI_API_KEY in your environment.",
+    "Model costs are USD per token where the route is metered; subscription, router, image, audio, and realtime routes use null costs."
+  ],
+  "fast_model": "opencode-go/deepseek-v4-flash",
+  "preserves_thinking": true
+}
