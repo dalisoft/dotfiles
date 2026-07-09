@@ -153,7 +153,14 @@
 		"sort_by": "path",
 		"group_by": "status",
 		"button": true,
-		"default_width": 320
+		"default_width": 320,
+		"file_icons": true,
+		"folder_icons": true,
+		"starts_open": false,
+		"show_count_badge": true,
+		"diff_stats": true,
+		"commit_title_max_length": 80,
+		"entry_primary_click_action": "project_diff"
 	},
 	"project_panel": {
 		"dock": "left",
@@ -162,7 +169,13 @@
 		"auto_reveal_entries": true,
 		"auto_fold_dirs": true,
 		"button": true,
-		"default_width": 320
+		"default_width": 320,
+		"scrollbar": {
+			"horizontal_scroll": true
+		},
+		"sort_order": "default",
+		"diagnostic_badges": false,
+		"git_status_indicator": false
 	},
 	"outline_panel": {
 		"dock": "right",
