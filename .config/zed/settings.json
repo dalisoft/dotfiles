@@ -189,10 +189,11 @@
 		"default_width": 320
 	},
 	"terminal": {
+		"show_count_badge": true,
 		"line_height": "standard",
 		"option_as_meta": false,
 		"minimum_contrast": 0,
-		"font_size": 14.0,
+		"font_size": 14,
 		"font_family": "JetBrains Mono",
 		"font_fallbacks": ["Fira Code", "Monaco"],
 		"cursor_shape": "block",
@@ -211,6 +212,12 @@
 		},
 		"scroll_multiplier": 4,
 		"button": true,
+		"default_height": 420,
+		"flexible": true,
+		"bell": "off",
+		"open_links_in_mouse_mode": true
+	},
+	"disable_ai": true,
 	"language_models": {},
 	"collaboration_panel": {
 		"button": false,
