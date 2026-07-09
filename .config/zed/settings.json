@@ -85,7 +85,8 @@
 	},
 	"gutter": {
 		"line_numbers": true,
-		"folds": true
+		"folds": true,
+		"bookmarks": true
 	},
 	"minimap": {
 		"show": "never",
@@ -104,8 +105,8 @@
 	"autosave": "on_window_change",
 	"confirm_quit": true,
 	"text_rendering_mode": "platform_default",
-	"ui_font_size": 16.0,
-	"buffer_font_size": 14.0,
+	"ui_font_size": 16,
+	"buffer_font_size": 14,
 	"buffer_font_fallbacks": ["Fira Code", "Monaco"],
 	"buffer_font_family": "JetBrains Mono NL",
 	"file_types": {
