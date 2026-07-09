@@ -407,6 +407,46 @@
 			"formatter": {
 				"language_server": { "name": "biome" }
 			}
+		},
+		"Astro": {
+			"format_on_save": "on"
+		},
+		"Dart": {
+			"format_on_save": "on"
+		},
+		"EEx": {
+			"format_on_save": "on",
+			"language_servers": ["elixir-ls", "!expert", "!dexter", "!next-ls", "!lexical", "..."]
+		},
+		"Elixir": {
+			"format_on_save": "on"
+		},
+		"Elm": {
+			"format_on_save": "on"
+		},
+		"Go": {
+			"format_on_save": "on"
+		},
+		"GraphQL": {
+			"format_on_save": "on"
+		},
+		"HEEx": {
+			"format_on_save": "on",
+			"language_servers": ["elixir-ls", "!expert", "!dexter", "!next-ls", "!lexical", "..."]
+		},
+		"Kotlin": {
+			"format_on_save": "on"
+		},
+		"Rust": {
+			"format_on_save": "on"
+		},
+		"Starlark": {
+			"format_on_save": "on"
+		},
+		"Zig": {
+			"format_on_save": "on"
+		}
+	},
 	"vim": {
 		"use_regex_search": true,
 		"show_edit_predictions_in_normal_mode": false
