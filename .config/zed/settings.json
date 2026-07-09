@@ -224,33 +224,112 @@
 		"dock": "left"
 	},
 	"agent": {
+		"show_turn_stats": true,
 		"flexible": false,
 		"dock": "right",
-		"enabled": true,
+		"enabled": false,
 		"default_model": {
-			"model": "gemini-3-flash-preview(minimal)",
-			"provider": "CLIProxyAPI"
+			"model": "gpt-5.5",
+			"provider": "openai",
+			"effort": "high",
+			"speed": "standard",
+			"enable_thinking": true
 		},
 		"inline_assistant_model": {
-			"model": "claude-sonnet-4-5(0)",
-			"provider": "CLIProxyAPI"
+			"model": "gemini-3.5-flash",
+			"provider": "google",
+			"effort": "high",
+			"speed": "standard",
+			"enable_thinking": true
 		},
 		"inline_alternatives": [
 			{
-				"model": "gemini-3-flash-preview(minimal)",
-				"provider": "CLIProxyAPI"
+				"model": "claude-sonnet-5",
+				"provider": "anthropic",
+				"effort": "high",
+				"speed": "standard",
+				"enable_thinking": true
 			},
 			{
-				"model": "gpt-5.1-codex-mini(medium)",
-				"provider": "CLIProxyAPI"
+				"model": "gpt-5.4-mini",
+				"provider": "openai",
+				"effort": "high",
+				"speed": "standard",
+				"enable_thinking": true
 			}
 		],
 		"default_profile": "minimal",
 		"tool_permissions": {
 			"default": "allow"
 		},
-		"button": false,
-		"default_width": 540
+		"button": true,
+		"default_width": 540,
+		"commit_message_include_project_rules": true,
+		"sidebar_side": "left",
+		"limit_content_width": true,
+		"max_content_width": 850,
+		"auto_compact": {
+			"enabled": true,
+			"threshold": "90%"
+		},
+		"profiles": {
+			"write": {
+				"name": "Write",
+				"enable_all_context_servers": true,
+				"tools": {
+					"copy_path": true,
+					"create_directory": true,
+					"create_thread": true,
+					"delete_path": true,
+					"diagnostics": true,
+					"apply_code_action": true,
+					"edit_file": true,
+					"write_file": true,
+					"fetch": true,
+					"find_path": true,
+					"find_references": true,
+					"get_code_actions": true,
+					"go_to_definition": true,
+					"list_agents_and_models": true,
+					"list_directory": true,
+					"move_path": true,
+					"rename_symbol": true,
+					"read_file": true,
+					"grep": true,
+					"skill": true,
+					"spawn_agent": true,
+					"terminal": true,
+					"search_web": true
+				}
+			},
+			"ask": {
+				"name": "Ask",
+				"tools": {
+					"create_thread": true,
+					"diagnostics": true,
+					"fetch": true,
+					"list_agents_and_models": true,
+					"list_directory": true,
+					"find_path": true,
+					"find_references": true,
+					"get_code_actions": true,
+					"go_to_definition": true,
+					"read_file": true,
+					"grep": true,
+					"skill": true,
+					"spawn_agent": true,
+					"search_web": true
+				}
+			},
+			"minimal": {
+				"name": "Minimal",
+				"enable_all_context_servers": false,
+				"tools": {}
+			}
+		},
+		"terminal_init_command": "",
+		"thinking_display": "auto",
+		"show_merge_conflict_indicator": true
 	},
 	"agent_servers": {},
 	"lsp": {
