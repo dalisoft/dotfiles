@@ -34,8 +34,8 @@
 	"bottom_dock_layout": "contained",
 	"title_bar": {
 		"show_menus": true,
-
-		"show_branch_status_icon": true
+		"show_branch_status_icon": true,
+		"button_layout": "platform_default"
 	},
 	"go_to_definition_fallback": "none",
 	"toolbar": {
@@ -49,14 +49,17 @@
 	"icon_theme": "Material Icon Theme",
 	"telemetry": {
 		"diagnostics": false,
-		"metrics": false
+		"metrics": false,
+		"anthropic_retention": false
 	},
 	"git": {
 		"inline_blame": {
 			"delay_ms": 0,
 			"show_commit_summary": true,
-			"enabled": false
-		}
+			"enabled": true,
+			"location": "status_bar"
+		},
+		"show_stage_restore_buttons": true
 	},
 	"base_keymap": "VSCode",
 	"theme": "Quiet Light",
