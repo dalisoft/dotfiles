@@ -146,6 +146,32 @@
 	"soft_wrap": "bounded",
 	"hard_tabs": false,
 	"tab_size": 2,
+	"markdown_preview": {
+		"limit_content_width": true,
+		"max_width": 800
+	},
+	"hover_popover_sticky": true,
+	"hover_popover_hiding_delay": 300,
+	"cli_default_open_behavior": "existing_window",
+	"default_open_behavior": "existing_window",
+	"focus_follows_mouse": {
+		"enabled": false,
+		"debounce_ms": 250
+	},
+	"completion_menu_item_kind": "off",
+	"minimum_split_diff_width": 100,
+	"go_to_definition_scroll_strategy": "center",
+	"mouse_wheel_zoom": false,
+	"file_finder": {
+		"include_channels": false
+	},
+	"line_ending": "detect",
+	"modeline_lines": 5,
+	"lsp_document_links": true,
+	"scan_symlinks": "expanded",
+	"status_bar": {
+		"show_active_file": false
+	},
 	"prettier": {
 		"allowed": false
 	},
