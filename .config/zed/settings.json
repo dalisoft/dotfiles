@@ -403,6 +403,27 @@
 			"formatter": {
 				"language_server": { "name": "biome" }
 			}
+	"vim": {
+		"use_regex_search": true,
+		"show_edit_predictions_in_normal_mode": false
+	},
+	"nightly": {
+		"instrumentation": {
+			"performance_profiler": {
+				"enabled": true
+			}
+		}
+	},
+	"dev": {
+		"instrumentation": {
+			"performance_profiler": {
+				"enabled": true
+			}
+		}
+	},
+	"instrumentation": {
+		"performance_profiler": {
+			"enabled": false
 		}
 	}
 }
