@@ -7,9 +7,6 @@ working_directory = "None"
 live_config_reload = true
 ipc_socket = true
 
-[env]
-term = "xterm-256color"
-
 [window]
 opacity = 1
 blur = false
@@ -19,7 +16,7 @@ decorations = "Full"
 startup_mode = "Windowed"
 dynamic_title = true
 decorations_theme_variant = "None"
-resize_increments = false
+resize_increments = true
 option_as_alt = "OnlyLeft"
 level = "Normal"
 
