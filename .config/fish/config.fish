@@ -25,9 +25,6 @@ set -gx NEXT_TELEMETRY_DISABLED 1 # Disable Next.js global tracking
 set -gx HOMEBREW_NO_REQUIRE_TAP_TRUST 1 # Allow all taps be trusted
 set -gx HOMEBREW_NO_ASK 1 # Allow upgrades without ask
 
-# Updater settings
-set -gx DISABLE_AUTOUPDATER 1
-
 # Ollama
 set -gx OLLAMA_FLASH_ATTENTION 1
 set -gx OLLAMA_KV_CACHE_TYPE q8_0
@@ -70,20 +67,53 @@ set -gx ANDROID_HOME "$HOME/Library/Android/sdk"
 set -gx ANDROID_SDK_ROOT "$HOME/Library/Android/sdk"
 set -gx ANDROID_AVD_HOME "$HOME/.android/avd"
 
-# Claude Code
-set -gx CLAUDE_BASH_TIMEOUT 86400
-set -gx CLAUDE_MAX_EXECUTION_TIME 86400
+# ********************************
+# ********* Claude Code **********
+# ********************************
+
+# Bash commands
+set -gx BASH_DEFAULT_TIMEOUT_MS 86400
+set -gx BASH_MAX_TIMEOUT_MS 86400
+
+# Model API connections
+set -gx API_TIMEOUT_MS 3000000
+set -gx CLAUDE_CODE_PROXY_RESOLVES_HOSTS true
+
+# Updater settings
+set -gx DISABLE_AUTOUPDATER 1
+set -gx FORCE_AUTOUPDATE_PLUGINS false
+
+# Privacy
+set -gx CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY 1
+set -gx DISABLE_FEEDBACK_COMMAND 1
+set -gx DISABLE_ERROR_REPORTING 1
+set -gx DISABLE_TELEMETRY 1
+
+# Memory
+set -gx CLAUDE_CODE_DISABLE_AUTO_MEMORY 1
+
+# Skills
+set -gx CLAUDE_CODE_DISABLE_BUNDLED_SKILLS 1
+
+# Local AI models caching
+# See link for more info
+# https://unsloth.ai/docs/basics/claude-code#fixing-90-slower-inference-in-claude-code
 set -gx CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC 1
 set -gx CLAUDE_CODE_ATTRIBUTION_HEADER 0
-set -gx CLAUDE_CODE_NO_FLICKER 1
+set -gx CLAUDE_CODE_ENABLE_TELEMETRY 0
+
+# Disk performance
+set -gx CLAUDE_CODE_DISABLE_FILE_CHECKPOINTING 1
+
+# TUI performance
 set -gx CLAUDE_CODE_DISABLE_ALTERNATE_SCREEN 0
+set -gx CLAUDE_CODE_NO_FLICKER 1
+
+# Model behavior
 set -gx CLAUDE_CODE_DISABLE_1M_CONTEXT 1
-set -gx CLAUDE_CODE_PROXY_RESOLVES_HOSTS true
-set -gx DISABLE_TELEMETRY 1
-set -gx DISABLE_ERROR_REPORTING 1
-set -gx API_TIMEOUT_MS 3000000
+
+# Tool calling improvements
 set -gx ENABLE_TOOL_SEARCH true
-set -gx FORCE_AUTOUPDATE_PLUGINS true
 
 # ********************************
 # ********* PATH of env **********
