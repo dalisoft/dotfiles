@@ -4,8 +4,6 @@
 
 ## Variables
 set -gx fish_greeting ""
-set -gx TERM xterm-256color
-set -gx COLORTERM truecolor
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 
