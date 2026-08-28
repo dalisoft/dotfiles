@@ -1,0 +1,47 @@
+modelRoles:
+  default: openai-codex/gpt-5.6-sol
+symbolPreset: unicode
+composer:
+  shape: pi
+theme:
+  dark: titanium
+  light: light
+setupVersion: 2
+statusLine:
+  preset: default
+  transparent: true
+  compactThinkingLevel: true
+display:
+  showTokenUsage: true
+  showTurnTime: true
+  cacheMissMarker: true
+task:
+  showResolvedModelBadge: true
+  eager: default
+  enableEffort: false
+  isolation:
+    mode: auto
+    commits: generic
+tui:
+  resizeScrollback: rebuild
+  textSizing: true
+  renderMermaid: false
+  hyperlinks: always
+  tight: true
+defaultThinkingLevel: medium
+hideThinkingBlock: true
+omitThinking: true
+modelRoleStorage: global
+inlineToolDescriptors: auto
+advisor:
+  enabled: true
+  syncBacklog: "5"
+prewalk:
+  enabled: true
+plan:
+  defaultOnStartup: true
+goal:
+  enabled: false
+  statusInFooter: false
+title:
+  refreshOnReplan: false

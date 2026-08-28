@@ -1,0 +1,6 @@
+# Track OMP configuration; keep generated state, history, caches, and binaries local.
+*
+!.gitignore
+!agent/
+agent/*
+!agent/config.yml
