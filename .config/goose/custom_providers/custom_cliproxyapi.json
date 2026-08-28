@@ -117,9 +117,9 @@
     {
       "name": "antigravity/gemini-3.1-flash-image",
       "context_limit": 65536,
-      "input_token_cost": null,
-      "output_token_cost": null,
-      "currency": null,
+      "input_token_cost": 0.0000005,
+      "output_token_cost": 0.00006,
+      "currency": "USD",
       "supports_cache_control": false,
       "reasoning": true
     },
@@ -323,10 +323,10 @@
     },
     {
       "name": "gemini-3.1-pro-low",
-      "context_limit": 1048576,
-      "input_token_cost": null,
-      "output_token_cost": null,
-      "currency": null,
+      "context_limit": 200000,
+      "input_token_cost": 0.000002,
+      "output_token_cost": 0.000012,
+      "currency": "USD",
       "supports_cache_control": true,
       "reasoning": true
     },
@@ -486,9 +486,9 @@
     {
       "name": "antigravity/gemini-3.1-flash-lite",
       "context_limit": 1048576,
-      "input_token_cost": null,
-      "output_token_cost": null,
-      "currency": null,
+      "input_token_cost": 0.00000025,
+      "output_token_cost": 0.0000015,
+      "currency": "USD",
       "supports_cache_control": true,
       "reasoning": true
     },
@@ -531,18 +531,18 @@
     {
       "name": "antigravity/gemini-3.5-flash-medium",
       "context_limit": 1048576,
-      "input_token_cost": null,
-      "output_token_cost": null,
-      "currency": null,
+      "input_token_cost": 0.0000015,
+      "output_token_cost": 0.000009,
+      "currency": "USD",
       "supports_cache_control": true,
       "reasoning": true
     },
     {
       "name": "antigravity/gemini-3.5-flash-low",
       "context_limit": 1048576,
-      "input_token_cost": null,
-      "output_token_cost": null,
-      "currency": null,
+      "input_token_cost": 0.0000015,
+      "output_token_cost": 0.000009,
+      "currency": "USD",
       "supports_cache_control": true,
       "reasoning": true
     },
@@ -584,10 +584,10 @@
     },
     {
       "name": "antigravity/gemini-3.1-pro-agent-high",
-      "context_limit": 1048576,
-      "input_token_cost": null,
-      "output_token_cost": null,
-      "currency": null,
+      "context_limit": 200000,
+      "input_token_cost": 0.000002,
+      "output_token_cost": 0.000012,
+      "currency": "USD",
       "supports_cache_control": true,
       "reasoning": true
     }
@@ -601,10 +601,11 @@
   "env_vars": null,
   "dynamic_models": null,
   "skip_canonical_filtering": false,
-  "model_doc_link": "https://models.dev/",
+  "model_doc_link": "https://models.dev/models/",
   "setup_steps": [
     "Set CUSTOM_CLIPROXYAPI_API_KEY in your environment.",
-    "Model costs are USD per token where the route is metered; subscription, router, image, audio, and realtime routes use null costs."
+    "Model costs are USD per token where the route is metered; subscription, router, image, audio, and realtime routes use null costs.",
+    "Gemini alias costs use canonical Google Gemini Developer API Standard rates; Antigravity subscription billing may differ. Gemini 3.1 Flash Image output cost uses the image-token rate."
   ],
   "fast_model": "opencode-go/deepseek-v4-flash",
   "preserves_thinking": true
