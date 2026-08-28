@@ -59,6 +59,9 @@
   "showHardwareCursor": false,
   "skills": [],
   "steeringMode": "all",
+  "subagents": {
+    "projectRootResolution": "git-root"
+  },
   "terminal": {
     "clearOnShrink": false,
     "hyperlinks": true,
