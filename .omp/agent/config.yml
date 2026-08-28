@@ -45,3 +45,20 @@ goal:
   statusInFooter: false
 title:
   refreshOnReplan: false
+tools:
+  xdev: false
+  xdevDocs: builtins
+dev:
+  autoqa: false
+astGrep:
+  enabled: true
+security:
+  enabled: true
+python:
+  kernelMode: session
+edit:
+  mode: hashline
+readLineNumbers: true
+lsp:
+  enabled: false
+  formatOnWrite: true
