@@ -24,7 +24,7 @@
   "fullscreenCopyOnSelect": true,
   "fullscreenExitOutput": "transcript",
   "fullscreenScrollbar": "auto",
-  "hideThinkingBlock": false,
+  "hideThinkingBlock": true,
   "httpIdleTimeoutMs": 300000,
   "images": {
     "autoResize": true,
@@ -33,7 +33,7 @@
   "lastChangelogVersion": "0.84.3",
   "markdown": {
     "codeBlockIndent": "  ",
-    "mermaid": "streaming"
+    "mermaid": "off"
   },
   "modelThinkingLevels": {
     "openai-codex/gpt-5.5": "medium",
