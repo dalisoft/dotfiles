@@ -1,4 +1,5 @@
 {
+  "autocompleteMaxVisible": 3,
   "branchSummary": {
     "reserveTokens": 16384,
     "skipPrompt": false
@@ -6,50 +7,74 @@
   "collapseChangelog": false,
   "compaction": {
     "enabled": true,
-    "reserveTokens": 16384,
-    "keepRecentTokens": 20000
+    "keepRecentTokens": 20000,
+    "reserveTokens": 16384
   },
   "defaultModel": "gpt-5.6-sol",
   "defaultProjectTrust": "never",
   "defaultProvider": "openai-codex",
   "doubleEscapeAction": "tree",
+  "editorPaddingX": 0,
+  "enableAnalytics": false,
   "enableInstallTelemetry": false,
+  "enableSkillCommands": true,
+  "extensions": [],
   "externalEditor": "code --wait",
   "followUpMode": "one-at-a-time",
+  "fullscreenCopyOnSelect": true,
   "fullscreenExitOutput": "transcript",
   "fullscreenScrollbar": "auto",
   "hideThinkingBlock": false,
+  "httpIdleTimeoutMs": 300000,
   "images": {
+    "autoResize": true,
     "blockImages": false
   },
   "lastChangelogVersion": "0.84.3",
   "markdown": {
+    "codeBlockIndent": "  ",
     "mermaid": "streaming"
   },
   "modelThinkingLevels": {
     "openai-codex/gpt-5.5": "medium",
-    "openai-codex/gpt-5.6-sol": "medium",
     "openai-codex/gpt-5.6-luna": "xhigh",
+    "openai-codex/gpt-5.6-sol": "medium",
     "openai-codex/gpt-5.6-terra": "high"
   },
+  "outputPad": 1,
+  "packages": [],
+  "prompts": [],
   "quietStartup": true,
   "retry": {
+    "baseDelayMs": 2000,
     "enabled": false,
     "maxRetries": 0,
-    "baseDelayMs": 2000,
     "provider": {
-      "timeoutMs": 3600000,
       "maxRetries": 0,
-      "maxRetryDelayMs": 60000
+      "maxRetryDelayMs": 60000,
+      "timeoutMs": 3600000
     }
   },
   "showCacheMissNotices": true,
+  "showHardwareCursor": false,
+  "skills": [],
   "steeringMode": "all",
+  "terminal": {
+    "clearOnShrink": false,
+    "hyperlinks": true,
+    "imageWidthCells": 60,
+    "images": "kitty",
+    "showImages": true,
+    "trueColor": true
+  },
   "theme": "light/dark",
+  "themes": [],
+  "thinkingBudgets": {},
   "transport": "auto",
   "treeFilterMode": "default",
   "tuiMode": "fullscreen",
   "warnings": {
     "anthropicExtraUsage": false
-  }
+  },
+  "websocketConnectTimeoutMs": 15000
 }
