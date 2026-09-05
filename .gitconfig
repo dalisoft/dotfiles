@@ -4,6 +4,7 @@
 	preloadIndex = true
 	fsmonitor = false
 	untrackedCache = false
+	attributesFile = ~/.gitattributes
 [pager]
 	difftool = true
 [feature]
@@ -97,12 +98,16 @@
 	true-color = always
 [merge]
 	conflictStyle = zdiff3
+	renames = true
+	tool = meld
+	guitool = meld
 [merge "mergiraf"]
 	name = mergiraf
 	driver = mergiraf merge --git %O %A %B -s %S -x %X -y %Y -p %P -l %L
 [mergetool]
 	prompt = false
 	keepBackup = false
+	hideResolved = true
 [mergetool "meld"]
 	cmd = meld "$LOCAL" "$MERGED" "$REMOTE" --output="$MERGED"
 [mergetool "kdiff3"]
@@ -112,6 +117,10 @@
 	ignoredHook = false
 [rerere]
 	enabled = true
+	autoUpdate = false
+[gc]
+	rerereResolved = 365
+	rerereUnresolved = 30
 [column]
 	ui = auto
 [url "ssh://git@"]

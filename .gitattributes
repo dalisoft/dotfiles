@@ -1,6 +1,6 @@
 # Automatically normalize line endings for all text-based files
 # http://git-scm.com/docs/gitattributes#_end_of_line_conversion
-* text=auto merge=mergiraf
+* text=auto eol=lf merge=mergiraf
 
 # For the following file types, normalize line endings to LF on
 # checkin and prevent conversion to CRLF when they are checked out
