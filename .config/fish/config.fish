@@ -103,7 +103,7 @@ set -gx CLAUDE_CODE_DISABLE_BUNDLED_SKILLS 1
 # Local AI models caching
 # See link for more info
 # https://unsloth.ai/docs/basics/claude-code#fixing-90-slower-inference-in-claude-code
-set -gx CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC 1
+# set -gx CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC 1 # Required for Remote control
 set -gx CLAUDE_CODE_ATTRIBUTION_HEADER 0
 set -gx CLAUDE_CODE_ENABLE_TELEMETRY 0
 
