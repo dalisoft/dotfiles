@@ -117,7 +117,7 @@
           "id": "vercel/alibaba/qwen3.8-max-0902",
           "name": "[QA] Qwen3.8 Max",
           "limit": {
-            "context": 262144,
+            "context": 1000000,
             "output": 65536
           },
           "modalities": {
@@ -129,7 +129,7 @@
           "id": "vercel/alibaba/qwen3.7-max",
           "name": "[QA] Qwen3.7 Max",
           "limit": {
-            "context": 262144,
+            "context": 1000000,
             "output": 65536
           },
           "modalities": {
