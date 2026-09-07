@@ -1,5 +1,27 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "code-reviewer": {
+      "description": "Reviews code for best practices and potential issues",
+      "mode": "subagent",
+      "model": "opencode-go/kimi-k3",
+      "permission": {
+        "bash": "deny",
+        "edit": "deny",
+        "glob": "allow",
+        "grep": "allow",
+        "lsp": "deny",
+        "question": "deny",
+        "read": "allow",
+        "skill": "deny",
+        "todowrite": "deny",
+        "webfetch": "deny",
+        "websearch": "deny"
+      },
+      "prompt": "You are a code reviewer. Focus on security, performance, and maintainability.",
+      "variant": "max"
+    }
+  },
   "attachment": {
     "image": {
       "auto_resize": true,
@@ -22,14 +44,13 @@
   "mcp": {},
   "mode": {
     "build": {
-      "model": "opencode-go/deepseek-v4-flash",
       "mode": "primary",
-      "variant": "max",
+      "model": "opencode-go/deepseek-v4-flash",
       "permission": {
         "bash": {
           "*": "ask",
-          "git status *": "allow",
-          "git diff *": "allow"
+          "git diff *": "allow",
+          "git status *": "allow"
         },
         "edit": "allow",
         "glob": "allow",
@@ -41,12 +62,12 @@
         "todowrite": "allow",
         "webfetch": "allow",
         "websearch": "allow"
-      }
+      },
+      "variant": "max"
     },
     "plan": {
-      "model": "openai/gpt-5.6-sol",
       "mode": "primary",
-      "variant": "medium",
+      "model": "openai/gpt-5.6-sol",
       "permission": {
         "bash": "deny",
         "edit": "deny",
@@ -59,27 +80,8 @@
         "todowrite": "allow",
         "webfetch": "allow",
         "websearch": "deny"
-      }
-    },
-    "code-reviewer": {
-      "description": "Reviews code for best practices and potential issues",
-      "mode": "subagent",
-      "model": "opencode-go/kimi-k3",
-      "variant": "max",
-      "prompt": "You are a code reviewer. Focus on security, performance, and maintainability.",
-      "permission": {
-        "bash": "deny",
-        "edit": "deny",
-        "glob": "allow",
-        "grep": "allow",
-        "lsp": "deny",
-        "question": "deny",
-        "read": "allow",
-        "skill": "deny",
-        "todowrite": "deny",
-        "webfetch": "deny",
-        "websearch": "deny"
-      }
+      },
+      "variant": "medium"
     }
   },
   "permission": {
@@ -96,38 +98,11 @@
     "websearch": "allow"
   },
   "plugin": [],
-  "share": "disabled",
-  "shell": "fish",
-  "small_model": "opencode-go/mimo-v2.5",
-  "snapshot": true,
-  "subagent_depth": 1,
-  "watcher": {
-    "ignore": ["node_modules/**", "dist/**", ".git/**"]
-  },
   "provider": {
     "modelscope-ai": {
-      "npm": "@ai-sdk/openai-compatible",
-      "name": "ModelScope AI",
-      "options": {
-        "baseURL": "https://api-inference.modelscope.ai/v1",
-        "setCacheKey": true
-      },
       "models": {
-        "Qwen-Ambassador/Qwen3.8-Max": {
-          "id": "vercel/alibaba/qwen3.8-max-0902",
-          "name": "[QA] Qwen3.8 Max",
-          "limit": {
-            "context": 1000000,
-            "output": 65536
-          },
-          "modalities": {
-            "input": ["text", "image", "video"],
-            "output": ["text"]
-          }
-        },
         "Qwen-Ambassador/Qwen3.7-Max": {
           "id": "vercel/alibaba/qwen3.7-max",
-          "name": "[QA] Qwen3.7 Max",
           "limit": {
             "context": 1000000,
             "output": 65536
@@ -135,23 +110,11 @@
           "modalities": {
             "input": ["text"],
             "output": ["text"]
-          }
-        },
-        "Qwen-Ambassador/Qwen3.8-27B": {
-          "id": "vercel/alibaba/qwen3.8-27b",
-          "name": "[QA] Qwen3.8-27B",
-          "limit": {
-            "context": 262144,
-            "output": 65536
           },
-          "modalities": {
-            "input": ["text", "image", "video"],
-            "output": ["text"]
-          }
+          "name": "[QA] Qwen3.7 Max"
         },
         "Qwen-Ambassador/Qwen3.7-Plus": {
           "id": "vercel/alibaba/qwen3.7-plus",
-          "name": "[QA] Qwen3.7 Plus",
           "limit": {
             "context": 1000000,
             "output": 65536
@@ -159,9 +122,48 @@
           "modalities": {
             "input": ["text", "image"],
             "output": ["text"]
-          }
+          },
+          "name": "[QA] Qwen3.7 Plus"
+        },
+        "Qwen-Ambassador/Qwen3.8-27B": {
+          "id": "vercel/alibaba/qwen3.8-27b",
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          },
+          "modalities": {
+            "input": ["text", "image", "video"],
+            "output": ["text"]
+          },
+          "name": "[QA] Qwen3.8-27B"
+        },
+        "Qwen-Ambassador/Qwen3.8-Max": {
+          "id": "vercel/alibaba/qwen3.8-max-0902",
+          "limit": {
+            "context": 1000000,
+            "output": 65536
+          },
+          "modalities": {
+            "input": ["text", "image", "video"],
+            "output": ["text"]
+          },
+          "name": "[QA] Qwen3.8 Max"
         }
+      },
+      "name": "ModelScope AI",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "https://api-inference.modelscope.ai/v1",
+        "setCacheKey": true
       }
     }
+  },
+  "share": "disabled",
+  "shell": "fish",
+  "small_model": "opencode-go/mimo-v2.5",
+  "snapshot": true,
+  "subagent_depth": 1,
+  "watcher": {
+    "ignore": ["node_modules/**", "dist/**", ".git/**"]
   }
 }
