@@ -1,55 +1,107 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "shell": "fish",
-  "small_model": "opencode-go/mimo-v2.5",
-  "plugin": [],
+  "attachment": {
+    "image": {
+      "auto_resize": true,
+      "max_base64_bytes": 5242880,
+      "max_height": 800,
+      "max_width": 800
+    }
+  },
+  "autoshare": false,
+  "autoupdate": false,
+  "compaction": {
+    "auto": true,
+    "preserve_recent_tokens": 0,
+    "prune": false,
+    "reserved": 16384
+  },
+  "default_agent": "plan",
+  "formatter": false,
+  "lsp": false,
+  "mcp": {},
+  "mode": {
+    "build": {
+      "model": "opencode-go/deepseek-v4-flash",
+      "mode": "primary",
+      "variant": "max",
+      "permission": {
+        "bash": {
+          "*": "ask",
+          "git status *": "allow",
+          "git diff *": "allow"
+        },
+        "edit": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "lsp": "deny",
+        "question": "ask",
+        "read": "allow",
+        "skill": "allow",
+        "todowrite": "allow",
+        "webfetch": "allow",
+        "websearch": "allow"
+      }
+    },
+    "plan": {
+      "model": "openai/gpt-5.6-sol",
+      "mode": "primary",
+      "variant": "medium",
+      "permission": {
+        "bash": "deny",
+        "edit": "deny",
+        "glob": "allow",
+        "grep": "allow",
+        "lsp": "deny",
+        "question": "allow",
+        "read": "allow",
+        "skill": "deny",
+        "todowrite": "allow",
+        "webfetch": "allow",
+        "websearch": "deny"
+      }
+    },
+    "code-reviewer": {
+      "description": "Reviews code for best practices and potential issues",
+      "mode": "subagent",
+      "model": "opencode-go/kimi-k3",
+      "variant": "max",
+      "prompt": "You are a code reviewer. Focus on security, performance, and maintainability.",
+      "permission": {
+        "bash": "deny",
+        "edit": "deny",
+        "glob": "allow",
+        "grep": "allow",
+        "lsp": "deny",
+        "question": "deny",
+        "read": "allow",
+        "skill": "deny",
+        "todowrite": "deny",
+        "webfetch": "deny",
+        "websearch": "deny"
+      }
+    }
+  },
   "permission": {
     "bash": "ask",
     "edit": "allow",
     "glob": "allow",
     "grep": "allow",
     "lsp": "deny",
+    "question": "allow",
     "read": "allow",
     "skill": "allow",
-    "question": "allow",
     "todowrite": "allow",
     "webfetch": "allow",
-    "websearch": "allow",
+    "websearch": "allow"
   },
-  "lsp": false,
-  "formatter": false,
-  "attachment": {
-    "image": {
-      "auto_resize": true,
-      "max_width": 800,
-      "max_height": 800,
-      "max_base64_bytes": 5242880
-    }
-  },
-  "default_agent": "plan",
-  "subagent_depth": 1,
-  "mode": {
-    "plan": {
-      "model": "openai/gpt-5.6-sol",
-      "variant": "medium"
-    },
-    "build": {
-      "model": "opencode-go/deepseek-v4-flash",
-      "variant": "max"
-    }
-  },
+  "plugin": [],
   "share": "disabled",
-  "autoshare": false,
-  "compaction": {
-    "auto": true,
-    "prune": false,
-    "reserved": 16384,
-    "preserve_recent_tokens": 0
-  },
+  "shell": "fish",
+  "small_model": "opencode-go/mimo-v2.5",
   "snapshot": true,
-  "autoupdate": false,
+  "subagent_depth": 1,
   "watcher": {
     "ignore": ["node_modules/**", "dist/**", ".git/**"]
-  },
-  "mcp": {}
+  }
 }
