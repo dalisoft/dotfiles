@@ -114,6 +114,7 @@
       },
       "models": {
         "Qwen-Ambassador/Qwen3.8-Max": {
+          "id": "vercel/alibaba/qwen3.8-max-0902",
           "name": "[QA] Qwen3.8 Max",
           "limit": {
             "context": 262144,
@@ -125,6 +126,7 @@
           }
         },
         "Qwen-Ambassador/Qwen3.7-Max": {
+          "id": "vercel/alibaba/qwen3.7-max",
           "name": "[QA] Qwen3.7 Max",
           "limit": {
             "context": 262144,
