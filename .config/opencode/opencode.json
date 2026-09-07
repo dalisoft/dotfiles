@@ -103,5 +103,63 @@
   "subagent_depth": 1,
   "watcher": {
     "ignore": ["node_modules/**", "dist/**", ".git/**"]
+  },
+  "provider": {
+    "modelscope-ai": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "ModelScope AI",
+      "options": {
+        "baseURL": "https://api-inference.modelscope.ai/v1",
+        "setCacheKey": true
+      },
+      "models": {
+        "Qwen-Ambassador/Qwen3.8-Max": {
+          "name": "[QA] Qwen3.8 Max",
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          },
+          "modalities": {
+            "input": ["text", "image", "video"],
+            "output": ["text"]
+          }
+        },
+        "Qwen-Ambassador/Qwen3.7-Max": {
+          "name": "[QA] Qwen3.7 Max",
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          },
+          "modalities": {
+            "input": ["text"],
+            "output": ["text"]
+          }
+        },
+        "Qwen-Ambassador/Qwen3.8-27B": {
+          "id": "vercel/alibaba/qwen3.8-27b",
+          "name": "[QA] Qwen3.8-27B",
+          "limit": {
+            "context": 262144,
+            "output": 65536
+          },
+          "modalities": {
+            "input": ["text", "image", "video"],
+            "output": ["text"]
+          }
+        },
+        "Qwen-Ambassador/Qwen3.7-Plus": {
+          "id": "vercel/alibaba/qwen3.7-plus",
+          "name": "[QA] Qwen3.7 Plus",
+          "limit": {
+            "context": 1000000,
+            "output": 65536
+          },
+          "modalities": {
+            "input": ["text", "image"],
+            "output": ["text"]
+          }
+        }
+      }
+    }
   }
 }
