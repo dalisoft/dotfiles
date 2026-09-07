@@ -130,6 +130,21 @@ set -gx CLAUDE_CODE_ALWAYS_ENABLE_EFFORT 1
 set -gx ENABLE_TOOL_SEARCH 1
 
 # ********************************
+# ********** OpenCode ************
+# ********************************
+
+# Web search
+set -gx OPENCODE_ENABLE_EXA 1
+
+# Parallel tools
+set -gx OPENCODE_ENABLE_PARALLEL 1
+
+# Claude Code compat disable
+set -gx OPENCODE_DISABLE_CLAUDE_CODE 1 # Disable all .claude support
+set -gx OPENCODE_DISABLE_CLAUDE_CODE_PROMPT 1 # Disable only ~/.claude/CLAUDE.md
+set -gx OPENCODE_DISABLE_CLAUDE_CODE_SKILLS 1 # Disable only .claude/skills
+
+# ********************************
 # ********* PATH of env **********
 # ********************************
 
