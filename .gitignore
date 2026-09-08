@@ -299,3 +299,17 @@ typings/
 
 # 1Password
 .config/op
+
+# Claude Code — allowlist: only settings.json is tracked.
+.claude/*
+!.claude/.gitkeep
+!.claude/settings.json
+.claude/settings.local.json
+
+# Claude Code — global state (OAuth account, email, project paths, machine IDs)
+.claude.json
+.claude.json.backup
+
+# Claude Desktop — config.json holds live OAuth tokens
+.config/claude-desktop/*
+!.config/claude-desktop/claude_desktop_config.json
