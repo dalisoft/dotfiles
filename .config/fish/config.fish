@@ -130,6 +130,9 @@ set -gx CLAUDE_CODE_ALWAYS_ENABLE_EFFORT 1
 # Tool calling improvements
 set -gx ENABLE_TOOL_SEARCH 1
 
+# Subscription (Pro/Max)
+set -gx DISABLE_EXTRA_USAGE_COMMAND 1
+
 # ********************************
 # ********** OpenCode ************
 # ********************************
