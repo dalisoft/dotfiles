@@ -72,8 +72,8 @@ set -gx ANDROID_AVD_HOME "$HOME/.android/avd"
 # ********************************
 
 # Bash commands
-set -gx BASH_DEFAULT_TIMEOUT_MS 86400
-set -gx BASH_MAX_TIMEOUT_MS 86400
+set -gx BASH_DEFAULT_TIMEOUT_MS 86400000
+set -gx BASH_MAX_TIMEOUT_MS 86400000
 
 # Model API connections
 set -gx API_TIMEOUT_MS 3000000
