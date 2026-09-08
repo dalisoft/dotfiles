@@ -11,6 +11,7 @@
 - On-demand commands
 - Auto ENV and PATH for apps
 - nFanCurve for Linux (NVIDIA GPU)
+- Versioned OpenCode and Pi configuration
 
 ## License
 
