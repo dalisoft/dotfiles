@@ -1,4 +1,5 @@
 {
+  "$schema": "https://www.schemastore.org/claude-code-settings.json",
   "respectGitignore": true,
   "env": {
     "BASH_DEFAULT_TIMEOUT_MS": "86400000",
@@ -32,7 +33,12 @@
     "CLAUDE_CODE_DISABLE_FAST_MODE": "1",
     "CLAUDE_CODE_ALWAYS_ENABLE_EFFORT": "1",
     "ENABLE_TOOL_SEARCH": "1",
-    "DISABLE_EXTRA_USAGE_COMMAND": "1"
+    "DISABLE_EXTRA_USAGE_COMMAND": "1",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet",
+    "CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS": "4",
+    "CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH": "1",
+    "CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION": "20",
+    "CLAUDE_CODE_SUBAGENT_MODEL_FORCE": "1"
   },
   "fallbackModel": [
     "sonnet"

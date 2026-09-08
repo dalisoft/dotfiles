@@ -133,6 +133,13 @@ set -gx ENABLE_TOOL_SEARCH 1
 # Subscription (Pro/Max)
 set -gx DISABLE_EXTRA_USAGE_COMMAND 1
 
+# Subagents
+set -gx CLAUDE_CODE_SUBAGENT_MODEL sonnet
+set -gx CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS 4
+set -gx CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH 1
+set -gx CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION 20
+set -gx CLAUDE_CODE_SUBAGENT_MODEL_FORCE 1
+
 # ********************************
 # ********** OpenCode ************
 # ********************************
