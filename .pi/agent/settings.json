@@ -14,7 +14,7 @@
   "defaultThinkingLevel": "medium",
   "defaultProjectTrust": "never",
   "defaultProvider": "openai-codex",
-  "defaultTools": ["bash", "edit", "write", "grep", "find", "ls"],
+  "defaultTools": ["bash", "edit", "find", "grep", "ls", "read", "write"],
   "doubleEscapeAction": "tree",
   "editorPaddingX": 0,
   "enableAnalytics": false,
