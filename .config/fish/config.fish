@@ -171,9 +171,9 @@ set -gx PI_TELEMETRY 0
 set -gx PI_CACHE_RETENTION long
 
 # Model behavior
-set -gx PI_PROVIDER openai-codex
-set -gx PI_MODEL "gpt-5.6-sol"
-set -gx PI_REASONING_LEVEL high
+set -gx PI_PROVIDER zai
+set -gx PI_MODEL "glm-5.3-flash"
+set -gx PI_REASONING_LEVEL max
 
 # TUI behavior
 set -gx PI_TRUE_COLOR 1

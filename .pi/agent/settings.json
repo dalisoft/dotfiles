@@ -10,10 +10,10 @@
     "keepRecentTokens": 20000,
     "reserveTokens": 16384
   },
-  "defaultModel": "gpt-5.6-sol",
+  "defaultModel": "glm-5.3-flash",
   "defaultProjectTrust": "never",
-  "defaultProvider": "openai-codex",
-  "defaultThinkingLevel": "high",
+  "defaultProvider": "zai",
+  "defaultThinkingLevel": "max",
   "defaultTools": [
     "bash",
     "edit",
@@ -50,7 +50,9 @@
     "openai-codex/gpt-5.6-luna": "max",
     "openai-codex/gpt-5.6-sol": "high",
     "openai-codex/gpt-5.6-terra": "xhigh",
-    "openai-codex/gpt-6-astra": "medium"
+    "openai-codex/gpt-6-astra": "medium",
+    "zai/glm-5.3": "max",
+    "zai/glm-5.3-flash": "max"
   },
   "outputPad": 1,
   "packages": [],
@@ -76,7 +78,7 @@
     "imageWidthCells": 60,
     "images": "kitty",
     "showImages": true,
-    "showTerminalProgress": true,
+    "showTerminalProgress": false,
     "trueColor": true
   },
   "theme": "light/dark",
