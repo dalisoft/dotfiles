@@ -180,6 +180,7 @@ set -gx PI_TRUE_COLOR 1
 set -gx PI_IMAGE_PROTOCOL kitty
 set -gx PI_HARDWARE_CURSOR 0
 set -gx PI_HYPERLINKS 1
+set -gx PI_TUI_ESC_TIMEOUT 50
 
 # ********************************
 # ********* PATH of env **********
