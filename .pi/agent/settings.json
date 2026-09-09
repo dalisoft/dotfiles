@@ -28,6 +28,10 @@
   "enableAnalytics": false,
   "enableInstallTelemetry": false,
   "enableSkillCommands": true,
+  "enabledModels": [
+    "zai/glm-5.3",
+    "zai/glm-5.3-flash"
+  ],
   "extensions": [],
   "externalEditor": "code --wait",
   "followUpMode": "one-at-a-time",
@@ -68,6 +72,7 @@
       "timeoutMs": 3600000
     }
   },
+  "sessionDir": "~/.pi/agent/sessions",
   "showCacheMissNotices": true,
   "showHardwareCursor": false,
   "skills": [],

@@ -208,6 +208,8 @@ set -gx PI_IMAGE_PROTOCOL kitty
 set -gx PI_HARDWARE_CURSOR 0
 set -gx PI_HYPERLINKS 1
 set -gx PI_TUI_ESC_TIMEOUT 50
+set -gx PI_CODING_AGENT_DIR ~/.pi/agent
+set -gx PI_SHARE_VIEWER_URL https://pi.dev/session/
 
 # Model behavior
 set -gx PI_PROVIDER zai
