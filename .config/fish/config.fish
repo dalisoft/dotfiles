@@ -70,6 +70,12 @@ set -gx ANDROID_AVD_HOME "$HOME/.android/avd"
 # ********************************
 # ********* Claude Code **********
 # ********************************
+# Structure:
+# Bash, Model API / connections, Updater settings
+# Privacy, IDE, Memory, Skills, Tricks / Optimizations
+# Disk performance, TUI performance, TUI behavior
+# Model behavior, Tool calling improvements
+# Subscriptions / Accounts, Subagents
 
 # Bash commands
 set -gx BASH_DEFAULT_TIMEOUT_MS 86400000
