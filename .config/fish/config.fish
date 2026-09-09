@@ -150,17 +150,37 @@ set -gx CLAUDE_CODE_SUBAGENT_MODEL_FORCE 1
 # ********************************
 # ********** OpenCode ************
 # ********************************
+# Structure:
+# Bash, Model API / connections, Updater settings
+# Privacy, IDE, Memory, Skills, Tricks / Optimizations
+# Disk performance, TUI performance, TUI behavior
+# Model behavior, Tool calling improvements
+# Subscriptions / Accounts, Subagents
 
-# Web search
+# Updater settings
+set -gx OPENCODE_DISABLE_AUTOUPDATE 1
+
+# Privacy
+set -gx OPENCODE_DISABLE_MODELS_FETCH 1
+set -gx OPENCODE_DISABLE_LSP_DOWNLOAD 1
+set -gx OPENCODE_AUTO_SHARE 0
+
+# Tool calling improvements
+set -gx OPENCODE_ENABLE_PARALLEL 1
 set -gx OPENCODE_ENABLE_EXA 1
 
-# Parallel tools
-set -gx OPENCODE_ENABLE_PARALLEL 1
-
 # Claude Code compat disable
-set -gx OPENCODE_DISABLE_CLAUDE_CODE 1 # Disable all .claude support
-set -gx OPENCODE_DISABLE_CLAUDE_CODE_PROMPT 1 # Disable only ~/.claude/CLAUDE.md
-set -gx OPENCODE_DISABLE_CLAUDE_CODE_SKILLS 1 # Disable only .claude/skills
+set -gx OPENCODE_DISABLE_CLAUDE_CODE 1
+set -gx OPENCODE_DISABLE_CLAUDE_CODE_PROMPT 1
+set -gx OPENCODE_DISABLE_CLAUDE_CODE_SKILLS 1
+
+# TUI performance
+set -gx OPENCODE_DISABLE_EMBEDDED_WEB_UI 1
+set -gx OPENCODE_DISABLE_DEFAULT_PLUGINS 0
+set -gx OPENCODE_DISABLE_EXTERNAL_SKILLS 1
+
+# TUI behavior
+set -gx OPENCODE_LOG_LEVEL ERROR
 
 # ********************************
 # ************** Pi **************

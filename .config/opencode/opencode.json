@@ -44,6 +44,7 @@
   "experimental": {},
   "formatter": false,
   "instructions": [],
+  "logLevel": "ERROR",
   "lsp": false,
   "mcp": {},
   "mode": {
@@ -88,6 +89,7 @@
       "variant": "high"
     }
   },
+  "model": "zai-coding-plan/glm-5.3",
   "permission": {
     "bash": "ask",
     "edit": "allow",
@@ -162,10 +164,15 @@
       }
     }
   },
+  "references": {},
   "share": "disabled",
   "shell": "fish",
-  "small_model": "opencode-go/mimo-v2.5",
-  "snapshot": true,
+  "skills": {
+    "paths": [],
+    "urls": []
+  },
+  "small_model": "zai-coding-plan/glm-5.3-flash",
+  "snapshot": false,
   "subagent_depth": 1,
   "watcher": {
     "ignore": ["node_modules/**", "dist/**", ".git/**"]
