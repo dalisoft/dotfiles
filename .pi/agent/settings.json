@@ -30,16 +30,17 @@
     "autoResize": true,
     "blockImages": false
   },
-  "lastChangelogVersion": "0.84.3",
+  "lastChangelogVersion": "0.85.1",
   "markdown": {
     "codeBlockIndent": "  ",
     "mermaid": "off"
   },
   "modelThinkingLevels": {
-    "openai-codex/gpt-5.5": "medium",
-    "openai-codex/gpt-5.6-luna": "xhigh",
-    "openai-codex/gpt-5.6-sol": "medium",
-    "openai-codex/gpt-5.6-terra": "high"
+    "openai-codex/gpt-5.5": "high",
+    "openai-codex/gpt-5.6-luna": "max",
+    "openai-codex/gpt-5.6-sol": "high",
+    "openai-codex/gpt-5.6-terra": "xhigh",
+    "openai-codex/gpt-6-astra": "medium"
   },
   "outputPad": 1,
   "packages": [],
