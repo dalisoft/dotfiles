@@ -50,8 +50,14 @@
   },
   "permissions": {
     "defaultMode": "auto",
-    "disableBypassPermissionsMode": "disable"
+    "disableBypassPermissionsMode": "disable",
+    "allow": [],
+    "ask": [],
+    "deny": []
   },
+  "hooks": {},
+  "cleanupPeriodDays": 90,
+  "autoMemoryEnabled": false,
   "model": "opus",
   "enabledPlugins": {},
   "spinnerTipsEnabled": false,
