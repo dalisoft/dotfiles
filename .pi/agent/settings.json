@@ -11,10 +11,18 @@
     "reserveTokens": 16384
   },
   "defaultModel": "gpt-5.6-sol",
-  "defaultThinkingLevel": "high",
   "defaultProjectTrust": "never",
   "defaultProvider": "openai-codex",
-  "defaultTools": ["bash", "edit", "find", "grep", "ls", "read", "write"],
+  "defaultThinkingLevel": "high",
+  "defaultTools": [
+    "bash",
+    "edit",
+    "find",
+    "grep",
+    "ls",
+    "read",
+    "write"
+  ],
   "doubleEscapeAction": "tree",
   "editorPaddingX": 0,
   "enableAnalytics": false,
