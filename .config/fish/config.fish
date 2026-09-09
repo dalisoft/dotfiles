@@ -159,8 +159,14 @@ set -gx OPENCODE_DISABLE_CLAUDE_CODE_SKILLS 1 # Disable only .claude/skills
 # ********************************
 # ************** Pi **************
 # ********************************
+# Structure:
+# Bash, Model API / connections, Updater settings
+# Privacy, IDE, Memory, Skills, Tricks / Optimizations
+# Disk performance, TUI performance, TUI behavior
+# Model behavior, Tool calling improvements
+# Subscriptions / Accounts, Subagents
 
-# Disable version check
+# Updater settings
 set -gx PI_SKIP_VERSION_CHECK 1
 
 # Privacy
@@ -170,17 +176,17 @@ set -gx PI_TELEMETRY 0
 # TUI performance
 set -gx PI_CACHE_RETENTION long
 
-# Model behavior
-set -gx PI_PROVIDER zai
-set -gx PI_MODEL "glm-5.3-flash"
-set -gx PI_REASONING_LEVEL max
-
 # TUI behavior
 set -gx PI_TRUE_COLOR 1
 set -gx PI_IMAGE_PROTOCOL kitty
 set -gx PI_HARDWARE_CURSOR 0
 set -gx PI_HYPERLINKS 1
 set -gx PI_TUI_ESC_TIMEOUT 50
+
+# Model behavior
+set -gx PI_PROVIDER zai
+set -gx PI_MODEL "glm-5.3-flash"
+set -gx PI_REASONING_LEVEL max
 
 # ********************************
 # ********* PATH of env **********
