@@ -42,6 +42,10 @@
   "formatter": false,
   "lsp": false,
   "mcp": {},
+  "command": {},
+  "instructions": [],
+  "experimental": {},
+  "disabled_providers": [],
   "mode": {
     "build": {
       "mode": "primary",
