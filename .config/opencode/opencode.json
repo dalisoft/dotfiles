@@ -41,6 +41,13 @@
   },
   "default_agent": "plan",
   "disabled_providers": [],
+  "enabled_providers": [
+    "modelscope-ai",
+    "openai",
+    "opencode",
+    "opencode-go",
+    "zai-coding-plan"
+  ],
   "experimental": {},
   "formatter": false,
   "instructions": [],
@@ -175,6 +182,10 @@
   "small_model": "zai-coding-plan/glm-5.3-flash",
   "snapshot": false,
   "subagent_depth": 1,
+  "tool_output": {
+    "max_bytes": 51200,
+    "max_lines": 2000
+  },
   "tools": {},
   "username": "dalisoft",
   "watcher": {
