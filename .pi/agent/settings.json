@@ -69,6 +69,7 @@
     "imageWidthCells": 60,
     "images": "kitty",
     "showImages": true,
+    "showTerminalProgress": true,
     "trueColor": true
   },
   "theme": "light/dark",
