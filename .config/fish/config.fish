@@ -165,6 +165,21 @@ set -gx PI_SKIP_VERSION_CHECK 1
 
 # Privacy
 set -gx PI_OFFLINE 1
+set -gx PI_TELEMETRY 0
+
+# TUI performance
+set -gx PI_CACHE_RETENTION long
+
+# Model behavior
+set -gx PI_PROVIDER openai-codex
+set -gx PI_MODEL "gpt-5.6-sol"
+set -gx PI_REASONING_LEVEL high
+
+# TUI behavior
+set -gx PI_TRUE_COLOR 1
+set -gx PI_IMAGE_PROTOCOL kitty
+set -gx PI_HARDWARE_CURSOR 0
+set -gx PI_HYPERLINKS 1
 
 # ********************************
 # ********* PATH of env **********
