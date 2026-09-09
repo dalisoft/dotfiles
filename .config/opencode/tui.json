@@ -1,21 +1,28 @@
 {
   "$schema": "https://opencode.ai/tui.json",
-  "keybinds": {},
-  "scroll_speed": 3,
-  "scroll_acceleration": {
-    "enabled": true
-  },
-  "theme": "system",
-  "diff_style": "auto",
-  "cursor": {
-    "style": "block",
-    "blinking": true
-  },
-  "mouse": true,
   "attention": {
     "enabled": true,
     "notifications": true,
     "sound": true,
     "volume": 0.4
-  }
+  },
+  "cursor": {
+    "blinking": true,
+    "style": "block"
+  },
+  "diff_style": "auto",
+  "keybinds": {},
+  "leader_timeout": 1000,
+  "mouse": true,
+  "plugin": [],
+  "plugin_enabled": {},
+  "prompt": {
+    "max_height": 10,
+    "max_width": "auto"
+  },
+  "scroll_acceleration": {
+    "enabled": true
+  },
+  "scroll_speed": 3,
+  "theme": "system"
 }

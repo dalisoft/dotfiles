@@ -32,6 +32,7 @@
   },
   "autoshare": false,
   "autoupdate": false,
+  "command": {},
   "compaction": {
     "auto": true,
     "preserve_recent_tokens": 0,
@@ -39,13 +40,12 @@
     "reserved": 16384
   },
   "default_agent": "plan",
+  "disabled_providers": [],
+  "experimental": {},
   "formatter": false,
+  "instructions": [],
   "lsp": false,
   "mcp": {},
-  "command": {},
-  "instructions": [],
-  "experimental": {},
-  "disabled_providers": [],
   "mode": {
     "build": {
       "mode": "primary",
