@@ -11,6 +11,7 @@
     "reserveTokens": 16384
   },
   "defaultModel": "gpt-5.6-sol",
+  "defaultThinkingLevel": "medium",
   "defaultProjectTrust": "never",
   "defaultProvider": "openai-codex",
   "doubleEscapeAction": "tree",
@@ -72,6 +73,7 @@
   "theme": "light/dark",
   "themes": [],
   "thinkingBudgets": {},
+  "trackindId": "0000",
   "transport": "auto",
   "treeFilterMode": "default",
   "tuiMode": "fullscreen",
