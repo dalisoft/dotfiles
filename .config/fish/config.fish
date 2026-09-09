@@ -157,6 +157,16 @@ set -gx OPENCODE_DISABLE_CLAUDE_CODE_PROMPT 1 # Disable only ~/.claude/CLAUDE.md
 set -gx OPENCODE_DISABLE_CLAUDE_CODE_SKILLS 1 # Disable only .claude/skills
 
 # ********************************
+# ************** Pi **************
+# ********************************
+
+# Disable version check
+set -gx PI_SKIP_VERSION_CHECK 1
+
+# Privacy
+set -gx PI_OFFLINE 1
+
+# ********************************
 # ********* PATH of env **********
 # ********************************
 

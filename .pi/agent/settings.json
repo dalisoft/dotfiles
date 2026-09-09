@@ -78,7 +78,7 @@
   "treeFilterMode": "default",
   "tuiMode": "fullscreen",
   "warnings": {
-    "anthropicExtraUsage": false
+    "anthropicExtraUsage": true
   },
   "websocketConnectTimeoutMs": 15000
 }
