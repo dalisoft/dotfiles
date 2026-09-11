@@ -7,7 +7,7 @@
   },
   "autoMemoryEnabled": false,
   "autoUpdatesChannel": "stable",
-  "cleanupPeriodDays": 90,
+  "cleanupPeriodDays": 180,
   "companyAnnouncements": [],
   "disableDeepLinkRegistration": "disable",
   "effortLevel": "high",
