@@ -54,6 +54,7 @@
     "sonnet"
   ],
   "fastMode": false,
+  "fastModePerSessionOptIn": true,
   "hooks": {},
   "model": "opus",
   "permissions": {
