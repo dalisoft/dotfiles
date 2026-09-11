@@ -168,7 +168,7 @@ set -gx OPENCODE_AUTO_SHARE false
 # Tool calling improvements
 set -gx OPENCODE_ENABLE_PARALLEL 1
 set -gx OPENCODE_ENABLE_EXA 1
-set -gx OPENCODE_DISABLE_PRUNE 1
+set -e OPENCODE_DISABLE_PRUNE
 
 # Claude Code compat disable
 set -gx OPENCODE_DISABLE_CLAUDE_CODE 1
