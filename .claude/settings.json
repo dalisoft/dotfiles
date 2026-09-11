@@ -6,7 +6,7 @@
     "pr": ""
   },
   "autoMemoryEnabled": false,
-  "autoUpdatesChannel": "latest",
+  "autoUpdatesChannel": "stable",
   "cleanupPeriodDays": 90,
   "companyAnnouncements": [],
   "disableDeepLinkRegistration": "disable",
