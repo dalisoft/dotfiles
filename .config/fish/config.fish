@@ -183,7 +183,7 @@ set -e OPENCODE_FAST_BOOT
 
 # TUI behavior
 set -gx OPENCODE_LOG_LEVEL ERROR
-set -gx OPENCODE_DISABLE_MOUSE 1
+set -e OPENCODE_DISABLE_MOUSE
 
 # ********************************
 # ************** Pi **************

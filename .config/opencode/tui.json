@@ -13,7 +13,7 @@
   "diff_style": "auto",
   "keybinds": {},
   "leader_timeout": 1000,
-  "mouse": false,
+  "mouse": true,
   "plugin": [],
   "plugin_enabled": {},
   "prompt": {
