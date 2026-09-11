@@ -75,7 +75,7 @@
     },
     "plan": {
       "mode": "primary",
-      "model": "opencode-go/glm-5.1",
+      "model": "opencode-go/glm-5.3",
       "permission": {
         "bash": "deny",
         "edit": "deny",
