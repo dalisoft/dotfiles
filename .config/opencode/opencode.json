@@ -82,6 +82,7 @@
           "npx prettier*": "allow",
           "npx tsc*": "allow",
           "rm *": "deny",
+          "sort": "allow",
           "sudo *": "deny",
           "tail *": "allow",
         },
