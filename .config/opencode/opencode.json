@@ -35,9 +35,9 @@
   "command": {},
   "compaction": {
     "auto": true,
-    "preserve_recent_tokens": 8192,
+    "preserve_recent_tokens": 0,
     "prune": true,
-    "reserved": 32768
+    "reserved": 24576
   },
   "default_agent": "build",
   "disabled_providers": [],
