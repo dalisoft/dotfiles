@@ -61,6 +61,7 @@
           "gh api*": "allow",
           "gh pr list*": "allow",
           "gh pr view*": "allow",
+          "git add *": "allow",
           "git branch*": "allow",
           "git commit *": "ask",
           "git diff*": "allow",
