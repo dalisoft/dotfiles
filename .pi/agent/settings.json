@@ -9,8 +9,8 @@
   "compaction": {
     "enabled": true,
     "keepRecentTokens": 20000,
-    "reserveTokens": 16384,
-    "modelOverrides": {}
+    "modelOverrides": {},
+    "reserveTokens": 16384
   },
   "defaultModel": "glm-5.3-flash",
   "defaultProjectTrust": "never",
