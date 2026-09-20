@@ -46,7 +46,7 @@
     "autoResize": true,
     "blockImages": false
   },
-  "lastChangelogVersion": "0.85.1",
+  "lastChangelogVersion": "0.86.0",
   "markdown": {
     "codeBlockIndent": "  ",
     "mermaid": "off"
