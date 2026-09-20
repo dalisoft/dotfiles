@@ -57,6 +57,11 @@
   "fastModePerSessionOptIn": true,
   "hooks": {},
   "model": "opus",
+  "modelSettings": {
+    "claude-opus-5": {
+      "effortLevel": "high"
+    }
+  },
   "permissions": {
     "allow": [],
     "ask": [],
@@ -70,7 +75,8 @@
   "respectGitignore": true,
   "sandbox": {
     "allowUnsandboxedCommands": false,
-    "enabled": true
+    "enabled": true,
+    "excludedCommands": []
   },
   "showTurnDuration": true,
   "spinnerTipsEnabled": false,
