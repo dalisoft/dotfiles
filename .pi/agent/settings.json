@@ -4,11 +4,13 @@
     "reserveTokens": 16384,
     "skipPrompt": false
   },
+  "cacheWarming": "streaming",
   "collapseChangelog": true,
   "compaction": {
     "enabled": true,
     "keepRecentTokens": 20000,
-    "reserveTokens": 16384
+    "reserveTokens": 16384,
+    "modelOverrides": {}
   },
   "defaultModel": "glm-5.3-flash",
   "defaultProjectTrust": "never",
