@@ -86,7 +86,7 @@
           "rm *": "deny",
           "sort": "allow",
           "sudo *": "deny",
-          "tail *": "allow",
+          "tail *": "allow"
         },
         "edit": "allow",
         "glob": "allow",
