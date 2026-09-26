@@ -51,7 +51,7 @@
   "mode": {
     "build": {
       "mode": "primary",
-      "model": "opencode-go/muse-spark-1.3-contributor",
+      "model": "opencode-go/deepseek-v4.1-flash",
       "permission": {
         "bash": {
           "*": "ask",
@@ -117,10 +117,10 @@
         "webfetch": "allow",
         "websearch": "deny"
       },
-      "variant": "high"
+      "variant": "max"
     }
   },
-  "model": "opencode-go/muse-spark-1.3-contributor",
+  "model": "opencode-go/deepseek-v4.1-flash",
   "permission": {
     "bash": "ask",
     "edit": "allow",
@@ -144,7 +144,7 @@
     "paths": [],
     "urls": []
   },
-  "small_model": "opencode-go/mimo-v2.5",
+  "small_model": "opencode-go/mimo-v2.6-flash",
   "snapshot": false,
   "subagent_depth": 1,
   "tool_output": {
