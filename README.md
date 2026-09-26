@@ -23,7 +23,7 @@ Configuration mostly should be compatible with 5 last previous versions.
 | ----------- | ------------------------------------------------------------------ | -------- | ------------------ |
 | Claude Code | [`.claude/settings.json`](.claude/settings.json)                   | v2.1.267 | v2.1.231 and later |
 | OpenCode    | [`.config/opencode/opencode.json`](.config/opencode/opencode.json) | v1.18.31 | v1.18.25 and later |
-| Pi          | [`.pi/agent/settings.json`](.pi/agent/settings.json)               | v0.86.0  | v0.84.1 and later  |
+| Pi          | [`.pi/agent/settings.json`](.pi/agent/settings.json)               | v0.87.1  | v0.84.1 and later  |
 
 ## License
 
