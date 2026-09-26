@@ -7,6 +7,7 @@
   },
   "autoMemoryEnabled": false,
   "autoUpdatesChannel": "stable",
+  "bashEditDiffEnabled": true,
   "cleanupPeriodDays": 180,
   "companyAnnouncements": [],
   "disableDeepLinkRegistration": "disable",
