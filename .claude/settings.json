@@ -8,8 +8,10 @@
   "autoMemoryEnabled": false,
   "autoUpdatesChannel": "stable",
   "bashEditDiffEnabled": true,
+  "bashOutputMaxChars": 30000,
   "cleanupPeriodDays": 180,
   "companyAnnouncements": [],
+  "desktopSessionCleanupPeriodDays": 180,
   "disableDeepLinkRegistration": "disable",
   "effortLevel": "high",
   "enabledPlugins": {},
@@ -32,16 +34,24 @@
     "CLAUDE_CODE_ENABLE_TASKS": "1",
     "CLAUDE_CODE_ENABLE_TELEMETRY": "0",
     "CLAUDE_CODE_ENABLE_TODO_TOOLS": "1",
+    "CLAUDE_CODE_GATEWAY_HINT_HEADERS": "0",
+    "CLAUDE_CODE_GATEWAY_MODEL_DISCOVERY_TIMEOUT_MS": "3000",
+    "CLAUDE_CODE_GLOB_HIDDEN": "false",
+    "CLAUDE_CODE_GLOB_NO_IGNORE": "false",
     "CLAUDE_CODE_IDE_SKIP_AUTO_INSTALL": "1",
     "CLAUDE_CODE_IDE_SKIP_VALID_CHECK": "1",
     "CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS": "4",
-    "CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION": "20",
     "CLAUDE_CODE_MAX_SUBAGENT_SPAWN_DEPTH": "1",
+    "CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION": "20",
+    "CLAUDE_CODE_MCP_STARTUP_WAIT_MS": "0",
     "CLAUDE_CODE_NO_FLICKER": "1",
     "CLAUDE_CODE_PROXY_RESOLVES_HOSTS": "1",
+    "CLAUDE_CODE_RESTRICTED": "0",
     "CLAUDE_CODE_SIMPLE_SYSTEM_PROMPT": "1",
-    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet",
     "CLAUDE_CODE_SUBAGENT_MODEL_FORCE": "1",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet",
+    "CLAUDE_CODE_WEBFETCH_CACHE_TTL_MS": "900000",
+    "CLAUDE_CODE_WEBFETCH_DEADLINE_MS": "300000",
     "DISABLE_AUTOUPDATER": "1",
     "DISABLE_ERROR_REPORTING": "1",
     "DISABLE_EXTRA_USAGE_COMMAND": "1",
@@ -49,14 +59,18 @@
     "DISABLE_TELEMETRY": "1",
     "DISABLE_UPDATES": "1",
     "ENABLE_TOOL_SEARCH": "1",
-    "FORCE_AUTOUPDATE_PLUGINS": "0"
+    "FORCE_AUTOUPDATE_PLUGINS": "0",
+    "OTEL_METRICS_INCLUDE_REPOSITORY": "0"
   },
   "fallbackModel": [
     "sonnet"
   ],
   "fastMode": false,
   "fastModePerSessionOptIn": true,
+  "feedbackDrafts": false,
   "hooks": {},
+  "keybindingFlavor": "classic",
+  "maxEffortLevel": "max",
   "model": "opus",
   "modelSettings": {
     "claude-opus-5": {
@@ -72,6 +86,7 @@
   },
   "plansDirectory": "./.claude/plans",
   "prefersReducedMotion": false,
+  "promptCacheTtl": "5m",
   "promptSuggestionEnabled": false,
   "respectGitignore": true,
   "sandbox": {
@@ -80,8 +95,13 @@
     "excludedCommands": []
   },
   "showTurnDuration": true,
+  "spellcheck": {
+    "enabled": false
+  },
   "spinnerTipsEnabled": false,
+  "subagentPromptCacheTtl": "5m",
   "terminalProgressBarEnabled": false,
   "theme": "auto",
+  "timeFormat": "auto",
   "workflowKeywordTriggerEnabled": false
 }

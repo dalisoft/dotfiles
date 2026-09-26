@@ -71,7 +71,7 @@ set -gx ANDROID_AVD_HOME "$HOME/.android/avd"
 # ********************************
 # Structure:
 # Bash, Model API / connections, Updater settings
-# Privacy, IDE, Memory, Skills, Tricks / Optimizations
+# Privacy, Security, IDE, Memory, Skills, Tricks / Optimizations
 # Disk performance, TUI performance, TUI behavior
 # Model behavior, Tool calling improvements
 # Subscriptions / Accounts, Subagents
@@ -83,6 +83,9 @@ set -gx BASH_MAX_TIMEOUT_MS 86400000
 # Model API connections
 set -gx API_TIMEOUT_MS 3000000
 set -gx CLAUDE_CODE_PROXY_RESOLVES_HOSTS 1
+set -gx CLAUDE_CODE_ENABLE_GATEWAY_MODEL_DISCOVERY 0
+set -gx CLAUDE_CODE_GATEWAY_HINT_HEADERS 0
+set -gx CLAUDE_CODE_GATEWAY_MODEL_DISCOVERY_TIMEOUT_MS 3000
 
 # Updater settings
 set -gx DISABLE_UPDATES 1
@@ -94,6 +97,10 @@ set -gx CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY 1
 set -gx DISABLE_FEEDBACK_COMMAND 1
 set -gx DISABLE_ERROR_REPORTING 1
 set -gx DISABLE_TELEMETRY 1
+
+# Security
+set -gx CLAUDE_CODE_GLOB_HIDDEN false
+set -gx CLAUDE_CODE_GLOB_NO_IGNORE false
 
 # IDE
 set -gx CLAUDE_CODE_AUTO_CONNECT_IDE false
@@ -112,6 +119,7 @@ set -gx CLAUDE_CODE_DISABLE_BUNDLED_SKILLS 1
 set -gx CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC 1
 set -gx CLAUDE_CODE_ATTRIBUTION_HEADER 0
 set -gx CLAUDE_CODE_ENABLE_TELEMETRY 0
+set -gx OTEL_METRICS_INCLUDE_REPOSITORY 0
 
 # Disk performance
 set -gx CLAUDE_CODE_DISABLE_FILE_CHECKPOINTING 1
@@ -132,9 +140,13 @@ set -gx CLAUDE_CODE_ENABLE_TODO_TOOLS 1
 set -e CLAUDE_CODE_DISABLE_1M_CONTEXT
 set -e CLAUDE_CODE_DISABLE_FAST_MODE
 set -gx CLAUDE_CODE_ALWAYS_ENABLE_EFFORT 1
+set -e CLAUDE_CODE_RESTRICTED
 
 # Tool calling improvements
 set -gx ENABLE_TOOL_SEARCH 1
+set -gx CLAUDE_CODE_MCP_STARTUP_WAIT_MS 0
+set -gx CLAUDE_CODE_WEBFETCH_CACHE_TTL_MS 900000
+set -gx CLAUDE_CODE_WEBFETCH_DEADLINE_MS 300000
 
 # Subscription (Pro/Max)
 set -gx DISABLE_EXTRA_USAGE_COMMAND 1
@@ -151,7 +163,7 @@ set -gx CLAUDE_CODE_SUBAGENT_MODEL_FORCE 1
 # ********************************
 # Structure:
 # Bash, Model API / connections, Updater settings
-# Privacy, IDE, Memory, Skills, Tricks / Optimizations
+# Privacy, Security, IDE, Memory, Skills, Tricks / Optimizations
 # Disk performance, TUI performance, TUI behavior
 # Model behavior, Tool calling improvements
 # Subscriptions / Accounts, Subagents
@@ -189,7 +201,7 @@ set -e OPENCODE_DISABLE_MOUSE
 # ********************************
 # Structure:
 # Bash, Model API / connections, Updater settings
-# Privacy, IDE, Memory, Skills, Tricks / Optimizations
+# Privacy, Security, IDE, Memory, Skills, Tricks / Optimizations
 # Disk performance, TUI performance, TUI behavior
 # Model behavior, Tool calling improvements
 # Subscriptions / Accounts, Subagents
