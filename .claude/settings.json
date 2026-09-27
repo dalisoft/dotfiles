@@ -103,7 +103,7 @@
   ],
   "fastMode": false,
   "fastModePerSessionOptIn": true,
-  "feedbackDrafts": false,
+  "feedbackDrafts": "off",
   "hooks": {},
   "includeCoAuthoredBy": false,
   "includeGitInstructions": false,
