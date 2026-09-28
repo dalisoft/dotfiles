@@ -48,6 +48,9 @@ set -gx NPM_CONFIG_PREFIX "$HOME/.npm-global"
 set -gx NODE_PATH "$NPM_CONFIG_PREFIX/lib/node_modules"
 set -gx NPM_CHECK_INSTALLER bun
 
+set -gx NPM_CONFIG_AUDIT false
+set -gx NPM_CONFIG_FUND false
+
 # bun
 set -gx BUN_INSTALL "$HOME/.bun"
 set -gx BUM_INSTALL "$HOME/.bum"
@@ -100,9 +103,12 @@ set -gx FORCE_AUTOUPDATE_PLUGINS 0
 
 # Privacy
 set -gx CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY 1
+set -gx CLAUDE_CODE_ENABLE_FEEDBACK_SURVEY_FOR_OTEL 0
 set -gx DISABLE_FEEDBACK_COMMAND 1
 set -gx DISABLE_ERROR_REPORTING 1
 set -gx DISABLE_TELEMETRY 1
+set -gx OTEL_CUSTOMER_ENABLED false
+set -gx OTEL_LOG_MESSAGE_CONTENT false
 
 # Security
 set -gx CLAUDE_CODE_GLOB_HIDDEN false
@@ -183,6 +189,7 @@ set -gx OPENCODE_DISABLE_AUTOUPDATE 1
 set -gx OPENCODE_DISABLE_MODELS_FETCH 1
 set -gx OPENCODE_DISABLE_LSP_DOWNLOAD 1
 set -gx OPENCODE_AUTO_SHARE false
+set -gx OPENCODE_DISABLE_SHARE true
 
 # Tool calling improvements
 set -gx OPENCODE_ENABLE_PARALLEL 1
@@ -237,6 +244,22 @@ set -gx PI_SHARE_VIEWER_URL https://pi.dev/session/
 set -gx PI_PROVIDER zai
 set -gx PI_MODEL "glm-5.3-flash"
 set -gx PI_REASONING_LEVEL max
+
+# ********************************
+# *********** T3 Code ************
+# ********************************
+# Structure:
+# Bash, Model API / connections, Updater settings
+# Privacy, Security, IDE, Memory, Skills, Tricks / Optimizations
+# Disk performance, TUI performance, TUI behavior
+# Model behavior, Tool calling improvements
+# Subscriptions / Accounts, Subagents
+
+# Privacy
+set -gx T3CODE_TELEMETRY_ENABLED false
+
+# Overall Privacy
+set -gx OTEL_SDK_DISABLED true
 
 # ********************************
 # ********* PATH of env **********
