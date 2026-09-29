@@ -55,6 +55,7 @@
       "permission": {
         "bash": {
           "*": "ask",
+          "awk *": "allow",
           "bun run *": "allow",
           "cat *": "allow",
           "echo *": "allow",
@@ -76,6 +77,7 @@
           "git stash show*": "allow",
           "git status*": "allow",
           "grep *": "allow",
+          "rg *": "allow",
           "head *": "allow",
           "ls*": "allow",
           "node *": "allow",
@@ -83,10 +85,12 @@
           "npx *": "ask",
           "npx prettier*": "allow",
           "npx tsc*": "allow",
+          "readlink *": "allow",
           "rm *": "deny",
           "sort": "allow",
           "sudo *": "deny",
-          "tail *": "allow"
+          "tail *": "allow",
+          "which *": "allow"
         },
         "edit": "allow",
         "glob": "allow",
