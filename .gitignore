@@ -313,3 +313,12 @@ typings/
 # Claude Desktop — config.json holds live OAuth tokens
 .config/claude-desktop/*
 !.config/claude-desktop/claude_desktop_config.json
+
+# OpenUsage
+.config/openusage
+
+# Mimo Code
+.config/mimocode
+
+# FreeBuff / ManiCode
+.config/manicode
