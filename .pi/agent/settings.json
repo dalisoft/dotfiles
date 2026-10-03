@@ -5,6 +5,10 @@
     "skipPrompt": false
   },
   "cacheWarming": "streaming",
+  "codemode": {
+    "inlineBudget": 3000,
+    "mode": "on"
+  },
   "collapseChangelog": true,
   "compaction": {
     "enabled": true,
@@ -23,7 +27,8 @@
     "grep",
     "ls",
     "read",
-    "write"
+    "write",
+    "codemode"
   ],
   "doubleEscapeAction": "tree",
   "editorPaddingX": 0,
@@ -46,7 +51,7 @@
     "autoResize": true,
     "blockImages": false
   },
-  "lastChangelogVersion": "0.87.1",
+  "lastChangelogVersion": "1.0.0",
   "markdown": {
     "codeBlockIndent": "  ",
     "mermaid": "off"
@@ -55,6 +60,9 @@
     "zai/glm-5.3": "max",
     "zai/glm-5.3-flash": "max"
   },
+  "npmCommand": [
+    "npm"
+  ],
   "outputPad": 1,
   "packages": [],
   "prompts": [],
