@@ -125,5 +125,7 @@
 	ui = auto
 [url "ssh://git@"]
 	insteadOf = git://
-[includeIf "gitdir:~/Desktop/OS-*/"]
+[includeIf "gitdir:~/Desktop/OS-nanoexpress-js/"]
+	path = ~/Desktop/dotfiles/.gitconfig-oss
+[includeIf "gitdir:~/Desktop/OS-release-me-bash/"]
 	path = ~/Desktop/dotfiles/.gitconfig-oss
