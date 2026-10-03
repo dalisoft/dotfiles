@@ -1,9 +1,13 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.3.11/schema.json",
-  "vcs": {
-    "enabled": false,
-    "clientKind": "git",
-    "useIgnoreFile": true
+  "$schema": "https://biomejs.dev/schemas/2.5.15/schema.json",
+  "assist": {
+    "actions": {
+      "source": {
+        "useSortedKeys": "on",
+        "useSortedPackageJson": "on"
+      }
+    },
+    "enabled": true
   },
   "files": {
     "ignoreUnknown": true,
@@ -16,21 +20,22 @@
   },
   "formatter": {
     "enabled": true,
-    "indentStyle": "space",
-    "indentWidth": 2,
     "formatWithErrors": true,
-    "lineWidth": 80
+    "lineWidth": 80,
+    "useEditorconfig": true
   },
   "json": {
     "formatter": {
-      "trailingCommas": "none",
-      "bracketSpacing": true
+      "bracketSpacing": true,
+      "trailingCommas": "none"
     }
   },
   "linter": {
     "enabled": false
   },
-  "assist": {
-    "enabled": false
+  "vcs": {
+    "clientKind": "git",
+    "enabled": false,
+    "useIgnoreFile": true
   }
 }

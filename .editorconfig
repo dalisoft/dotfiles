@@ -14,3 +14,7 @@ insert_final_newline = false
 [.git*]
 indent_style = tab
 indent_size = 1
+
+[.config/zed/*.json]
+indent_style = tab
+indent_size = 2
