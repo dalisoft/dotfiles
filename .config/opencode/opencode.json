@@ -41,7 +41,9 @@
   },
   "default_agent": "build",
   "disabled_providers": [],
-  "enabled_providers": ["opencode-go"],
+  "enabled_providers": [
+    "opencode-go"
+  ],
   "experimental": {},
   "formatter": false,
   "instructions": [],
@@ -77,7 +79,6 @@
           "git stash show*": "allow",
           "git status*": "allow",
           "grep *": "allow",
-          "rg *": "allow",
           "head *": "allow",
           "ls*": "allow",
           "node *": "allow",
@@ -86,6 +87,7 @@
           "npx prettier*": "allow",
           "npx tsc*": "allow",
           "readlink *": "allow",
+          "rg *": "allow",
           "rm *": "deny",
           "sort": "allow",
           "sudo *": "deny",
@@ -158,6 +160,10 @@
   "tools": {},
   "username": "dalisoft",
   "watcher": {
-    "ignore": ["node_modules/**", "dist/**", ".git/**"]
+    "ignore": [
+      "node_modules/**",
+      "dist/**",
+      ".git/**"
+    ]
   }
 }
