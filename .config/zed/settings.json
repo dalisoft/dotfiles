@@ -101,9 +101,11 @@
 		},
 		"show_merge_conflict_indicator": true,
 		"show_turn_stats": true,
-		"sidebar_side": "left",
 		"terminal_init_command": "",
 		"thinking_display": "auto",
+		"threads_sidebar": {
+			"position": "left"
+		},
 		"tool_permissions": {
 			"default": "allow"
 		}
