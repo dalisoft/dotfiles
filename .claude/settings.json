@@ -105,7 +105,9 @@
     "OTEL_SDK_DISABLED": "true"
   },
   "extraKnownMarketplaces": {},
-  "fallbackModel": ["sonnet"],
+  "fallbackModel": [
+    "sonnet"
+  ],
   "fastMode": false,
   "fastModePerSessionOptIn": true,
   "feedbackDrafts": "off",
