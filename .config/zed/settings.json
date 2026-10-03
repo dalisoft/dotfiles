@@ -1,12 +1,19 @@
 {
 	"$schema": "zed://schemas/settings",
+	"accessible_mode": false,
+	"active_pane_modifiers": {
+		"border_size": 0.0,
+		"inactive_opacity": 1.0
+	},
 	"agent": {
 		"auto_compact": {
 			"enabled": true,
 			"threshold": "90%"
 		},
 		"button": true,
+		"cancel_generation_on_terminal_stop": true,
 		"commit_message_include_project_rules": true,
+		"default_height": 320,
 		"default_model": {
 			"effort": "high",
 			"enable_thinking": true,
@@ -17,7 +24,10 @@
 		"default_profile": "minimal",
 		"default_width": 540,
 		"dock": "right",
+		"enable_feedback": true,
 		"enabled": false,
+		"expand_edit_card": true,
+		"expand_terminal_card": true,
 		"flexible": false,
 		"inline_alternatives": [
 			{
@@ -42,8 +52,15 @@
 			"provider": "google",
 			"speed": "standard"
 		},
+		"inline_assistant_use_streaming_tools": true,
 		"limit_content_width": true,
 		"max_content_width": 850,
+		"max_idle_retained_threads": 5,
+		"message_editor_min_lines": 4,
+		"model_parameters": [],
+		"notify_when_agent_waiting": "primary_screen",
+		"play_sound_when_agent_done": "never",
+		"prevent_idle_sleep": true,
 		"profiles": {
 			"ask": {
 				"name": "Ask",
@@ -101,16 +118,31 @@
 		},
 		"show_merge_conflict_indicator": true,
 		"show_turn_stats": true,
+		"single_file_review": false,
 		"terminal_init_command": "",
 		"thinking_display": "auto",
 		"threads_sidebar": {
+			"auto_open": true,
+			"default_width": 300,
 			"position": "left"
 		},
 		"tool_permissions": {
 			"default": "allow"
-		}
+		},
+		"use_modifier_to_send": false
 	},
+	"agent_buffer_font_family": null,
+	"agent_buffer_font_size": 12,
 	"agent_servers": {},
+	"agent_ui_font_family": null,
+	"agent_ui_font_size": null,
+	"allow_rewrap": "in_comments",
+	"always_treat_brackets_as_autoclosed": false,
+	"audio": {
+		"experimental.input_audio_device": null,
+		"experimental.output_audio_device": null
+	},
+	"auto_indent": "syntax_aware",
 	"auto_indent_on_paste": false,
 	"auto_install_extensions": {
 		"basher": true,
@@ -142,6 +174,7 @@
 	"auto_signature_help": true,
 	"auto_update": false,
 	"autosave": "on_window_change",
+	"autoscroll_on_clicks": false,
 	"base_keymap": "VSCode",
 	"bottom_dock_layout": "contained",
 	"buffer_font_fallbacks": [
@@ -149,18 +182,65 @@
 		"Monaco"
 	],
 	"buffer_font_family": "JetBrains Mono NL",
+	"buffer_font_features": {},
 	"buffer_font_size": 14,
+	"buffer_font_weight": 400,
+	"buffer_line_height": "comfortable",
+	"call_hierarchy": {
+		"modal_max_width": "medium"
+	},
+	"calls": {
+		"mute_on_join": false,
+		"share_on_join": false
+	},
+	"centered_layout": {
+		"left_padding": 0.2,
+		"right_padding": 0.2
+	},
 	"cli_default_open_behavior": "existing_window",
+	"close_on_file_delete": false,
+	"close_panel_on_toggle": false,
+	"code_actions_on_format": {},
+	"code_lens": "off",
 	"collaboration_panel": {
 		"button": false,
+		"default_width": 240,
 		"dock": "left"
 	},
 	"colorize_brackets": true,
+	"command_palette": {
+		"use_command_history": true
+	},
+	"completion_detail_alignment": "left",
 	"completion_menu_item_kind": "off",
+	"completion_menu_scrollbar": "never",
+	"completions": {
+		"lsp": true,
+		"lsp_fetch_timeout_ms": 0,
+		"lsp_insert_mode": "replace_suffix",
+		"words": "fallback",
+		"words_min_length": 3
+	},
 	"confirm_quit": true,
+	"context_server_timeout": 60,
+	"copilot": {
+		"enterprise_uri": null
+	},
 	"current_line_highlight": "all",
+	"cursor_animation": {
+		"enabled": false
+	},
 	"cursor_blink": true,
 	"cursor_shape": "bar",
+	"debugger": {
+		"button": true,
+		"dock": "bottom",
+		"format_dap_log_messages": true,
+		"log_dap_communications": true,
+		"save_breakpoints": true,
+		"stepping_granularity": "line",
+		"timeout": 2000
+	},
 	"default_open_behavior": "existing_window",
 	"dev": {
 		"instrumentation": {
@@ -169,15 +249,114 @@
 			}
 		}
 	},
+	"diagnostics": {
+		"button": true,
+		"include_warnings": true,
+		"inline": {
+			"enabled": false,
+			"max_severity": null,
+			"min_column": 0,
+			"padding": 4,
+			"update_debounce_ms": 150
+		},
+		"lsp_pull_diagnostics": {
+			"debounce_ms": 50,
+			"enabled": true
+		}
+	},
+	"diagnostics_max_severity": "all",
+	"diff_view_style": "split",
 	"disable_ai": true,
+	"document_folding_ranges": "off",
+	"document_symbols": "off",
+	"double_click_in_multibuffer": "select",
+	"drag_and_drop_selection": {
+		"delay": 300,
+		"enabled": true
+	},
+	"drop_target_size": 0.2,
 	"edit_predictions": {
 		"allow_data_collection": "no",
-		"provider": "zed"
+		"codestral": {
+			"api_url": "https://codestral.mistral.ai",
+			"max_tokens": 150,
+			"model": "codestral-latest",
+			"prediction_debounce": 150
+		},
+		"copilot": {
+			"enable_next_edit_suggestions": true,
+			"prediction_debounce": 75,
+			"proxy": null,
+			"proxy_no_verify": null
+		},
+		"disabled_globs": [
+			"**/.env*",
+			"**/*.pem",
+			"**/*.key",
+			"**/*.cert",
+			"**/*.crt",
+			"**/.dev.vars",
+			"**/secrets.yml",
+			"**/.zed/settings.json",
+			"/**/zed/settings.json",
+			"/**/zed/keymap.json"
+		],
+		"mercury": {
+			"prediction_debounce": 0
+		},
+		"mode": "eager",
+		"ollama": {
+			"api_url": "http://localhost:11434",
+			"max_output_tokens": 64,
+			"model": "qwen2.5-coder:7b-base",
+			"prediction_debounce": 0,
+			"prompt_format": "infer"
+		},
+		"open_ai_compatible_api": {
+			"api_url": "",
+			"max_output_tokens": 64,
+			"model": "",
+			"prediction_debounce": 0,
+			"prompt_format": "infer"
+		},
+		"provider": "zed",
+		"zed": {
+			"prediction_debounce": 0
+		}
 	},
+	"edit_predictions_disabled_in": [],
+	"enable_language_server": true,
 	"ensure_final_newline_on_save": false,
+	"excerpt_context_lines": 2,
+	"expand_excerpt_lines": 5,
+	"extend_comment_on_newline": true,
+	"extend_list_on_newline": true,
+	"fast_scroll_sensitivity": 4.0,
 	"file_finder": {
-		"include_channels": false
+		"file_icons": true,
+		"include_channels": false,
+		"include_ignored": "smart",
+		"modal_max_width": "small",
+		"prefill_query_from_selection": true,
+		"skip_focus_for_active_in_search": true
 	},
+	"file_scan_depth": 5,
+	"file_scan_exclusions": [
+		"**/.git",
+		"**/.svn",
+		"**/.hg",
+		"**/.jj",
+		"**/.sl",
+		"**/.repo",
+		"**/CVS",
+		"**/.DS_Store",
+		"**/Thumbs.db",
+		"**/.classpath",
+		"**/.settings"
+	],
+	"file_scan_inclusions": [
+		".env*"
+	],
 	"file_types": {
 		"Git Attributes": [
 			"**/{git,.git,.git/info}/attributes"
@@ -209,44 +388,113 @@
 		"enabled": false
 	},
 	"format_on_save": "on",
+	"formatter": "auto",
+	"fullscreen_mode": "native",
 	"git": {
+		"blame": {
+			"show_avatar": true
+		},
+		"branch_picker": {
+			"show_author_name": true
+		},
+		"diff_base": "head",
+		"disable_git": false,
+		"enable_diff": true,
+		"enable_status": true,
+		"file_diff": {
+			"show_full_file": true
+		},
+		"git_gutter": "tracked_files",
+		"gutter_debounce": 0,
+		"hunk_style": "staged_hollow",
 		"inline_blame": {
 			"delay_ms": 0,
 			"enabled": true,
 			"location": "status_bar",
+			"min_column": 0,
+			"padding": 7,
 			"show_commit_summary": true
 		},
-		"show_stage_restore_buttons": true
+		"path_style": "file_name_first",
+		"show_stage_restore_buttons": true,
+		"worktree_directory": "../worktrees"
 	},
 	"git_commit_buffer_font_size": 14,
 	"git_panel": {
 		"button": true,
 		"collapse_untracked_diff": false,
+		"commit_editor": "expanded",
 		"commit_title_max_length": 80,
 		"default_width": 320,
 		"diff_stats": true,
 		"dock": "left",
 		"entry_primary_click_action": "project_diff",
+		"fallback_branch_name": "main",
 		"file_icons": true,
 		"folder_indicator": "icon",
 		"group_by": "status",
+		"scrollbar": {},
 		"show_count_badge": true,
 		"sort_by": "path",
 		"starts_open": false,
 		"status_style": "label_color",
 		"tree_view": true
 	},
+	"global_lsp_settings": {
+		"button": true,
+		"max_buffer_line_length": 20000,
+		"notifications": {
+			"dismiss_timeout_ms": 5000
+		},
+		"request_timeout": 120,
+		"semantic_token_rules": []
+	},
 	"go_to_definition_fallback": "none",
 	"go_to_definition_scroll_strategy": "center",
+	"granted_extension_capabilities": [
+		{
+			"args": [
+				"**"
+			],
+			"command": "*",
+			"kind": "process:exec"
+		},
+		{
+			"host": "*",
+			"kind": "download_file",
+			"path": [
+				"**"
+			]
+		},
+		{
+			"kind": "npm:install",
+			"package": "*"
+		}
+	],
 	"gutter": {
 		"bookmarks": true,
+		"breakpoints": true,
 		"folds": true,
-		"line_numbers": true
+		"git_gutter_width": "default",
+		"line_numbers": true,
+		"min_line_number_digits": 4,
+		"runnables": true
 	},
 	"hard_tabs": false,
+	"helix_mode": false,
+	"hidden_files": [
+		"**/.*"
+	],
+	"hide_mouse": "on_typing_and_action",
+	"horizontal_scroll_margin": 5,
+	"hover_popover_delay": 300,
+	"hover_popover_enabled": true,
 	"hover_popover_hiding_delay": 300,
 	"hover_popover_sticky": true,
 	"icon_theme": "Material Icon Theme",
+	"image_viewer": {
+		"unit": "binary"
+	},
 	"indent_guides": {
 		"active_line_width": 1,
 		"background_coloring": "disabled",
@@ -254,12 +502,46 @@
 		"enabled": true,
 		"line_width": 1
 	},
+	"indent_list_on_tab": true,
+	"inlay_hints": {
+		"edit_debounce_ms": 700,
+		"enabled": false,
+		"scroll_debounce_ms": 50,
+		"show_background": false,
+		"show_other_hints": true,
+		"show_parameter_hints": true,
+		"show_type_hints": true,
+		"show_value_hints": true,
+		"toggle_on_modifiers_press": {
+			"alt": false,
+			"control": false,
+			"function": false,
+			"platform": false,
+			"shift": false
+		}
+	},
+	"inline_code_actions": true,
 	"instrumentation": {
 		"performance_profiler": {
 			"enabled": false
 		}
 	},
+	"journal": {
+		"hour_format": "hour12",
+		"path": "~"
+	},
+	"jsx_tag_auto_close": {
+		"enabled": true
+	},
+	"jupyter": {
+		"enabled": true,
+		"kernel_selections": {}
+	},
+	"language_detection": true,
 	"language_models": {},
+	"language_servers": [
+		"..."
+	],
 	"languages": {
 		"Astro": {
 			"format_on_save": "on"
@@ -355,7 +637,11 @@
 		}
 	},
 	"line_ending": "detect",
+	"line_indicator_format": "long",
 	"linked_edits": true,
+	"linux": {},
+	"load_direnv": "direct",
+	"log": {},
 	"lsp": {
 		"tsgo": {
 			"settings": {
@@ -403,20 +689,31 @@
 			}
 		}
 	},
+	"lsp_document_colors": "inlay",
 	"lsp_document_links": true,
+	"lsp_highlight_debounce": 75,
+	"lsp_results_location": "multi_buffer",
+	"macos": {},
 	"markdown_preview": {
 		"code_font_family": "JetBrains Mono NL",
 		"font_family": ".ZedSans",
 		"font_size": 14,
+		"heading_font_weight": 600,
 		"limit_content_width": true,
-		"max_width": 800
+		"max_width": 800,
+		"open_markdown_files_in_preview": false
 	},
 	"max_tabs": 10,
+	"middle_click_paste": true,
 	"minimap": {
+		"current_line_highlight": null,
+		"display_in": "active_editor",
 		"max_width_columns": 80,
 		"show": "never",
-		"thumb": "always"
+		"thumb": "always",
+		"thumb_border": "left_open"
 	},
+	"minimum_contrast_for_highlights": 45,
 	"minimum_split_diff_width": 100,
 	"modeline_lines": 5,
 	"mouse_wheel_zoom": false,
@@ -428,6 +725,13 @@
 			}
 		}
 	},
+	"node": {
+		"ignore_system_version": false,
+		"npm_path": null,
+		"path": null
+	},
+	"on_last_window_closed": "platform_default",
+	"on_new_window": "launchpad",
 	"outline_panel": {
 		"auto_fold_dirs": true,
 		"auto_reveal_entries": false,
@@ -437,56 +741,165 @@
 		"expand_outlines_with_depth": 100,
 		"file_icons": true,
 		"folder_indicator": "icon",
-		"git_status": true
+		"git_status": true,
+		"indent_guides": {
+			"show": "always"
+		},
+		"indent_size": 20,
+		"multi_buffer_hide_symbols": false,
+		"scrollbar": {
+			"show": null
+		}
 	},
+	"pane_split_direction_horizontal": "down",
+	"pane_split_direction_vertical": "right",
 	"preferred_line_length": 80,
 	"prettier": {
-		"allowed": false
+		"allowed": false,
+		"parser": "",
+		"plugins": []
 	},
+	"preview": {},
 	"preview_tabs": {
 		"enable_keep_preview_on_code_navigation": true,
+		"enable_preview_file_from_code_navigation": true,
 		"enable_preview_from_file_finder": true,
+		"enable_preview_from_multibuffer": true,
+		"enable_preview_from_project_panel": true,
+		"enable_preview_multibuffer_from_code_navigation": false,
 		"enabled": true
 	},
+	"private_files": [
+		"**/.env*",
+		"**/*.pem",
+		"**/*.key",
+		"**/*.cert",
+		"**/*.crt",
+		"**/secrets.yml"
+	],
 	"project_panel": {
 		"auto_fold_dirs": true,
+		"auto_open": {
+			"on_create": true,
+			"on_drop": true,
+			"on_paste": true
+		},
 		"auto_reveal_entries": true,
+		"bold_folder_labels": false,
 		"button": true,
 		"default_width": 320,
 		"diagnostic_badges": false,
 		"dock": "left",
+		"drag_and_drop": true,
+		"entry_spacing": "comfortable",
+		"file_icons": true,
+		"folder_indicator": "icon",
 		"git_status": true,
 		"git_status_indicator": false,
 		"hide_gitignore": false,
-		"scrollbar": {
-			"horizontal_scroll": true
+		"hide_hidden": false,
+		"hide_root": false,
+		"indent_guides": {
+			"show": "always"
 		},
-		"sort_order": "default"
+		"indent_size": 20,
+		"scrollbar": {
+			"horizontal_scroll": true,
+			"show": null
+		},
+		"show_diagnostics": "all",
+		"sort_mode": "directories_first",
+		"sort_order": "default",
+		"starts_open": true,
+		"sticky_scroll": true,
+		"title_tooltip_delay": "default"
 	},
+	"proxy": "",
+	"read_only_files": [],
+	"read_ssh_config": true,
+	"redact_private_values": false,
+	"reduce_motion": "off",
+	"relative_line_numbers": "disabled",
+	"remove_trailing_whitespace_on_save": true,
+	"repl": {
+		"max_columns": 128,
+		"max_lines": 32,
+		"output_max_height_lines": 0,
+		"output_max_width_columns": 0
+	},
+	"resize_all_panels_in_dock": [
+		"left"
+	],
 	"restore_on_file_reopen": true,
 	"restore_on_startup": "last_session",
+	"reveal_if_open": false,
+	"rounded_selection": true,
 	"scan_symlinks": "expanded",
 	"scroll_beyond_last_line": "off",
-	"selection_highlight": true,
-	"session": {
-		"restore_unsaved_buffers": false
+	"scroll_sensitivity": 1.0,
+	"scrollbar": {
+		"axes": {
+			"horizontal": true,
+			"vertical": true
+		},
+		"cursors": true,
+		"diagnostics": "all",
+		"git_diff": true,
+		"search_results": true,
+		"selected_symbol": true,
+		"selected_text": true,
+		"show": "auto"
 	},
+	"search": {
+		"button": true,
+		"case_sensitive": false,
+		"center_on_match": false,
+		"include_ignored": false,
+		"regex": false,
+		"search_on_type": true,
+		"whole_word": false
+	},
+	"search_wrap": true,
+	"seed_search_query_from_cursor": "always",
+	"selection_highlight": true,
+	"server_url": "https://zed.dev",
+	"session": {
+		"restore_unsaved_buffers": false,
+		"trust_all_worktrees": false
+	},
+	"show_call_status_icon": true,
+	"show_completion_documentation": true,
 	"show_completions_on_input": true,
 	"show_edit_predictions": false,
 	"show_signature_help_after_edits": true,
 	"show_whitespaces": "all",
+	"show_wrap_guides": true,
+	"snippet_sort_order": "inline",
 	"soft_wrap": "bounded",
+	"soft_wrap_indent": "same",
+	"stable": {},
 	"status_bar": {
+		"active_encoding_button": "non_utf8",
+		"active_language_button": true,
+		"cursor_position_button": true,
+		"experimental.show": true,
+		"line_endings_button": false,
+		"pending_keystrokes_indicator": true,
 		"show_active_file": false
 	},
 	"sticky_scroll": {
 		"enabled": false
 	},
 	"tab_bar": {
-		"show": true
+		"show": true,
+		"show_nav_history_buttons": true,
+		"show_pinned_tabs_in_separate_row": false,
+		"show_tab_bar_buttons": true
 	},
 	"tab_size": 2,
 	"tabs": {
+		"activate_on_close": "history",
+		"close_position": "right",
 		"file_icons": true,
 		"git_status": true,
 		"show_close_button": "hover",
@@ -498,15 +911,18 @@
 		"metrics": false
 	},
 	"terminal": {
+		"alternate_scroll": "on",
 		"bell": "off",
 		"blinking": "on",
 		"button": true,
 		"copy_on_select": false,
 		"cursor_shape": "block",
 		"default_height": 420,
+		"default_width": 640,
 		"detect_venv": {
 			"on": {
 				"activate_script": "default",
+				"conda_manager": "auto",
 				"directories": [
 					".env",
 					"env",
@@ -515,6 +931,8 @@
 				]
 			}
 		},
+		"dock": "bottom",
+		"env": {},
 		"flexible": true,
 		"font_fallbacks": [
 			"Fira Code",
@@ -522,39 +940,129 @@
 		],
 		"font_family": "JetBrains Mono",
 		"font_size": 14,
+		"font_weight": 400,
+		"keep_selection_on_copy": true,
 		"line_height": "standard",
 		"max_scroll_history_lines": 10000,
 		"minimum_contrast": 0,
 		"open_links_in_mouse_mode": true,
 		"option_as_meta": false,
+		"path_hyperlink_regexes": [
+			"File \"(?<path>[^\"]+)\", line (?<line>[0-9]+)",
+			[
+				"(?x)",
+				"(?<path>",
+				"    (",
+				"        # multi-char path: first char (not opening delimiter, space, or box drawing char)",
+				"        [^({\\[<\"'`\\ \\u2500-\\u257F]",
+				"        # middle chars: non-space, and colon/paren only if not followed by digit/paren/space",
+				"        ([^\\ :(]|[:(][^0-9()\\ ])*",
+				"        # last char: not closing delimiter or colon",
+				"        [^()}\\]>\"'`.,;:\\ ]",
+				"    |",
+				"        # single-char path: not delimiter, punctuation, space, or box drawing char",
+				"        [^(){}\\[\\]<>\"'`.,;:\\ \\u2500-\\u257F]",
+				"    )",
+				"    # optional line/column suffix (included in path for PathWithPosition::parse_str)",
+				"    (:+[0-9]+(:[0-9]+)?|:?\\([0-9]+([,:]?[0-9]+)?\\))?",
+				")"
+			]
+		],
+		"path_hyperlink_timeout_ms": 1,
 		"scroll_multiplier": 4,
+		"scrollbar": {
+			"show": null
+		},
 		"shell": "system",
 		"show_count_badge": true,
+		"starts_open": false,
 		"toolbar": {
 			"breadcrumbs": false
-		}
+		},
+		"working_directory": "current_project_directory"
 	},
 	"text_rendering_mode": "grayscale",
 	"theme": "Quiet Light",
 	"title_bar": {
 		"button_layout": "platform_default",
+		"open_menus_on_hover": false,
+		"show_branch_name": true,
 		"show_branch_status_icon": true,
-		"show_menus": true
+		"show_menus": true,
+		"show_onboarding_banner": true,
+		"show_project_items": true,
+		"show_sign_in": true,
+		"show_user_menu": true,
+		"show_user_picture": true,
+		"show_worktree_name": true
 	},
 	"toolbar": {
-		"code_actions": true
+		"agent_review": true,
+		"breadcrumbs": true,
+		"code_actions": true,
+		"quick_actions": true,
+		"selections_menu": true
+	},
+	"ui_font_fallbacks": null,
+	"ui_font_family": ".ZedSans",
+	"ui_font_features": {
+		"calt": false
 	},
 	"ui_font_size": 16,
+	"ui_font_weight": 400,
+	"unnecessary_code_fade": 0.3,
+	"use_auto_surround": true,
+	"use_autoclose": true,
 	"use_on_type_format": false,
+	"use_smartcase_search": false,
 	"use_system_path_prompts": true,
+	"use_system_prompts": true,
 	"use_system_window_tabs": true,
+	"vertical_scroll_margin": 3,
 	"vim": {
+		"cursor_shape": {
+			"insert": "inherit",
+			"normal": "block",
+			"replace": "underline",
+			"visual": "block"
+		},
+		"custom_digraphs": {},
+		"default_mode": "normal",
+		"gdefault": false,
+		"highlight_on_yank_duration": 200,
 		"show_edit_predictions_in_normal_mode": false,
-		"use_regex_search": true
+		"toggle_relative_line_numbers": false,
+		"use_regex_search": true,
+		"use_smartcase_find": false,
+		"use_system_clipboard": "always"
 	},
+	"vim_mode": false,
+	"when_closing_with_no_tabs": "platform_default",
+	"which_key": {
+		"delay_ms": 1000,
+		"enabled": false
+	},
+	"window_decorations": "client",
+	"window_title_format": "${projectName}${separator}${fileName}",
+	"window_title_separator": " \u2014 ",
+	"windows": {
+		"languages": {
+			"PHP": {
+				"language_servers": [
+					"intelephense",
+					"!phpactor",
+					"!phptools",
+					"!phpantom",
+					"..."
+				]
+			}
+		}
+	},
+	"word_diff_enabled": true,
 	"wrap_guides": [
 		80,
 		100,
 		120
-	]
+	],
+	"zoomed_padding": true
 }
