@@ -28,12 +28,12 @@
   "doubleEscapeAction": "tree",
   "editorPaddingX": 0,
   "enableAnalytics": false,
-  "enableInstallTelemetry": false,
-  "enableSkillCommands": true,
   "enabledModels": [
     "zai/glm-5.3",
     "zai/glm-5.3-flash"
   ],
+  "enableInstallTelemetry": false,
+  "enableSkillCommands": true,
   "extensions": [
     "-builtin:codemode"
   ],
@@ -84,8 +84,8 @@
   "terminal": {
     "clearOnShrink": false,
     "hyperlinks": true,
-    "imageWidthCells": 60,
     "images": "kitty",
+    "imageWidthCells": 60,
     "showImages": true,
     "showTerminalProgress": false,
     "trueColor": true
