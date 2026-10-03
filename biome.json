@@ -19,9 +19,16 @@
     ]
   },
   "formatter": {
+    "attributePosition": "multiline",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "delimiterSpacing": true,
     "enabled": true,
+    "expand": "always",
     "formatWithErrors": true,
+    "lineEnding": "auto",
     "lineWidth": 80,
+    "trailingNewline": true,
     "useEditorconfig": true
   },
   "json": {
