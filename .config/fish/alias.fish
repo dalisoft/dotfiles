@@ -44,6 +44,19 @@ alias octave_gui='octave --force-gui'
 alias use_conda='eval (brew --prefix)/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source'
 alias pyenv='source (pwd)/env/bin/activate.fish'
 
+# **** AI Agents ****
+alias codexm 'command codex \
+    -c features.goals=false \
+    -c features.apps=false \
+    -c features.plugins=false \
+    -c features.browser_use=false \
+    -c features.browser_use_external=false \
+    -c features.browser_use_full_cdp_access=false \
+    -c features.computer_use=false \
+    -c features.in_app_browser=false \
+    -c mcp_servers.node_repl.enabled=false \
+    -c mcp_servers.openaiDeveloperDocs.enabled=false'
+
 # **** Docker ****
 alias docker_run='docker run -ti --net=bridge'
 alias docker_run_tmp='docker run -ti --rm --net=bridge'
