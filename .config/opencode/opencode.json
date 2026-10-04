@@ -1,28 +1,406 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "agent": {
+  "$schema": "./opencode.schema.json",
+  "agents": {
+    "build": {
+      "mode": "primary",
+      "model": "opencode-go/deepseek-v4.1-flash#max",
+      "permissions": [
+        {
+          "action": "shell",
+          "effect": "ask",
+          "resource": "*"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "awk *"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "bun run *"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "cat *"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "echo *"
+        },
+        {
+          "action": "shell",
+          "effect": "ask",
+          "resource": "gh api*"
+        },
+        {
+          "action": "shell",
+          "effect": "ask",
+          "resource": "gh pr comment*"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "gh pr list*"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "gh pr view*"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "git add *"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "git branch*"
+        },
+        {
+          "action": "shell",
+          "effect": "ask",
+          "resource": "git commit *"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "git diff*"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "git fetch*"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "git log*"
+        },
+        {
+          "action": "shell",
+          "effect": "ask",
+          "resource": "git push *"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "git remote*"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "git rev-parse*"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "git show*"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "git stash list"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "git stash show*"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "git status*"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "grep *"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "head *"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "ls*"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "node *"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "npm run *"
+        },
+        {
+          "action": "shell",
+          "effect": "ask",
+          "resource": "npx *"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "npx prettier*"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "npx tsc*"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "readlink *"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "rg *"
+        },
+        {
+          "action": "shell",
+          "effect": "deny",
+          "resource": "rm *"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "sort"
+        },
+        {
+          "action": "shell",
+          "effect": "deny",
+          "resource": "sudo *"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "tail *"
+        },
+        {
+          "action": "shell",
+          "effect": "allow",
+          "resource": "which *"
+        },
+        {
+          "action": "edit",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "glob",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "grep",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "lsp",
+          "effect": "deny",
+          "resource": "*"
+        },
+        {
+          "action": "question",
+          "effect": "ask",
+          "resource": "*"
+        },
+        {
+          "action": "read",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "skill",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "todowrite",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "webfetch",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "websearch",
+          "effect": "allow",
+          "resource": "*"
+        }
+      ]
+    },
     "code-reviewer": {
       "description": "Reviews code for best practices and potential issues",
       "mode": "subagent",
-      "model": "opencode-go/kimi-k3",
-      "permission": {
-        "bash": "deny",
-        "edit": "deny",
-        "glob": "allow",
-        "grep": "allow",
-        "lsp": "deny",
-        "question": "deny",
-        "read": "allow",
-        "skill": "deny",
-        "todowrite": "deny",
-        "webfetch": "deny",
-        "websearch": "deny"
-      },
-      "prompt": "You are a code reviewer. Focus on security, performance, and maintainability.",
-      "variant": "max"
+      "model": "opencode-go/kimi-k3#max",
+      "permissions": [
+        {
+          "action": "shell",
+          "effect": "deny",
+          "resource": "*"
+        },
+        {
+          "action": "edit",
+          "effect": "deny",
+          "resource": "*"
+        },
+        {
+          "action": "glob",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "grep",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "lsp",
+          "effect": "deny",
+          "resource": "*"
+        },
+        {
+          "action": "question",
+          "effect": "deny",
+          "resource": "*"
+        },
+        {
+          "action": "read",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "skill",
+          "effect": "deny",
+          "resource": "*"
+        },
+        {
+          "action": "todowrite",
+          "effect": "deny",
+          "resource": "*"
+        },
+        {
+          "action": "webfetch",
+          "effect": "deny",
+          "resource": "*"
+        },
+        {
+          "action": "websearch",
+          "effect": "deny",
+          "resource": "*"
+        }
+      ],
+      "system": "You are a code reviewer. Focus on security, performance, and maintainability."
+    },
+    "plan": {
+      "mode": "primary",
+      "model": "opencode-go/glm-5.3#max",
+      "permissions": [
+        {
+          "action": "shell",
+          "effect": "deny",
+          "resource": "*"
+        },
+        {
+          "action": "edit",
+          "effect": "deny",
+          "resource": "*"
+        },
+        {
+          "action": "glob",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "grep",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "lsp",
+          "effect": "deny",
+          "resource": "*"
+        },
+        {
+          "action": "question",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "read",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "skill",
+          "effect": "deny",
+          "resource": "*"
+        },
+        {
+          "action": "todowrite",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "webfetch",
+          "effect": "allow",
+          "resource": "*"
+        },
+        {
+          "action": "websearch",
+          "effect": "deny",
+          "resource": "*"
+        }
+      ]
+    },
+    "title": {
+      "model": "opencode-go/mimo-v2.6-flash"
     }
   },
-  "attachment": {
+  "commands": {},
+  "compaction": {
+    "auto": true,
+    "buffer": 24576,
+    "keep": {
+      "tokens": 0
+    }
+  },
+  "default_agent": "build",
+  "experimental": {
+    "policies": [
+      {
+        "action": "provider.use",
+        "effect": "deny",
+        "resource": "*"
+      },
+      {
+        "action": "provider.use",
+        "effect": "allow",
+        "resource": "opencode-go"
+      }
+    ],
+    "subagent_depth": 1
+  },
+  "formatter": false,
+  "instructions": [],
+  "lsp": false,
+  "mcp": {
+    "servers": {}
+  },
+  "media": {
     "image": {
       "auto_resize": true,
       "max_base64_bytes": 5242880,
@@ -30,134 +408,76 @@
       "max_width": 2000
     }
   },
-  "autoshare": false,
-  "autoupdate": false,
-  "command": {},
-  "compaction": {
-    "auto": true,
-    "preserve_recent_tokens": 0,
-    "prune": true,
-    "reserved": 24576
-  },
-  "default_agent": "build",
-  "disabled_providers": [],
-  "enabled_providers": [
-    "opencode-go"
-  ],
-  "experimental": {},
-  "formatter": false,
-  "instructions": [],
-  "logLevel": "ERROR",
-  "lsp": false,
-  "mcp": {},
-  "mode": {
-    "build": {
-      "mode": "primary",
-      "model": "opencode-go/deepseek-v4.1-flash",
-      "permission": {
-        "bash": {
-          "*": "ask",
-          "awk *": "allow",
-          "bun run *": "allow",
-          "cat *": "allow",
-          "echo *": "allow",
-          "gh api*": "allow",
-          "gh pr comment*": "ask",
-          "gh pr list*": "allow",
-          "gh pr view*": "allow",
-          "git add *": "allow",
-          "git branch*": "allow",
-          "git commit *": "ask",
-          "git diff*": "allow",
-          "git fetch*": "allow",
-          "git log*": "allow",
-          "git push *": "ask",
-          "git remote*": "allow",
-          "git rev-parse*": "allow",
-          "git show*": "allow",
-          "git stash list": "allow",
-          "git stash show*": "allow",
-          "git status*": "allow",
-          "grep *": "allow",
-          "head *": "allow",
-          "ls*": "allow",
-          "node *": "allow",
-          "npm run *": "allow",
-          "npx *": "ask",
-          "npx prettier*": "allow",
-          "npx tsc*": "allow",
-          "readlink *": "allow",
-          "rg *": "allow",
-          "rm *": "deny",
-          "sort": "allow",
-          "sudo *": "deny",
-          "tail *": "allow",
-          "which *": "allow"
-        },
-        "edit": "allow",
-        "glob": "allow",
-        "grep": "allow",
-        "lsp": "deny",
-        "question": "ask",
-        "read": "allow",
-        "skill": "allow",
-        "todowrite": "allow",
-        "webfetch": "allow",
-        "websearch": "allow"
-      },
-      "variant": "max"
-    },
-    "plan": {
-      "mode": "primary",
-      "model": "opencode-go/glm-5.3",
-      "permission": {
-        "bash": "deny",
-        "edit": "deny",
-        "glob": "allow",
-        "grep": "allow",
-        "lsp": "deny",
-        "question": "allow",
-        "read": "allow",
-        "skill": "deny",
-        "todowrite": "allow",
-        "webfetch": "allow",
-        "websearch": "deny"
-      },
-      "variant": "max"
-    }
-  },
   "model": "opencode-go/deepseek-v4.1-flash",
-  "permission": {
-    "bash": "ask",
-    "edit": "allow",
-    "glob": "allow",
-    "grep": "allow",
-    "lsp": "deny",
-    "question": "allow",
-    "read": "allow",
-    "skill": "allow",
-    "todowrite": "allow",
-    "webfetch": "allow",
-    "websearch": "allow"
-  },
-  "plugin": [],
-  "provider": {},
+  "permissions": [
+    {
+      "action": "shell",
+      "effect": "ask",
+      "resource": "*"
+    },
+    {
+      "action": "edit",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "glob",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "grep",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "lsp",
+      "effect": "deny",
+      "resource": "*"
+    },
+    {
+      "action": "question",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "read",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "skill",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "todowrite",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "webfetch",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "websearch",
+      "effect": "allow",
+      "resource": "*"
+    }
+  ],
+  "plugins": [],
+  "providers": {},
   "references": {},
-  "server": {},
   "share": "disabled",
   "shell": "fish",
-  "skills": {
-    "paths": [],
-    "urls": []
-  },
-  "small_model": "opencode-go/mimo-v2.6-flash",
-  "snapshot": false,
-  "subagent_depth": 1,
+  "skills": [],
+  "snapshots": false,
   "tool_output": {
     "max_bytes": 51200,
     "max_lines": 2000
   },
-  "tools": {},
+  "update": "disable",
   "username": "dalisoft",
   "watcher": {
     "ignore": [

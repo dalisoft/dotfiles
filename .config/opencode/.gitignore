@@ -7,3 +7,4 @@ antigravity-logs/
 antigravity-accounts.json.*.tmp
 package-lock.json
 cli.json
+service.json
