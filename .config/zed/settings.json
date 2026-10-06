@@ -626,24 +626,28 @@
 		},
 		"JSON": {
 			"code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      },
-			"formatter": { "language_server": { "name": "biome" } },
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			},
+			"formatter": {
+				"language_server": {
+					"name": "biome"
+				}
+			},
 			"prettier": {
 				"allowed": true
 			}
 		},
 		"JSONC": {
 			"code_actions_on_format": {
-        "source.fixAll.biome": true,
-        "source.organizeImports.biome": true
-      },
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			},
 			"formatter": {
 				"language_server": {
 					"name": "biome"
 				}
-			},
+			}
 		},
 		"Kotlin": {
 			"format_on_save": "on"
@@ -718,8 +722,8 @@
 	"lsp": {
 		"biome": {
 			"settings": {
-        "require_config_file": true,
-      }
+				"require_config_file": true
+			}
 		},
 		"tsgo": {
 			"settings": {
