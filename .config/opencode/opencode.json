@@ -484,11 +484,15 @@
   },
   "update": "disable",
   "username": "dalisoft",
+  "warming": true,
   "watcher": {
     "ignore": [
       "node_modules/**",
       "dist/**",
       ".git/**"
     ]
+  },
+  "websearch": {
+    "provider": "random"
   }
 }
