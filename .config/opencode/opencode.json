@@ -389,6 +389,11 @@
       {
         "action": "provider.use",
         "effect": "allow",
+        "resource": "zai-coding-plan"
+      },
+      {
+        "action": "provider.use",
+        "effect": "allow",
         "resource": "opencode-go"
       }
     ],
