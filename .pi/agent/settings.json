@@ -42,13 +42,14 @@
   "fullscreenCopyOnSelect": true,
   "fullscreenExitOutput": "transcript",
   "fullscreenScrollbar": "auto",
+  "fullscreenWheelScrollLines": "auto",
   "hideThinkingBlock": true,
   "httpIdleTimeoutMs": 300000,
   "images": {
     "autoResize": true,
     "blockImages": false
   },
-  "lastChangelogVersion": "1.0.2",
+  "lastChangelogVersion": "1.1.0",
   "markdown": {
     "codeBlockIndent": "  ",
     "mermaid": "off"
@@ -69,6 +70,7 @@
   "retry": {
     "baseDelayMs": 2000,
     "enabled": true,
+    "maxAgentDelayMs": 60000,
     "maxRetries": 3,
     "provider": {
       "maxRetries": 0,
