@@ -1,5 +1,5 @@
 {
-  "$schema": "./opencode.schema.json",
+  "$schema": "https://opencode.ai/v2/config.json",
   "agents": {
     "build": {
       "mode": "primary",
