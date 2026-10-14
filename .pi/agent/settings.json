@@ -1,4 +1,5 @@
 {
+  "$schema": "https://pi.dev/schemas/settings.schema.json",
   "autocompleteMaxVisible": 3,
   "branchSummary": {
     "reserveTokens": 16384,
@@ -49,7 +50,7 @@
     "autoResize": true,
     "blockImages": false
   },
-  "lastChangelogVersion": "1.1.0",
+  "lastChangelogVersion": "1.2.0",
   "markdown": {
     "codeBlockIndent": "  ",
     "mermaid": "off"
