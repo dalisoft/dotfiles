@@ -1,0 +1,40 @@
+{
+  "$schema": "./config.schema.json",
+  "autoInstallExtension": false,
+  "branchSummarySkipPrompt": false,
+  "codemode": "mcp",
+  "collapsePastedText": true,
+  "compactMode": "default",
+  "defaultExportFormat": "jsonl",
+  "defaultShareGistFormat": "jsonl",
+  "featureModels": {
+    "branchSummarization": "deepseek/deepseek-v4.1-flash",
+    "compaction": "deepseek/deepseek-v4.1-flash",
+    "implementation": "deepseek/deepseek-v4.1-flash",
+    "planning": "z-ai/glm-5.3",
+    "tasteLearning": "deepseek/deepseek-v4.1-flash",
+    "tasteOnboarding": "deepseek/deepseek-v4.1-flash",
+    "titleGeneration": "deepseek/deepseek-v4.1-flash",
+    "toolDescription": "deepseek/deepseek-v4.1-flash",
+    "vision": "default"
+  },
+  "firstMessageSent": true,
+  "ideContextEnabled": true,
+  "installed": true,
+  "language": "en",
+  "model": "deepseek/deepseek-v4.1-flash",
+  "onDemandToolDescriptions": true,
+  "peekRecapDelayMinutes": "0",
+  "peekRecapDiagram": false,
+  "provider": "command-code",
+  "reasoningEffort": {
+    "deepseek/deepseek-v4-flash": "max",
+    "deepseek/deepseek-v4-pro": "max",
+    "deepseek/deepseek-v4.1-flash": "max"
+  },
+  "showTasteLearningInFeed": false,
+  "tasteLearning": false,
+  "theme": "auto",
+  "themeOnboarded": true,
+  "treeFilterMode": "default"
+}
