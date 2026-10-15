@@ -1,5 +1,5 @@
 {
-  "$schema": "https://opencode.ai/v2/config.json",
+  "$schema": "https://opencode.ai/config.json",
   "agents": {
     "build": {
       "mode": "primary",
@@ -389,12 +389,17 @@
       {
         "action": "provider.use",
         "effect": "allow",
-        "resource": "zai-coding-plan"
+        "resource": "opencode-go"
       },
       {
         "action": "provider.use",
         "effect": "allow",
-        "resource": "opencode-go"
+        "resource": "opencode"
+      },
+      {
+        "action": "provider.use",
+        "effect": "allow",
+        "resource": "zai-coding-plan"
       }
     ],
     "subagent_depth": 1
