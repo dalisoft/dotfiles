@@ -11,7 +11,7 @@
     "branchSummarization": "deepseek/deepseek-v4.1-flash",
     "compaction": "deepseek/deepseek-v4.1-flash",
     "implementation": "deepseek/deepseek-v4.1-flash",
-    "planning": "z-ai/glm-5.3",
+    "planning": "zai-org/GLM-5.3",
     "tasteLearning": "deepseek/deepseek-v4.1-flash",
     "tasteOnboarding": "deepseek/deepseek-v4.1-flash",
     "titleGeneration": "deepseek/deepseek-v4.1-flash",
@@ -19,18 +19,20 @@
     "vision": "default"
   },
   "firstMessageSent": true,
-  "ideContextEnabled": true,
-  "installed": true,
+  "ideContextEnabled": false,
+  "installed": false,
   "language": "en",
   "model": "deepseek/deepseek-v4.1-flash",
   "onDemandToolDescriptions": true,
   "peekRecapDelayMinutes": "0",
-  "peekRecapDiagram": false,
+  "peekRecapDiagram": true,
   "provider": "command-code",
   "reasoningEffort": {
     "deepseek/deepseek-v4-flash": "max",
     "deepseek/deepseek-v4-pro": "max",
-    "deepseek/deepseek-v4.1-flash": "max"
+    "deepseek/deepseek-v4.1-flash": "max",
+    "zai-org/GLM-5.3": "max",
+    "z-ai/glm-5.3-flash": "max"
   },
   "showTasteLearningInFeed": false,
   "tasteLearning": false,
