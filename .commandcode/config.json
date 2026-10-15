@@ -19,13 +19,13 @@
     "vision": "default"
   },
   "firstMessageSent": true,
-  "ideContextEnabled": false,
-  "installed": false,
+  "ideContextEnabled": true,
+  "installed": true,
   "language": "en",
-  "model": "deepseek/deepseek-v4.1-flash",
+  "model": "zai-org/GLM-5.3",
   "onDemandToolDescriptions": true,
   "peekRecapDelayMinutes": "0",
-  "peekRecapDiagram": true,
+  "peekRecapDiagram": false,
   "provider": "command-code",
   "reasoningEffort": {
     "deepseek/deepseek-v4-flash": "max",

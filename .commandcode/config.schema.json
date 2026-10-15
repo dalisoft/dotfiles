@@ -39,7 +39,7 @@
     },
     "featureModels": {
       "type": "object",
-      "description": "Model overrides for background features and the planning/implementation lanes. A model id, or \"default\" to follow the curated default.",
+      "description": "Model overrides for background features and the planning/implementation lanes. A model id, or \"default\" to follow the curated default. Unknown/future feature keys are allowed.",
       "properties": {
         "planning": { "$ref": "#/$defs/featureModel" },
         "implementation": { "$ref": "#/$defs/featureModel" },
@@ -51,7 +51,9 @@
         "branchSummarization": { "$ref": "#/$defs/featureModel" },
         "vision": { "$ref": "#/$defs/featureModel" }
       },
-      "additionalProperties": false
+      "additionalProperties": {
+        "$ref": "#/$defs/featureModel"
+      }
     },
     "collapsePastedText": {
       "type": "boolean",
@@ -122,24 +124,15 @@
       "description": "Draw a short text diagram recapping a task that changed files or ran commands."
     },
     "peekRecapDelayMinutes": {
-      "type": ["integer", "string"],
-      "enum": [
-        0,
-        1,
-        2,
-        5,
-        10,
-        15,
-        30,
-        60,
-        "0",
-        "1",
-        "2",
-        "5",
-        "10",
-        "15",
-        "30",
-        "60"
+      "oneOf": [
+        {
+          "type": "integer",
+          "enum": [0, 1, 2, 5, 10, 15, 30, 60]
+        },
+        {
+          "type": "string",
+          "enum": ["0", "1", "2", "5", "10", "15", "30", "60"]
+        }
       ],
       "default": "0",
       "description": "Recap a finished task only after this many minutes passed since your last message. The CLI writes either a number or a numeric string."

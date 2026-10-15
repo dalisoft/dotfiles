@@ -1,0 +1,32 @@
+{
+  "$schema": "./settings.schema.json",
+  "attribution": {},
+  "disableScratchpad": false,
+  "disableSkillShellExecution": true,
+  "disabledSkills": [],
+  "hooks": {
+    "PostToolUse": [],
+    "PreToolUse": [],
+    "SessionStart": [],
+    "Stop": []
+  },
+  "mcp": {
+    "servers": []
+  },
+  "mods": {
+    "disabled": [],
+    "paths": [],
+    "sources": []
+  },
+  "permissions": {
+    "additionalDirectories": [],
+    "allow": [],
+    "ask": [],
+    "defaultMode": "auto-accept",
+    "deny": [],
+    "disableBypass": true
+  },
+  "plugins": [],
+  "providers": {},
+  "skills": []
+}
