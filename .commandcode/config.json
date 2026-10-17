@@ -31,8 +31,8 @@
     "deepseek/deepseek-v4-flash": "max",
     "deepseek/deepseek-v4-pro": "max",
     "deepseek/deepseek-v4.1-flash": "max",
-    "zai-org/GLM-5.3": "max",
-    "z-ai/glm-5.3-flash": "max"
+    "z-ai/glm-5.3-flash": "max",
+    "zai-org/GLM-5.3": "max"
   },
   "showTasteLearningInFeed": false,
   "tasteLearning": false,

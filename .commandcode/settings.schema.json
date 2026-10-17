@@ -1,56 +1,328 @@
 {
+  "$defs": {
+    "effort": {
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "type": "string"
+    },
+    "featureModel": {
+      "description": "A model id, or \"default\" to reset to the curated default.",
+      "type": "string"
+    },
+    "hookList": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "hooks": {
+            "items": {
+              "additionalProperties": false,
+              "properties": {
+                "async": {
+                  "description": "Run without blocking the turn.",
+                  "type": "boolean"
+                },
+                "command": {
+                  "description": "Shell command to run.",
+                  "type": "string"
+                },
+                "failClosed": {
+                  "description": "Treat errors as a block.",
+                  "type": "boolean"
+                },
+                "timeout": {
+                  "description": "Seconds before the hook is killed.",
+                  "maximum": 600,
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "type": {
+                  "const": "command"
+                }
+              },
+              "required": [
+                "type",
+                "command"
+              ],
+              "type": "object"
+            },
+            "type": "array"
+          },
+          "matcher": {
+            "description": "Tool name to match, e.g. \"shell\".",
+            "type": "string"
+          }
+        },
+        "required": [
+          "hooks"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "mcpServer": {
+      "additionalProperties": false,
+      "description": "One MCP server entry. ${ENV} and ${ENV:-default} are resolved at runtime in headers and env; write $${NAME} for the literal text.",
+      "properties": {
+        "args": {
+          "description": "Command arguments (stdio).",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "command": {
+          "description": "Command to run (stdio).",
+          "type": "string"
+        },
+        "env": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Environment variables (stdio).",
+          "type": "object"
+        },
+        "headers": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "description": "Request headers (http/sse).",
+          "type": "object"
+        },
+        "oauth": {
+          "additionalProperties": false,
+          "description": "OAuth 2.0 Authorization Code with PKCE (http/sse).",
+          "properties": {
+            "authorizationUrl": {
+              "type": "string"
+            },
+            "clientId": {
+              "type": "string"
+            },
+            "tokenUrl": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "transport": {
+          "description": "Transport type.",
+          "enum": [
+            "http",
+            "sse",
+            "stdio"
+          ],
+          "type": "string"
+        },
+        "type": {
+          "description": "Alias for transport.",
+          "enum": [
+            "http",
+            "sse",
+            "stdio"
+          ],
+          "type": "string"
+        },
+        "url": {
+          "description": "Remote server URL (http/sse).",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    }
+  },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Command Code settings.json",
+  "additionalProperties": false,
   "description": "Command Code behavior settings. Layers (highest first): <project>/.commandcode/settings.local.json, <project>/.commandcode/settings.json, ~/.commandcode/settings.json, then ~/.commandcode/config.json (legacy fields only). Maps deep-merge; permission rule lists union across layers. Docs: https://commandcode.ai/docs/settings",
-  "type": "object",
   "properties": {
     "$schema": {
-      "type": "string",
-      "description": "Path or URL of this JSON Schema."
+      "description": "Path or URL of this JSON Schema.",
+      "type": "string"
     },
-    "model": {
-      "type": "string",
-      "description": "Main model id for the session."
+    "attribution": {
+      "additionalProperties": false,
+      "description": "Commit co-author trailer. Precedence: settings.local.json > project settings.json > user settings.json.",
+      "properties": {
+        "commit": {
+          "description": "A single-line \"Co-authored-by: Name <email>\" trailer that replaces the default; empty string \"\" turns the trailer off entirely. Values that are not a co-author trailer are ignored.",
+          "maxLength": 200,
+          "pattern": "^(Co-authored-by: .+ <.+@.+>|)$",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "compactMode": {
+      "default": "default",
+      "description": "Auto-compact aggressiveness.",
+      "enum": [
+        "default",
+        "fast"
+      ],
+      "type": "string"
+    },
+    "disabledSkills": {
+      "description": "Skill names to disable (unioned across layers).",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "disableScratchpad": {
+      "default": false,
+      "description": "Disable the per-session scratchpad directory.",
+      "type": "boolean"
+    },
+    "disableSkillShellExecution": {
+      "default": false,
+      "description": "Disable dynamic !…` shell placeholders in skill bodies.",
+      "type": "boolean"
     },
     "effort": {
-      "type": "string",
-      "enum": ["low", "medium", "high", "xhigh", "max"],
-      "description": "Global reasoning effort."
+      "description": "Global reasoning effort.",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ],
+      "type": "string"
     },
-    "reasoningEffort": {
-      "type": "object",
-      "description": "Per-model reasoning effort override, keyed by model id.",
+    "featureModels": {
       "additionalProperties": {
-        "$ref": "#/$defs/effort"
-      }
+        "$ref": "#/$defs/featureModel"
+      },
+      "description": "Per-feature model overrides, including the planning and implementation lanes. A model id, or \"default\" to follow the curated default. Unknown/future feature keys are allowed.",
+      "properties": {
+        "branchSummarization": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "compaction": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "implementation": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "planning": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "tasteLearning": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "tasteOnboarding": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "titleGeneration": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "toolDescription": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "vision": {
+          "$ref": "#/$defs/featureModel"
+        }
+      },
+      "type": "object"
+    },
+    "hooks": {
+      "additionalProperties": false,
+      "description": "Lifecycle hooks. Only four events are recognized.",
+      "properties": {
+        "PostToolUse": {
+          "$ref": "#/$defs/hookList"
+        },
+        "PreToolUse": {
+          "$ref": "#/$defs/hookList"
+        },
+        "SessionStart": {
+          "$ref": "#/$defs/hookList"
+        },
+        "Stop": {
+          "$ref": "#/$defs/hookList"
+        }
+      },
+      "type": "object"
+    },
+    "mcp": {
+      "additionalProperties": false,
+      "description": "Inline MCP servers.",
+      "properties": {
+        "servers": {
+          "items": {
+            "$ref": "#/$defs/mcpServer"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "model": {
+      "description": "Main model id for the session.",
+      "type": "string"
+    },
+    "mods": {
+      "additionalProperties": false,
+      "description": "Declarative mod config.",
+      "properties": {
+        "disabled": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "paths": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "sources": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "permissionMode": {
+      "deprecated": true,
+      "description": "Legacy default mode; superseded by permissions.defaultMode.",
+      "type": "string"
     },
     "permissions": {
-      "type": "object",
+      "additionalProperties": false,
       "description": "Permission rules and toggles. The four rule lists (allow, ask, deny, additionalDirectories) union across every scope rather than being overwritten.",
       "properties": {
-        "allow": {
-          "type": "array",
+        "additionalDirectories": {
+          "description": "Extra in-workspace directories. ~/ expands; relative paths resolve against the project root.",
           "items": {
             "type": "string"
           },
-          "description": "Rules that auto-approve matching operations, e.g. \"Bash(npm test)\"."
+          "type": "array"
+        },
+        "allow": {
+          "description": "Rules that auto-approve matching operations, e.g. \"Bash(npm test)\".",
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
         },
         "ask": {
-          "type": "array",
+          "description": "Rules that always prompt, e.g. \"Bash(git push:*)\".",
           "items": {
             "type": "string"
           },
-          "description": "Rules that always prompt, e.g. \"Bash(git push:*)\"."
-        },
-        "deny": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Rules that always block, e.g. \"Bash(rm -rf:*)\"."
+          "type": "array"
         },
         "defaultMode": {
-          "type": "string",
+          "default": "default",
+          "description": "Default permission mode. auto-accept and bypass are accepted aliases of accept-edits and yolo.",
           "enum": [
             "default",
             "accept-edits",
@@ -60,305 +332,72 @@
             "auto-accept",
             "bypass"
           ],
-          "default": "default",
-          "description": "Default permission mode. auto-accept and bypass are accepted aliases of accept-edits and yolo."
+          "type": "string"
         },
-        "additionalDirectories": {
-          "type": "array",
+        "deny": {
+          "description": "Rules that always block, e.g. \"Bash(rm -rf:*)\".",
           "items": {
             "type": "string"
           },
-          "description": "Extra in-workspace directories. ~/ expands; relative paths resolve against the project root."
+          "type": "array"
         },
         "disableBypass": {
+          "description": "true (or \"disable\") makes yolo (permission bypass) unenterable.",
           "oneOf": [
-            { "type": "boolean" },
-            { "type": "string", "enum": ["disable"] }
-          ],
-          "description": "true (or \"disable\") makes yolo (permission bypass) unenterable."
+            {
+              "type": "boolean"
+            },
+            {
+              "enum": [
+                "disable"
+              ],
+              "type": "string"
+            }
+          ]
         }
       },
-      "additionalProperties": false
-    },
-    "permissionMode": {
-      "type": "string",
-      "description": "Legacy default mode; superseded by permissions.defaultMode.",
-      "deprecated": true
-    },
-    "hooks": {
-      "type": "object",
-      "description": "Lifecycle hooks. Only four events are recognized.",
-      "properties": {
-        "PreToolUse": {
-          "$ref": "#/$defs/hookList"
-        },
-        "PostToolUse": {
-          "$ref": "#/$defs/hookList"
-        },
-        "Stop": {
-          "$ref": "#/$defs/hookList"
-        },
-        "SessionStart": {
-          "$ref": "#/$defs/hookList"
-        }
-      },
-      "additionalProperties": false
-    },
-    "theme": {
-      "type": "string",
-      "enum": ["dark", "light", "auto"],
-      "description": "Terminal color theme."
-    },
-    "tasteLearning": {
-      "type": "boolean",
-      "default": true,
-      "description": "Taste-learning gate (per-project override)."
-    },
-    "compactMode": {
-      "type": "string",
-      "enum": ["default", "fast"],
-      "default": "default",
-      "description": "Auto-compact aggressiveness."
-    },
-    "featureModels": {
-      "type": "object",
-      "description": "Per-feature model overrides, including the planning and implementation lanes. A model id, or \"default\" to follow the curated default. Unknown/future feature keys are allowed.",
-      "properties": {
-        "planning": {
-          "$ref": "#/$defs/featureModel"
-        },
-        "implementation": {
-          "$ref": "#/$defs/featureModel"
-        },
-        "titleGeneration": {
-          "$ref": "#/$defs/featureModel"
-        },
-        "compaction": {
-          "$ref": "#/$defs/featureModel"
-        },
-        "toolDescription": {
-          "$ref": "#/$defs/featureModel"
-        },
-        "tasteLearning": {
-          "$ref": "#/$defs/featureModel"
-        },
-        "tasteOnboarding": {
-          "$ref": "#/$defs/featureModel"
-        },
-        "branchSummarization": {
-          "$ref": "#/$defs/featureModel"
-        },
-        "vision": {
-          "$ref": "#/$defs/featureModel"
-        }
-      },
-      "additionalProperties": {
-        "$ref": "#/$defs/featureModel"
-      }
-    },
-    "providers": {
-      "type": "object",
-      "description": "Bring-your-own provider configuration (BYOK)."
+      "type": "object"
     },
     "plugins": {
-      "type": "array",
+      "description": "Plugin list.",
       "items": {
         "type": "string"
       },
-      "description": "Plugin list."
+      "type": "array"
+    },
+    "providers": {
+      "description": "Bring-your-own provider configuration (BYOK).",
+      "type": "object"
+    },
+    "reasoningEffort": {
+      "additionalProperties": {
+        "$ref": "#/$defs/effort"
+      },
+      "description": "Per-model reasoning effort override, keyed by model id.",
+      "type": "object"
     },
     "skills": {
-      "type": "array",
+      "description": "Extra skill directories. ~/ expands; relative paths resolve against the project root.",
       "items": {
         "type": "string"
       },
-      "description": "Extra skill directories. ~/ expands; relative paths resolve against the project root."
+      "type": "array"
     },
-    "disableSkillShellExecution": {
-      "type": "boolean",
-      "default": false,
-      "description": "Disable dynamic !…` shell placeholders in skill bodies."
+    "tasteLearning": {
+      "default": true,
+      "description": "Taste-learning gate (per-project override).",
+      "type": "boolean"
     },
-    "disableScratchpad": {
-      "type": "boolean",
-      "default": false,
-      "description": "Disable the per-session scratchpad directory."
-    },
-    "mcp": {
-      "type": "object",
-      "description": "Inline MCP servers.",
-      "properties": {
-        "servers": {
-          "type": "array",
-          "items": {
-            "$ref": "#/$defs/mcpServer"
-          }
-        }
-      },
-      "additionalProperties": false
-    },
-    "mods": {
-      "type": "object",
-      "description": "Declarative mod config.",
-      "properties": {
-        "sources": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "paths": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        },
-        "disabled": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          }
-        }
-      },
-      "additionalProperties": false
-    },
-    "disabledSkills": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Skill names to disable (unioned across layers)."
-    },
-    "attribution": {
-      "type": "object",
-      "description": "Commit co-author trailer. Precedence: settings.local.json > project settings.json > user settings.json.",
-      "properties": {
-        "commit": {
-          "type": "string",
-          "maxLength": 200,
-          "pattern": "^(Co-authored-by: .+ <.+@.+>|)$",
-          "description": "A single-line \"Co-authored-by: Name <email>\" trailer that replaces the default; empty string \"\" turns the trailer off entirely. Values that are not a co-author trailer are ignored."
-        }
-      },
-      "additionalProperties": false
+    "theme": {
+      "description": "Terminal color theme.",
+      "enum": [
+        "dark",
+        "light",
+        "auto"
+      ],
+      "type": "string"
     }
   },
-  "$defs": {
-    "effort": {
-      "type": "string",
-      "enum": ["low", "medium", "high", "xhigh", "max"]
-    },
-    "featureModel": {
-      "type": "string",
-      "description": "A model id, or \"default\" to reset to the curated default."
-    },
-    "hookList": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "matcher": {
-            "type": "string",
-            "description": "Tool name to match, e.g. \"shell\"."
-          },
-          "hooks": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "type": {
-                  "const": "command"
-                },
-                "command": {
-                  "type": "string",
-                  "description": "Shell command to run."
-                },
-                "timeout": {
-                  "type": "integer",
-                  "minimum": 1,
-                  "maximum": 600,
-                  "description": "Seconds before the hook is killed."
-                },
-                "async": {
-                  "type": "boolean",
-                  "description": "Run without blocking the turn."
-                },
-                "failClosed": {
-                  "type": "boolean",
-                  "description": "Treat errors as a block."
-                }
-              },
-              "required": ["type", "command"],
-              "additionalProperties": false
-            }
-          }
-        },
-        "required": ["hooks"],
-        "additionalProperties": false
-      }
-    },
-    "mcpServer": {
-      "type": "object",
-      "description": "One MCP server entry. ${ENV} and ${ENV:-default} are resolved at runtime in headers and env; write $${NAME} for the literal text.",
-      "properties": {
-        "transport": {
-          "type": "string",
-          "enum": ["http", "sse", "stdio"],
-          "description": "Transport type."
-        },
-        "type": {
-          "type": "string",
-          "enum": ["http", "sse", "stdio"],
-          "description": "Alias for transport."
-        },
-        "url": {
-          "type": "string",
-          "description": "Remote server URL (http/sse)."
-        },
-        "headers": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          },
-          "description": "Request headers (http/sse)."
-        },
-        "command": {
-          "type": "string",
-          "description": "Command to run (stdio)."
-        },
-        "args": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Command arguments (stdio)."
-        },
-        "env": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          },
-          "description": "Environment variables (stdio)."
-        },
-        "oauth": {
-          "type": "object",
-          "description": "OAuth 2.0 Authorization Code with PKCE (http/sse).",
-          "properties": {
-            "authorizationUrl": {
-              "type": "string"
-            },
-            "tokenUrl": {
-              "type": "string"
-            },
-            "clientId": {
-              "type": "string"
-            }
-          },
-          "additionalProperties": false
-        }
-      },
-      "additionalProperties": false
-    }
-  },
-  "additionalProperties": false
+  "title": "Command Code settings.json",
+  "type": "object"
 }

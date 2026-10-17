@@ -1,164 +1,236 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Command Code config.json",
-  "description": "User-level Command Code preferences (~/.commandcode/config.json). Command Code writes this file itself as you use the CLI; the keys below mirror the CLI configuration registry. Docs: https://commandcode.ai/docs/settings",
-  "type": "object",
-  "properties": {
-    "$schema": {
-      "type": "string",
-      "description": "Path or URL of this JSON Schema."
-    },
-    "provider": {
-      "type": "string",
-      "enum": ["anthropic", "github-copilot", "codex", "command-code"],
-      "description": "Selected auth provider."
-    },
-    "model": {
-      "type": "string",
-      "description": "Default model id for new sessions. A running session keeps its current model."
-    },
-    "theme": {
-      "type": "string",
-      "enum": ["dark", "light", "auto"],
-      "default": "auto",
-      "description": "Terminal color theme. Auto detects your terminal background."
-    },
-    "compactMode": {
-      "type": "string",
-      "enum": ["default", "fast"],
-      "default": "default",
-      "description": "Auto-compact aggressiveness when context fills up."
-    },
-    "reasoningEffort": {
-      "type": "object",
-      "description": "Per-model reasoning effort, keyed by model id.",
-      "additionalProperties": {
-        "type": "string",
-        "enum": ["low", "medium", "high", "xhigh", "max"]
-      }
-    },
-    "featureModels": {
-      "type": "object",
-      "description": "Model overrides for background features and the planning/implementation lanes. A model id, or \"default\" to follow the curated default. Unknown/future feature keys are allowed.",
-      "properties": {
-        "planning": { "$ref": "#/$defs/featureModel" },
-        "implementation": { "$ref": "#/$defs/featureModel" },
-        "titleGeneration": { "$ref": "#/$defs/featureModel" },
-        "compaction": { "$ref": "#/$defs/featureModel" },
-        "toolDescription": { "$ref": "#/$defs/featureModel" },
-        "tasteLearning": { "$ref": "#/$defs/featureModel" },
-        "tasteOnboarding": { "$ref": "#/$defs/featureModel" },
-        "branchSummarization": { "$ref": "#/$defs/featureModel" },
-        "vision": { "$ref": "#/$defs/featureModel" }
-      },
-      "additionalProperties": {
-        "$ref": "#/$defs/featureModel"
-      }
-    },
-    "collapsePastedText": {
-      "type": "boolean",
-      "default": true,
-      "description": "Collapse long pasted/dictated text (over 300 chars) into a [first words... +NL] token."
-    },
-    "tasteLearning": {
-      "type": "boolean",
-      "default": true,
-      "description": "Global toggle for taste learning."
-    },
-    "showTasteLearningInFeed": {
-      "type": "boolean",
-      "default": true,
-      "description": "Show Taste learning notices in the conversation feed."
-    },
-    "ideContextEnabled": {
-      "type": "boolean",
-      "default": true,
-      "description": "IDE context integration."
-    },
-    "autoInstallExtension": {
-      "type": "boolean",
-      "default": true,
-      "description": "Auto-install the IDE extension on startup."
-    },
-    "defaultExportFormat": {
-      "type": "string",
-      "enum": ["html", "jsonl", "md"],
-      "default": "html",
-      "description": "Format a bare /export (no format or path) writes."
-    },
-    "defaultShareGistFormat": {
-      "type": "string",
-      "enum": ["html", "jsonl", "md"],
-      "default": "html",
-      "description": "Format a bare /share gist (no format argument) posts."
-    },
-    "treeFilterMode": {
-      "type": "string",
-      "enum": ["default", "no-tools", "user-only", "labeled-only", "all"],
-      "default": "default",
-      "description": "Default filter when opening /tree."
-    },
-    "branchSummarySkipPrompt": {
-      "type": "boolean",
-      "default": false,
-      "description": "Never ask about summarizing when switching branches in /tree."
-    },
-    "onDemandToolDescriptions": {
-      "type": "boolean",
-      "default": true,
-      "description": "Explain shell commands on permission prompts only when you press ctrl+e."
-    },
-    "codemode": {
-      "type": "string",
-      "enum": ["mcp", "tools", "off"],
-      "default": "mcp",
-      "description": "Scope of the codemode tool (MCP only, read-only + MCP tools, or off)."
-    },
-    "imageVisionEnabled": {
-      "type": "boolean",
-      "description": "Let a text-only model read attached images by describing them with the vision model. true = enabled, false = disabled; omit the key for \"ask\" (prompt on first use), which is the default."
-    },
-    "peekRecapDiagram": {
-      "type": "boolean",
-      "default": false,
-      "description": "Draw a short text diagram recapping a task that changed files or ran commands."
-    },
-    "peekRecapDelayMinutes": {
-      "oneOf": [
-        {
-          "type": "integer",
-          "enum": [0, 1, 2, 5, 10, 15, 30, 60]
-        },
-        {
-          "type": "string",
-          "enum": ["0", "1", "2", "5", "10", "15", "30", "60"]
-        }
-      ],
-      "default": "0",
-      "description": "Recap a finished task only after this many minutes passed since your last message. The CLI writes either a number or a numeric string."
-    },
-    "language": {
-      "type": "string",
-      "description": "CLI language."
-    },
-    "installed": {
-      "type": "boolean",
-      "description": "First-install detection (machine-written)."
-    },
-    "firstMessageSent": {
-      "type": "boolean",
-      "description": "First-message detection (machine-written)."
-    },
-    "themeOnboarded": {
-      "type": "boolean",
-      "description": "Theme onboarding state (machine-written)."
-    }
-  },
   "$defs": {
     "featureModel": {
-      "type": "string",
-      "description": "A model id, or \"default\" to reset to the curated default."
+      "description": "A model id, or \"default\" to reset to the curated default.",
+      "type": "string"
     }
   },
-  "additionalProperties": true
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "description": "User-level Command Code preferences (~/.commandcode/config.json). Command Code writes this file itself as you use the CLI; the keys below mirror the CLI configuration registry. Docs: https://commandcode.ai/docs/settings",
+  "properties": {
+    "$schema": {
+      "description": "Path or URL of this JSON Schema.",
+      "type": "string"
+    },
+    "autoInstallExtension": {
+      "default": true,
+      "description": "Auto-install the IDE extension on startup.",
+      "type": "boolean"
+    },
+    "branchSummarySkipPrompt": {
+      "default": false,
+      "description": "Never ask about summarizing when switching branches in /tree.",
+      "type": "boolean"
+    },
+    "codemode": {
+      "default": "mcp",
+      "description": "Scope of the codemode tool (MCP only, read-only + MCP tools, or off).",
+      "enum": [
+        "mcp",
+        "tools",
+        "off"
+      ],
+      "type": "string"
+    },
+    "collapsePastedText": {
+      "default": true,
+      "description": "Collapse long pasted/dictated text (over 300 chars) into a [first words... +NL] token.",
+      "type": "boolean"
+    },
+    "compactMode": {
+      "default": "default",
+      "description": "Auto-compact aggressiveness when context fills up.",
+      "enum": [
+        "default",
+        "fast"
+      ],
+      "type": "string"
+    },
+    "defaultExportFormat": {
+      "default": "html",
+      "description": "Format a bare /export (no format or path) writes.",
+      "enum": [
+        "html",
+        "jsonl",
+        "md"
+      ],
+      "type": "string"
+    },
+    "defaultShareGistFormat": {
+      "default": "html",
+      "description": "Format a bare /share gist (no format argument) posts.",
+      "enum": [
+        "html",
+        "jsonl",
+        "md"
+      ],
+      "type": "string"
+    },
+    "featureModels": {
+      "additionalProperties": {
+        "$ref": "#/$defs/featureModel"
+      },
+      "description": "Model overrides for background features and the planning/implementation lanes. A model id, or \"default\" to follow the curated default. Unknown/future feature keys are allowed.",
+      "properties": {
+        "branchSummarization": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "compaction": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "implementation": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "planning": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "tasteLearning": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "tasteOnboarding": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "titleGeneration": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "toolDescription": {
+          "$ref": "#/$defs/featureModel"
+        },
+        "vision": {
+          "$ref": "#/$defs/featureModel"
+        }
+      },
+      "type": "object"
+    },
+    "firstMessageSent": {
+      "description": "First-message detection (machine-written).",
+      "type": "boolean"
+    },
+    "ideContextEnabled": {
+      "default": true,
+      "description": "IDE context integration.",
+      "type": "boolean"
+    },
+    "imageVisionEnabled": {
+      "description": "Let a text-only model read attached images by describing them with the vision model. true = enabled, false = disabled; omit the key for \"ask\" (prompt on first use), which is the default.",
+      "type": "boolean"
+    },
+    "installed": {
+      "description": "First-install detection (machine-written).",
+      "type": "boolean"
+    },
+    "language": {
+      "description": "CLI language.",
+      "type": "string"
+    },
+    "model": {
+      "description": "Default model id for new sessions. A running session keeps its current model.",
+      "type": "string"
+    },
+    "onDemandToolDescriptions": {
+      "default": true,
+      "description": "Explain shell commands on permission prompts only when you press ctrl+e.",
+      "type": "boolean"
+    },
+    "peekRecapDelayMinutes": {
+      "default": "0",
+      "description": "Recap a finished task only after this many minutes passed since your last message. The CLI writes either a number or a numeric string.",
+      "oneOf": [
+        {
+          "enum": [
+            0,
+            1,
+            2,
+            5,
+            10,
+            15,
+            30,
+            60
+          ],
+          "type": "integer"
+        },
+        {
+          "enum": [
+            "0",
+            "1",
+            "2",
+            "5",
+            "10",
+            "15",
+            "30",
+            "60"
+          ],
+          "type": "string"
+        }
+      ]
+    },
+    "peekRecapDiagram": {
+      "default": false,
+      "description": "Draw a short text diagram recapping a task that changed files or ran commands.",
+      "type": "boolean"
+    },
+    "provider": {
+      "description": "Selected auth provider.",
+      "enum": [
+        "anthropic",
+        "github-copilot",
+        "codex",
+        "command-code"
+      ],
+      "type": "string"
+    },
+    "reasoningEffort": {
+      "additionalProperties": {
+        "enum": [
+          "low",
+          "medium",
+          "high",
+          "xhigh",
+          "max"
+        ],
+        "type": "string"
+      },
+      "description": "Per-model reasoning effort, keyed by model id.",
+      "type": "object"
+    },
+    "showTasteLearningInFeed": {
+      "default": true,
+      "description": "Show Taste learning notices in the conversation feed.",
+      "type": "boolean"
+    },
+    "tasteLearning": {
+      "default": true,
+      "description": "Global toggle for taste learning.",
+      "type": "boolean"
+    },
+    "theme": {
+      "default": "auto",
+      "description": "Terminal color theme. Auto detects your terminal background.",
+      "enum": [
+        "dark",
+        "light",
+        "auto"
+      ],
+      "type": "string"
+    },
+    "themeOnboarded": {
+      "description": "Theme onboarding state (machine-written).",
+      "type": "boolean"
+    },
+    "treeFilterMode": {
+      "default": "default",
+      "description": "Default filter when opening /tree.",
+      "enum": [
+        "default",
+        "no-tools",
+        "user-only",
+        "labeled-only",
+        "all"
+      ],
+      "type": "string"
+    }
+  },
+  "title": "Command Code config.json",
+  "type": "object"
 }

@@ -1,9 +1,12 @@
 {
   "$schema": "./settings.schema.json",
-  "attribution": {},
+  "attribution": {
+    "commit": ""
+  },
+  "disabledSkills": [],
   "disableScratchpad": false,
   "disableSkillShellExecution": true,
-  "disabledSkills": [],
+  "effort": "max",
   "hooks": {
     "PostToolUse": [],
     "PreToolUse": [],
