@@ -184,6 +184,23 @@ set -gx CLAUDE_CODE_MAX_SUBAGENTS_PER_SESSION 20
 set -gx CLAUDE_CODE_SUBAGENT_MODEL_FORCE 1
 
 # ********************************
+# ********* CommandCode ***********
+# ********************************
+# Structure:
+# Bash, Model API / connections, Updater settings
+# Privacy, Security, IDE, Memory, Skills, Tricks / Optimizations
+# Disk performance, TUI performance, TUI behavior
+# Model behavior, Tool calling improvements
+# Subscriptions / Accounts, Subagents
+
+# Updater settings
+set -gx COMMANDCODE_SKIP_UPDATES 1
+
+# Privacy
+set -gx CMD_ZDR 1
+set -gx CMD_DISABLE_REMOTE_MODEL_CATALOG 1
+
+# ********************************
 # ********** OpenCode ************
 # ********************************
 # Structure:
