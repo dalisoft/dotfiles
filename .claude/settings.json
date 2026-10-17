@@ -89,6 +89,7 @@
     "CLAUDE_CODE_RESUME_INTERRUPTED_TURN": "1",
     "CLAUDE_CODE_RESUME_INTERRUPTED_TURN_MAX_AGE_MS": "21600000",
     "CLAUDE_CODE_RETRY_WATCHDOG": "1",
+    "CLAUDE_CODE_RETRY_WATCHDOG_MAX_USAGE_LIMIT_WAIT_MS": "600000",
     "CLAUDE_CODE_RETRY_WATCHDOG_MAX_WAIT_MS": "600000",
     "CLAUDE_CODE_SIMPLE_SYSTEM_PROMPT": "1",
     "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet",
@@ -125,7 +126,7 @@
   "isolatePeerMachines": false,
   "keybindingFlavor": "classic",
   "maxEffortLevel": "max",
-  "model": "opus",
+  "model": "sonnet",
   "modelSettings": {
     "claude-opus-5": {
       "effortLevel": "high"
