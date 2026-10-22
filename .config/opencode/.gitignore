@@ -8,3 +8,6 @@ antigravity-accounts.json.*.tmp
 package-lock.json
 cli.json
 service.json
+
+# link cua-driver
+skills/cua-driver

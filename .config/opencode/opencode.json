@@ -408,7 +408,16 @@
   "instructions": [],
   "lsp": false,
   "mcp": {
-    "servers": {}
+    "servers": {
+      "cua-driver": {
+        "command": [
+          "/opt/homebrew/bin/cua-driver",
+          "mcp"
+        ],
+        "disabled": false,
+        "type": "local"
+      }
+    }
   },
   "media": {
     "image": {
