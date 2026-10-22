@@ -370,6 +370,8 @@
       "model": "opencode-go/mimo-v2.6-flash"
     }
   },
+  "autoshare": false,
+  "autoupdate": false,
   "commands": {},
   "compaction": {
     "auto": true,
