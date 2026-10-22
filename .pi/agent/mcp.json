@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "cua-driver": {
+      "command": "/opt/homebrew/bin/cua-driver",
+      "args": ["mcp"]
+    }
+  }
+}
