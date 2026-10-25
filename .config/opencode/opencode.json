@@ -388,7 +388,7 @@
     {
       "action": "external_directory",
       "effect": "allow",
-      "resource": "/tmp/opencode"
+      "resource": "/tmp/opencode/*"
     }
   ],
   "plugins": [],
