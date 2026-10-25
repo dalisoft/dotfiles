@@ -214,6 +214,7 @@
         "github.com",
         "*.npmjs.org"
       ],
+      "allowLocalBinding": true,
       "allowUnixSockets": []
     }
   },
