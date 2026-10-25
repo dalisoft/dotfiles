@@ -21,47 +21,7 @@
           "resource": "*"
         },
         {
-          "action": "glob",
-          "effect": "allow",
-          "resource": "*"
-        },
-        {
-          "action": "grep",
-          "effect": "allow",
-          "resource": "*"
-        },
-        {
-          "action": "lsp",
-          "effect": "deny",
-          "resource": "*"
-        },
-        {
-          "action": "question",
-          "effect": "deny",
-          "resource": "*"
-        },
-        {
-          "action": "read",
-          "effect": "allow",
-          "resource": "*"
-        },
-        {
           "action": "skill",
-          "effect": "deny",
-          "resource": "*"
-        },
-        {
-          "action": "todowrite",
-          "effect": "deny",
-          "resource": "*"
-        },
-        {
-          "action": "webfetch",
-          "effect": "deny",
-          "resource": "*"
-        },
-        {
-          "action": "websearch",
           "effect": "deny",
           "resource": "*"
         }
@@ -74,56 +34,11 @@
       "permissions": [
         {
           "action": "shell",
-          "effect": "deny",
+          "effect": "ask",
           "resource": "*"
         },
         {
           "action": "edit",
-          "effect": "deny",
-          "resource": "*"
-        },
-        {
-          "action": "glob",
-          "effect": "allow",
-          "resource": "*"
-        },
-        {
-          "action": "grep",
-          "effect": "allow",
-          "resource": "*"
-        },
-        {
-          "action": "lsp",
-          "effect": "deny",
-          "resource": "*"
-        },
-        {
-          "action": "question",
-          "effect": "allow",
-          "resource": "*"
-        },
-        {
-          "action": "read",
-          "effect": "allow",
-          "resource": "*"
-        },
-        {
-          "action": "skill",
-          "effect": "deny",
-          "resource": "*"
-        },
-        {
-          "action": "todowrite",
-          "effect": "allow",
-          "resource": "*"
-        },
-        {
-          "action": "webfetch",
-          "effect": "allow",
-          "resource": "*"
-        },
-        {
-          "action": "websearch",
           "effect": "deny",
           "resource": "*"
         }
