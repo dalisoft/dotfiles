@@ -142,6 +142,11 @@
     },
     {
       "action": "shell",
+      "effect": "allow",
+      "resource": "stat *"
+    },
+    {
+      "action": "shell",
       "effect": "ask",
       "resource": "gh api *"
     },
@@ -174,6 +179,11 @@
       "action": "shell",
       "effect": "ask",
       "resource": "git commit *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "git clone *"
     },
     {
       "action": "shell",
@@ -279,6 +289,11 @@
       "action": "shell",
       "effect": "ask",
       "resource": "rm *"
+    },
+    {
+      "action": "shell",
+      "effect": "ask",
+      "resource": "mkdir *"
     },
     {
       "action": "shell",
