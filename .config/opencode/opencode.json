@@ -33,12 +33,12 @@
         {
           "action": "shell",
           "effect": "ask",
-          "resource": "gh api*"
+          "resource": "gh api *"
         },
         {
           "action": "shell",
           "effect": "ask",
-          "resource": "gh pr comment*"
+          "resource": "gh pr comment *"
         },
         {
           "action": "shell",
@@ -68,17 +68,17 @@
         {
           "action": "shell",
           "effect": "allow",
-          "resource": "git diff*"
+          "resource": "git diff *"
         },
         {
           "action": "shell",
           "effect": "allow",
-          "resource": "git fetch*"
+          "resource": "git fetch *"
         },
         {
           "action": "shell",
           "effect": "allow",
-          "resource": "git log*"
+          "resource": "git log *"
         },
         {
           "action": "shell",
@@ -88,7 +88,7 @@
         {
           "action": "shell",
           "effect": "allow",
-          "resource": "git remote*"
+          "resource": "git remote *"
         },
         {
           "action": "shell",
@@ -98,7 +98,7 @@
         {
           "action": "shell",
           "effect": "allow",
-          "resource": "git show*"
+          "resource": "git show *"
         },
         {
           "action": "shell",
@@ -108,12 +108,12 @@
         {
           "action": "shell",
           "effect": "allow",
-          "resource": "git stash show*"
+          "resource": "git stash show *"
         },
         {
           "action": "shell",
           "effect": "allow",
-          "resource": "git status*"
+          "resource": "git status *"
         },
         {
           "action": "shell",
@@ -148,12 +148,12 @@
         {
           "action": "shell",
           "effect": "allow",
-          "resource": "npx prettier*"
+          "resource": "npx prettier *"
         },
         {
           "action": "shell",
           "effect": "allow",
-          "resource": "npx tsc*"
+          "resource": "npx tsc *"
         },
         {
           "action": "shell",
@@ -404,6 +404,7 @@
         "resource": "zai-coding-plan"
       }
     ],
+    "portable_shell_scanner": false,
     "subagent_depth": 1
   },
   "formatter": false,
@@ -437,6 +438,186 @@
       "resource": "*"
     },
     {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "awk *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "bun run *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "cat *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "echo *"
+    },
+    {
+      "action": "shell",
+      "effect": "ask",
+      "resource": "gh api *"
+    },
+    {
+      "action": "shell",
+      "effect": "ask",
+      "resource": "gh pr comment *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "gh pr list *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "gh pr view *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "git add *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "git branch *"
+    },
+    {
+      "action": "shell",
+      "effect": "ask",
+      "resource": "git commit *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "git diff *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "git fetch *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "git log *"
+    },
+    {
+      "action": "shell",
+      "effect": "ask",
+      "resource": "git push *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "git remote *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "git rev-parse *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "git show *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "git stash list"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "git stash show *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "git status *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "grep *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "head *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "ls*"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "node *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "npm run *"
+    },
+    {
+      "action": "shell",
+      "effect": "ask",
+      "resource": "npx *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "npx prettier *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "npx tsc *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "readlink *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "rg *"
+    },
+    {
+      "action": "shell",
+      "effect": "deny",
+      "resource": "rm *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "sort"
+    },
+    {
+      "action": "shell",
+      "effect": "deny",
+      "resource": "sudo *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "tail *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "which *"
+    },
+    {
       "action": "edit",
       "effect": "allow",
       "resource": "*"
@@ -458,13 +639,28 @@
     },
     {
       "action": "question",
-      "effect": "allow",
+      "effect": "ask",
       "resource": "*"
     },
     {
       "action": "read",
       "effect": "allow",
       "resource": "*"
+    },
+    {
+      "action": "read",
+      "effect": "deny",
+      "resource": "*.env"
+    },
+    {
+      "action": "read",
+      "effect": "deny",
+      "resource": "*.env.*"
+    },
+    {
+      "action": "read",
+      "effect": "allow",
+      "resource": "*.env.example"
     },
     {
       "action": "skill",
@@ -484,6 +680,11 @@
     {
       "action": "websearch",
       "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "external_directory",
+      "effect": "ask",
       "resource": "*"
     }
   ],
