@@ -248,7 +248,7 @@
     {
       "action": "shell",
       "effect": "allow",
-      "resource": "ls*"
+      "resource": "ls *"
     },
     {
       "action": "shell",
@@ -289,6 +289,16 @@
       "action": "shell",
       "effect": "ask",
       "resource": "rm *"
+    },
+    {
+      "action": "shell",
+      "effect": "allow",
+      "resource": "curl *"
+    },
+    {
+      "action": "shell",
+      "effect": "ask",
+      "resource": "sh *"
     },
     {
       "action": "shell",
