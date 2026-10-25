@@ -121,6 +121,81 @@
       "resource": "*"
     },
     {
+      "action": "edit",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "glob",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "grep",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "lsp",
+      "effect": "deny",
+      "resource": "*"
+    },
+    {
+      "action": "question",
+      "effect": "ask",
+      "resource": "*"
+    },
+    {
+      "action": "read",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "skill",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "todowrite",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "webfetch",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "websearch",
+      "effect": "allow",
+      "resource": "*"
+    },
+    {
+      "action": "external_directory",
+      "effect": "ask",
+      "resource": "*"
+    },
+    {
+      "action": "read",
+      "effect": "deny",
+      "resource": "*.env"
+    },
+    {
+      "action": "read",
+      "effect": "deny",
+      "resource": "*.env.*"
+    },
+    {
+      "action": "read",
+      "effect": "allow",
+      "resource": "*.env.example"
+    },
+    {
+      "action": "external_directory",
+      "effect": "allow",
+      "resource": "/tmp/opencode/*"
+    },
+    {
       "action": "shell",
       "effect": "allow",
       "resource": "awk *"
@@ -138,12 +213,12 @@
     {
       "action": "shell",
       "effect": "allow",
-      "resource": "echo *"
+      "resource": "curl *"
     },
     {
       "action": "shell",
       "effect": "allow",
-      "resource": "stat *"
+      "resource": "echo *"
     },
     {
       "action": "shell",
@@ -177,13 +252,13 @@
     },
     {
       "action": "shell",
-      "effect": "ask",
-      "resource": "git commit *"
+      "effect": "allow",
+      "resource": "git clone *"
     },
     {
       "action": "shell",
-      "effect": "allow",
-      "resource": "git clone *"
+      "effect": "ask",
+      "resource": "git commit *"
     },
     {
       "action": "shell",
@@ -252,6 +327,11 @@
     },
     {
       "action": "shell",
+      "effect": "ask",
+      "resource": "mkdir *"
+    },
+    {
+      "action": "shell",
       "effect": "allow",
       "resource": "node *"
     },
@@ -292,23 +372,18 @@
     },
     {
       "action": "shell",
-      "effect": "allow",
-      "resource": "curl *"
-    },
-    {
-      "action": "shell",
       "effect": "ask",
       "resource": "sh *"
     },
     {
       "action": "shell",
-      "effect": "ask",
-      "resource": "mkdir *"
+      "effect": "allow",
+      "resource": "sort"
     },
     {
       "action": "shell",
       "effect": "allow",
-      "resource": "sort"
+      "resource": "stat *"
     },
     {
       "action": "shell",
@@ -324,81 +399,6 @@
       "action": "shell",
       "effect": "allow",
       "resource": "which *"
-    },
-    {
-      "action": "edit",
-      "effect": "allow",
-      "resource": "*"
-    },
-    {
-      "action": "glob",
-      "effect": "allow",
-      "resource": "*"
-    },
-    {
-      "action": "grep",
-      "effect": "allow",
-      "resource": "*"
-    },
-    {
-      "action": "lsp",
-      "effect": "deny",
-      "resource": "*"
-    },
-    {
-      "action": "question",
-      "effect": "ask",
-      "resource": "*"
-    },
-    {
-      "action": "read",
-      "effect": "allow",
-      "resource": "*"
-    },
-    {
-      "action": "read",
-      "effect": "deny",
-      "resource": "*.env"
-    },
-    {
-      "action": "read",
-      "effect": "deny",
-      "resource": "*.env.*"
-    },
-    {
-      "action": "read",
-      "effect": "allow",
-      "resource": "*.env.example"
-    },
-    {
-      "action": "skill",
-      "effect": "allow",
-      "resource": "*"
-    },
-    {
-      "action": "todowrite",
-      "effect": "allow",
-      "resource": "*"
-    },
-    {
-      "action": "webfetch",
-      "effect": "allow",
-      "resource": "*"
-    },
-    {
-      "action": "websearch",
-      "effect": "allow",
-      "resource": "*"
-    },
-    {
-      "action": "external_directory",
-      "effect": "ask",
-      "resource": "*"
-    },
-    {
-      "action": "external_directory",
-      "effect": "allow",
-      "resource": "/tmp/opencode/*"
     }
   ],
   "plugins": [],
@@ -417,9 +417,9 @@
   "warming": true,
   "watcher": {
     "ignore": [
-      "node_modules/**",
+      ".git/**",
       "dist/**",
-      ".git/**"
+      "node_modules/**"
     ]
   },
   "websearch": {
