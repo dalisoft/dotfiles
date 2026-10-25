@@ -384,6 +384,11 @@
       "action": "external_directory",
       "effect": "ask",
       "resource": "*"
+    },
+    {
+      "action": "external_directory",
+      "effect": "allow",
+      "resource": "/tmp/opencode"
     }
   ],
   "plugins": [],
