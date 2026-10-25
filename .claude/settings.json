@@ -180,7 +180,6 @@
           "mode": "deny",
           "path": "~/.codex/auth.json"
         },
-
         {
           "mode": "deny",
           "path": "~/.config/opencode/service.json"
@@ -205,14 +204,14 @@
         "~/.ssh"
       ],
       "denyWrite": [
-        "~/.ssh",
-        "/etc"
+        "/etc",
+        "~/.ssh"
       ]
     },
     "network": {
       "allowedDomains": [
-        "github.com",
-        "*.npmjs.org"
+        "*.npmjs.org",
+        "github.com"
       ],
       "allowLocalBinding": true,
       "allowUnixSockets": []
