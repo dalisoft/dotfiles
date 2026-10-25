@@ -158,9 +158,64 @@
   "respectGitignore": true,
   "respondToBashCommands": true,
   "sandbox": {
+    "allowAppleEvents": false,
     "allowUnsandboxedCommands": false,
+    "autoAllowBashIfSandboxed": true,
+    "credentials": {
+      "envVars": [
+        {
+          "injectHosts": [
+            "api.github.com"
+          ],
+          "mode": "mask",
+          "name": "GITHUB_TOKEN"
+        },
+        {
+          "mode": "deny",
+          "name": "NPM_TOKEN"
+        }
+      ],
+      "files": [
+        {
+          "mode": "deny",
+          "path": "~/.codex/auth.json"
+        },
+
+        {
+          "mode": "deny",
+          "path": "~/.config/opencode/service.json"
+        },
+        {
+          "mode": "deny",
+          "path": "~/.pi/agent/auth.json"
+        }
+      ]
+    },
     "enabled": true,
-    "excludedCommands": []
+    "enableWeakerNestedSandbox": false,
+    "excludedCommands": [
+      "docker *"
+    ],
+    "failIfUnavailable": true,
+    "filesystem": {
+      "allowManagedReadPathsOnly": false,
+      "allowRead": [],
+      "allowWrite": [],
+      "denyRead": [
+        "~/.ssh"
+      ],
+      "denyWrite": [
+        "~/.ssh",
+        "/etc"
+      ]
+    },
+    "network": {
+      "allowedDomains": [
+        "github.com",
+        "*.npmjs.org"
+      ],
+      "allowUnixSockets": []
+    }
   },
   "showClearContextOnPlanAccept": true,
   "showMessageTimestamps": true,
