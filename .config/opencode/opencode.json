@@ -62,6 +62,11 @@
   "experimental": {
     "policies": [
       {
+        "action": "tool.use",
+        "effect": "deny",
+        "resource": "shell:sudo *"
+      },
+      {
         "action": "provider.use",
         "effect": "deny",
         "resource": "*"
@@ -272,7 +277,7 @@
     },
     {
       "action": "shell",
-      "effect": "deny",
+      "effect": "ask",
       "resource": "rm *"
     },
     {
