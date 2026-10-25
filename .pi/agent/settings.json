@@ -50,7 +50,7 @@
     "autoResize": true,
     "blockImages": false
   },
-  "lastChangelogVersion": "1.3.0",
+  "lastChangelogVersion": "1.4.0",
   "markdown": {
     "codeBlockIndent": "  ",
     "mermaid": "off"
