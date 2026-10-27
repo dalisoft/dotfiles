@@ -48,8 +48,6 @@
       "model": "opencode-go/mimo-v2.6-flash"
     }
   },
-  "autoshare": false,
-  "autoupdate": false,
   "commands": {},
   "compaction": {
     "auto": true,
@@ -60,6 +58,8 @@
   },
   "default_agent": "build",
   "experimental": {
+    "background_compaction": true,
+    "location_idle_timeout": "60 minutes",
     "policies": [
       {
         "action": "tool.use",
@@ -88,7 +88,8 @@
       }
     ],
     "portable_shell_scanner": false,
-    "subagent_depth": 1
+    "subagent_depth": 1,
+    "todo": true
   },
   "formatter": false,
   "instructions": [],
