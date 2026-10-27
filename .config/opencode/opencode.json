@@ -95,16 +95,7 @@
   "instructions": [],
   "lsp": false,
   "mcp": {
-    "servers": {
-      "cua-driver": {
-        "command": [
-          "/opt/homebrew/bin/cua-driver",
-          "mcp"
-        ],
-        "disabled": false,
-        "type": "local"
-      }
-    }
+    "servers": {}
   },
   "media": {
     "image": {
