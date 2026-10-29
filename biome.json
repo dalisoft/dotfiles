@@ -1,48 +1,48 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.6.3/schema.json",
-  "assist": {
-    "actions": {
-      "source": {
-        "useSortedKeys": "on",
-        "useSortedPackageJson": "on"
-      }
-    },
-    "enabled": true
-  },
-  "files": {
-    "ignoreUnknown": true,
-    "includes": [
-      "**",
-      "!.vim/plugged",
-      "!.config/gcloud",
-      "!.config/configstore"
-    ]
-  },
-  "formatter": {
-    "attributePosition": "multiline",
-    "bracketSameLine": false,
-    "bracketSpacing": true,
-    "delimiterSpacing": true,
-    "enabled": true,
-    "expand": "always",
-    "formatWithErrors": true,
-    "lineEnding": "auto",
-    "lineWidth": 80,
-    "trailingNewline": true,
-    "useEditorconfig": true
-  },
-  "json": {
-    "formatter": {
-      "bracketSpacing": true,
-      "trailingCommas": "none"
-    }
-  },
-  "linter": {
-    "enabled": false
-  },
-  "vcs": {
-    "clientKind": "git",
-    "enabled": false,
-    "useIgnoreFile": true
-  }
+	"$schema": "https://biomejs.dev/schemas/2.6.4/schema.json",
+	"assist": {
+		"actions": {
+			"source": {
+				"useSortedKeys": "on",
+				"useSortedPackageJson": "on"
+			}
+		},
+		"enabled": true
+	},
+	"files": {
+		"ignoreUnknown": true,
+		"includes": [
+			"**",
+			"!.vim/plugged",
+			"!.config/gcloud",
+			"!.config/configstore"
+		]
+	},
+	"formatter": {
+		"attributePosition": "multiline",
+		"bracketSameLine": false,
+		"bracketSpacing": true,
+		"delimiterSpacing": true,
+		"enabled": true,
+		"expand": "always",
+		"formatWithErrors": true,
+		"lineEnding": "auto",
+		"lineWidth": 80,
+		"trailingNewline": true,
+		"useEditorconfig": true
+	},
+	"json": {
+		"formatter": {
+			"bracketSpacing": true,
+			"trailingCommas": "none"
+		}
+	},
+	"linter": {
+		"enabled": false
+	},
+	"vcs": {
+		"clientKind": "git",
+		"enabled": false,
+		"useIgnoreFile": true
+	}
 }
