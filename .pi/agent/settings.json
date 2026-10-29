@@ -1,4 +1,5 @@
 {
+  "$schema": "https://pi.dev/schemas/settings.schema.json",
   "autocompleteMaxVisible": 3,
   "branchSummary": {
     "reserveTokens": 16384,
