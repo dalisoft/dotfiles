@@ -128,7 +128,7 @@
   "isolatePeerMachines": false,
   "keybindingFlavor": "classic",
   "maxEffortLevel": "max",
-  "model": "sonnet",
+  "model": "opus",
   "modelSettings": {
     "claude-opus-5": {
       "effortLevel": "high"
