@@ -8,7 +8,7 @@
   "cacheWarming": "streaming",
   "codemode": {
     "inlineBudget": 3000,
-    "mode": "only"
+    "mode": "on"
   },
   "collapseChangelog": true,
   "compaction": {
@@ -28,7 +28,8 @@
     "grep",
     "ls",
     "read",
-    "write"
+    "write",
+    "codemode"
   ],
   "doubleEscapeAction": "tree",
   "editorPaddingX": 0,
