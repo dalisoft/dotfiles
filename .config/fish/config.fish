@@ -287,6 +287,7 @@ set -gx PI_REASONING_LEVEL max
 
 # Privacy
 set -gx T3CODE_TELEMETRY_ENABLED false
+set -gx T3CODE_OTEL_SDK_DISABLED true
 
 # Overall Privacy
 set -gx OTEL_SDK_DISABLED true
