@@ -16,6 +16,7 @@
   "autoScrollEnabled": true,
   "autoUpdatesChannel": "stable",
   "autoUploadSessions": false,
+  "availableModelsMatch": "prefix",
   "awaySummaryEnabled": false,
   "bashEditDiffEnabled": true,
   "bashOutputMaxChars": 30000,
