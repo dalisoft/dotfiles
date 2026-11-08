@@ -124,6 +124,7 @@
     "OTEL_METRICS_INCLUDE_REPOSITORY": "0",
     "OTEL_SDK_DISABLED": "true"
   },
+  "externalEditorContext": false,
   "extraKnownMarketplaces": {},
   "fallbackModel": [
     "sonnet"
