@@ -44,6 +44,7 @@
   "disableRemoteControl": false,
   "disableSideloadFlags": false,
   "disableSkillShellExecution": false,
+  "disableWorkflows": true,
   "doneMeansMerged": false,
   "effortLevel": "high",
   "enableAllProjectMcpServers": false,
