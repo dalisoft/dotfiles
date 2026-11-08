@@ -62,7 +62,7 @@ function git_remap_tag --argument commit_hash tag
     git push origin refs/tags/$tag --force --no-verify
 end
 
-function git_branch_prune
+function git_branch_prune --argument branch
     git branch --v | grep "\[gone\]" | awk '{print $1}' | xargs git branch -D
-    git branch --merged master | grep -v '^[ *]*master$' | xargs git branch -d
+    git branch --merged "$branch" | grep -v "^[ *]*$branch\$" | xargs git branch -d
 end
