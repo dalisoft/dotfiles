@@ -232,6 +232,8 @@
   "showClearContextOnPlanAccept": true,
   "showMessageTimestamps": true,
   "showTurnDuration": true,
+  "skillListingBudgetFraction": 0.01,
+  "skillListingMaxDescChars": 1536,
   "skipDangerousModePermissionPrompt": false,
   "skipWebFetchPreflight": false,
   "skipWorkflowUsageWarning": false,
