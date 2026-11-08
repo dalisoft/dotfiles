@@ -144,6 +144,9 @@
   "maxEffortLevel": "max",
   "model": "opus",
   "modelSettings": {
+    "claude-haiku-5-5": {
+      "effortLevel": "xhigh"
+    },
     "claude-opus-5": {
       "effortLevel": "high"
     },
@@ -152,9 +155,6 @@
     },
     "claude-sonnet-5-5": {
       "effortLevel": "high"
-    },
-    "claude-haiku-5-5": {
-      "effortLevel": "xhigh"
     }
   },
   "outputStyle": "default",
@@ -166,13 +166,13 @@
     "disableBypassPermissionsMode": "disable"
   },
   "plansDirectory": "./.claude/plans",
-  "prStatusFooterEnabled": true,
   "precomputeCompactionEnabled": true,
   "preferredNotifChannel": "auto",
   "prefersReducedMotion": false,
   "prependPlugins": [],
   "promptCacheTtl": "1h",
   "promptSuggestionEnabled": false,
+  "prStatusFooterEnabled": true,
   "remoteControlAtStartup": false,
   "respectGitignore": true,
   "respondToBashCommands": true,
@@ -209,8 +209,8 @@
         }
       ]
     },
-    "enableWeakerNestedSandbox": false,
     "enabled": true,
+    "enableWeakerNestedSandbox": false,
     "excludedCommands": [
       "docker *"
     ],
@@ -228,12 +228,12 @@
       ]
     },
     "network": {
-      "allowLocalBinding": true,
-      "allowUnixSockets": [],
       "allowedDomains": [
         "*.npmjs.org",
         "github.com"
-      ]
+      ],
+      "allowLocalBinding": true,
+      "allowUnixSockets": []
     }
   },
   "showClearContextOnPlanAccept": true,
