@@ -76,11 +76,15 @@ set -gx ANDROID_AVD_HOME "$HOME/.android/avd"
 # ********* Claude Code **********
 # ********************************
 # Structure:
-# Bash, Model API / connections, Updater settings
+# Auth / Account, Bash, Model API / connections, Updater settings
 # Privacy, Security, IDE, Memory, Skills, Tricks / Optimizations
 # Disk performance, TUI performance, TUI behavior
 # Model behavior, Tool calling improvements
 # Subscriptions / Accounts, Subagents
+
+# Auth / Account
+set -e DISABLE_LOGIN_COMMAND
+set -e DISABLE_LOGOUT_COMMAND
 
 # Bash commands
 set -gx BASH_DEFAULT_TIMEOUT_MS 86400000
@@ -103,8 +107,11 @@ set -gx CLAUDE_CODE_RESUME_INTERRUPTED_TURN 1
 set -gx CLAUDE_CODE_RESUME_INTERRUPTED_TURN_MAX_AGE_MS 21600000
 
 # Updater settings
-set -gx DISABLE_UPDATES 1
+set -e DISABLE_INSTALLATION_CHECKS
+set -gx CLAUDE_CODE_DISABLE_OFFICIAL_MARKETPLACE_AUTOINSTALL 1
 set -gx DISABLE_AUTOUPDATER 1
+set -gx DISABLE_UPDATES 1
+set -gx DISABLE_UPGRADE_COMMAND 1
 set -gx FORCE_AUTOUPDATE_PLUGINS 0
 
 # Privacy
