@@ -132,6 +132,7 @@
   "fastMode": false,
   "fastModePerSessionOptIn": true,
   "feedbackDrafts": "off",
+  "forceRemoteSettingsRefresh": false,
   "hooks": {},
   "idleCompaction": true,
   "includeCoAuthoredBy": false,
@@ -139,6 +140,7 @@
   "inputNeededNotifEnabled": true,
   "isolatePeerMachines": false,
   "keybindingFlavor": "classic",
+  "leftArrowOpensAgents": true,
   "maxEffortLevel": "max",
   "model": "opus",
   "modelSettings": {
