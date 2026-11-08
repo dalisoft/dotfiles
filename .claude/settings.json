@@ -25,6 +25,8 @@
   "channelsEnabled": false,
   "cleanupPeriodDays": 180,
   "companyAnnouncements": [],
+  "copyFullResponse": false,
+  "copyOnSelect": true,
   "crossSessionInbound": "refuse",
   "defaultShell": "bash",
   "desktopSessionCleanupPeriodDays": 180,
