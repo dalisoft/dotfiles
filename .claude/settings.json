@@ -31,6 +31,7 @@
   "defaultShell": "bash",
   "defaultToAgentsView": false,
   "desktopSessionCleanupPeriodDays": 180,
+  "dialogExpiry": "5m",
   "disableAgentView": false,
   "disableAllHooks": false,
   "disableArtifact": false,
