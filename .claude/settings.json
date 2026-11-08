@@ -32,6 +32,7 @@
   "defaultToAgentsView": false,
   "desktopSessionCleanupPeriodDays": 180,
   "dialogExpiry": "5m",
+  "diffTool": "auto",
   "disableAgentView": false,
   "disableAllHooks": false,
   "disableArtifact": false,
