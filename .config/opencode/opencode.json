@@ -58,7 +58,9 @@
   },
   "default_agent": "build",
   "experimental": {
+    "artifacts": false,
     "background_compaction": true,
+    "image_generate": true,
     "location_idle_timeout": "60 minutes",
     "policies": [
       {
