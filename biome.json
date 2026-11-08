@@ -4,7 +4,7 @@
 		"actions": {
 			"source": {
 				"useSortedKeys": "on",
-				"useSortedPackageJson": "on"
+				"useSortedPackageJson": "off"
 			}
 		},
 		"enabled": true
