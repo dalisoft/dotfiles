@@ -16,7 +16,7 @@
     "tasteOnboarding": "deepseek/deepseek-v4.1-flash",
     "titleGeneration": "deepseek/deepseek-v4.1-flash",
     "toolDescription": "deepseek/deepseek-v4.1-flash",
-    "vision": "default"
+    "vision": "deepseek/deepseek-v4.1-flash"
   },
   "firstMessageSent": true,
   "ideContextEnabled": true,
