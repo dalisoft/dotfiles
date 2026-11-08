@@ -29,6 +29,7 @@
   "copyOnSelect": true,
   "crossSessionInbound": "refuse",
   "defaultShell": "bash",
+  "defaultToAgentsView": false,
   "desktopSessionCleanupPeriodDays": 180,
   "disableAgentView": false,
   "disableAllHooks": false,
