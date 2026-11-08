@@ -322,3 +322,6 @@ typings/
 
 # FreeBuff / ManiCode
 .config/manicode
+
+# OpenChamber
+.config/openchamber
