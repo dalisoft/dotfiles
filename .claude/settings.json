@@ -202,8 +202,8 @@
         }
       ]
     },
-    "enabled": true,
     "enableWeakerNestedSandbox": false,
+    "enabled": true,
     "excludedCommands": [
       "docker *"
     ],
@@ -221,12 +221,12 @@
       ]
     },
     "network": {
+      "allowLocalBinding": true,
+      "allowUnixSockets": [],
       "allowedDomains": [
         "*.npmjs.org",
         "github.com"
-      ],
-      "allowLocalBinding": true,
-      "allowUnixSockets": []
+      ]
     }
   },
   "showClearContextOnPlanAccept": true,
