@@ -161,7 +161,9 @@
     "disableBypassPermissionsMode": "disable"
   },
   "plansDirectory": "./.claude/plans",
+  "prStatusFooterEnabled": true,
   "precomputeCompactionEnabled": true,
+  "preferredNotifChannel": "auto",
   "prefersReducedMotion": false,
   "prependPlugins": [],
   "promptCacheTtl": "1h",
