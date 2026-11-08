@@ -12,7 +12,9 @@
     "sessionUrl": false
   },
   "autoCompactEnabled": true,
+  "autoConnectIde": false,
   "autoContinueAtUsageLimit": false,
+  "autoInstallIdeExtension": false,
   "autoMemoryEnabled": false,
   "autoScrollEnabled": true,
   "autoUpdatesChannel": "stable",
