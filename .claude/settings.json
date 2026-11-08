@@ -134,7 +134,7 @@
     "CLAUDE_CODE_RETRY_WATCHDOG_MAX_WAIT_MS": "600000",
     "CLAUDE_CODE_RETRY_WATCHDOG_USAGE_LIMIT_RECHECK_MS": "60000",
     "CLAUDE_CODE_SIMPLE_SYSTEM_PROMPT": "1",
-    "CLAUDE_CODE_SUBAGENT_MODEL": "sonnet",
+    "CLAUDE_CODE_SUBAGENT_MODEL": "haiku",
     "CLAUDE_CODE_SUBAGENT_MODEL_FORCE": "1",
     "CLAUDE_CODE_SUBAGENT_PROMPT_CACHE_TTL": "1h",
     "CLAUDE_CODE_WEBFETCH_CACHE_TTL_MS": "900000",
@@ -185,7 +185,7 @@
   "keybindingFlavor": "classic",
   "leftArrowOpensAgents": true,
   "maxEffortLevel": "max",
-  "model": "opus",
+  "model": "sonnet",
   "modelSettings": {
     "claude-haiku-5-5": {
       "effortLevel": "xhigh"
