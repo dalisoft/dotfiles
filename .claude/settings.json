@@ -261,7 +261,7 @@
     "filesystem": {
       "allowManagedReadPathsOnly": false,
       "allowRead": [],
-      "allowWrite": [],
+      "allowWrite": ["~/.gnupg"],
       "denyRead": [
         "~/.ssh"
       ],
@@ -276,7 +276,7 @@
         "github.com"
       ],
       "allowLocalBinding": true,
-      "allowUnixSockets": []
+      "allowUnixSockets": ["~/.gnupg/S.gpg-agent", "~/.gnupg/S.keyboxd"]
     }
   },
   "showClearContextOnPlanAccept": true,
