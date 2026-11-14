@@ -185,7 +185,7 @@
   "keybindingFlavor": "classic",
   "leftArrowOpensAgents": true,
   "maxEffortLevel": "max",
-  "model": "sonnet",
+  "model": "opus",
   "modelSettings": {
     "claude-haiku-5-5": {
       "effortLevel": "xhigh"
@@ -221,7 +221,7 @@
   "respondToBashCommands": true,
   "sandbox": {
     "allowAppleEvents": false,
-    "allowUnsandboxedCommands": false,
+    "allowUnsandboxedCommands": true,
     "autoAllowBashIfSandboxed": true,
     "credentials": {
       "envVars": [
