@@ -3,12 +3,12 @@
   "agents": {
     "build": {
       "mode": "primary",
-      "model": "opencode-go/deepseek-v4.1-flash#max"
+      "model": "opencode-go/deepseek-v4.1-flash#high"
     },
     "code-reviewer": {
       "description": "Reviews code for best practices and potential issues",
       "mode": "subagent",
-      "model": "opencode-go/kimi-k3#max",
+      "model": "opencode-go/kimi-k3.1-pro#max",
       "permissions": [
         {
           "action": "shell",
@@ -30,7 +30,7 @@
     },
     "plan": {
       "mode": "primary",
-      "model": "opencode-go/glm-5.3#max",
+      "model": "zai-coding-plan/glm-5.3#max",
       "permissions": [
         {
           "action": "shell",
@@ -51,7 +51,7 @@
   "commands": {},
   "compaction": {
     "auto": true,
-    "buffer": 24576,
+    "buffer": 28000,
     "keep": {
       "tokens": 0
     }
@@ -396,7 +396,589 @@
     }
   ],
   "plugins": [],
-  "providers": {},
+  "providers": {
+    "opencode": {
+      "models": {
+        "beam-free": {
+          "disabled": false
+        },
+        "big-pickle": {
+          "disabled": true
+        },
+        "claude-fable-5": {
+          "disabled": true
+        },
+        "claude-fable-5-1": {
+          "disabled": true
+        },
+        "claude-fable-5-2": {
+          "disabled": true
+        },
+        "claude-haiku-4-5": {
+          "disabled": true
+        },
+        "claude-haiku-5-5": {
+          "disabled": true
+        },
+        "claude-opus-4-5": {
+          "disabled": true
+        },
+        "claude-opus-4-6": {
+          "disabled": true
+        },
+        "claude-opus-4-7": {
+          "disabled": true
+        },
+        "claude-opus-4-8": {
+          "disabled": true
+        },
+        "claude-opus-5": {
+          "disabled": true
+        },
+        "claude-opus-5-5": {
+          "disabled": true
+        },
+        "claude-sonnet-4-5": {
+          "disabled": true
+        },
+        "claude-sonnet-4-6": {
+          "disabled": true
+        },
+        "claude-sonnet-5": {
+          "disabled": true
+        },
+        "claude-sonnet-5-5": {
+          "disabled": true
+        },
+        "crouton-alpha-free": {
+          "disabled": true
+        },
+        "deepseek-v4-pro": {
+          "disabled": true
+        },
+        "deepseek-v4.1-flash": {
+          "disabled": true
+        },
+        "deepseek-v4.1-flash-free": {
+          "disabled": true
+        },
+        "flint-40b-free": {
+          "disabled": true
+        },
+        "gemini-3-flash": {
+          "disabled": true
+        },
+        "gemini-3.1-pro": {
+          "disabled": true
+        },
+        "gemini-3.5-flash": {
+          "disabled": true
+        },
+        "gemini-3.5-flash-lite": {
+          "disabled": true
+        },
+        "gemini-3.6-flash": {
+          "disabled": true
+        },
+        "gemini-3.7-flash": {
+          "disabled": true
+        },
+        "gemini-3.8-flash": {
+          "disabled": true
+        },
+        "gemini-4-argon": {
+          "disabled": true
+        },
+        "glm-5": {
+          "disabled": true
+        },
+        "glm-5.1": {
+          "disabled": true
+        },
+        "glm-5.2": {
+          "disabled": true
+        },
+        "glm-5.3": {
+          "disabled": true
+        },
+        "glm-5.3-flash": {
+          "disabled": true
+        },
+        "glm-5.3-flash-free": {
+          "disabled": true
+        },
+        "gpt-5": {
+          "disabled": true
+        },
+        "gpt-5-codex": {
+          "disabled": true
+        },
+        "gpt-5-nano": {
+          "disabled": true
+        },
+        "gpt-5.1": {
+          "disabled": true
+        },
+        "gpt-5.1-codex": {
+          "disabled": true
+        },
+        "gpt-5.1-codex-max": {
+          "disabled": true
+        },
+        "gpt-5.1-codex-mini": {
+          "disabled": true
+        },
+        "gpt-5.2": {
+          "disabled": true
+        },
+        "gpt-5.2-codex": {
+          "disabled": true
+        },
+        "gpt-5.3-codex": {
+          "disabled": true
+        },
+        "gpt-5.3-codex-spark": {
+          "disabled": true
+        },
+        "gpt-5.4": {
+          "disabled": true
+        },
+        "gpt-5.4-mini": {
+          "disabled": true
+        },
+        "gpt-5.4-nano": {
+          "disabled": true
+        },
+        "gpt-5.4-pro": {
+          "disabled": true
+        },
+        "gpt-5.5": {
+          "disabled": true
+        },
+        "gpt-5.5-pro": {
+          "disabled": true
+        },
+        "gpt-5.6-luna": {
+          "disabled": true
+        },
+        "gpt-5.6-sol": {
+          "disabled": true
+        },
+        "gpt-5.6-terra": {
+          "disabled": true
+        },
+        "gpt-6-astra": {
+          "disabled": true
+        },
+        "gpt-6-luna": {
+          "disabled": true
+        },
+        "gpt-6-sol": {
+          "disabled": true
+        },
+        "gpt-6.1-sol": {
+          "disabled": true
+        },
+        "grok-4.5": {
+          "disabled": true
+        },
+        "grok-4.6": {
+          "disabled": true
+        },
+        "grok-4.7": {
+          "disabled": true
+        },
+        "grok-build-0.1": {
+          "disabled": true
+        },
+        "iceman-free": {
+          "disabled": false
+        },
+        "inkling-2-small-free": {
+          "disabled": false
+        },
+        "kimi-k2.5": {
+          "disabled": true
+        },
+        "kimi-k2.6": {
+          "disabled": true
+        },
+        "kimi-k2.7-code": {
+          "disabled": true
+        },
+        "kimi-k3": {
+          "disabled": true
+        },
+        "longcat-2.5-free": {
+          "disabled": false
+        },
+        "mimo-v2.6-flash-free": {
+          "disabled": true
+        },
+        "minimax-m2.5": {
+          "disabled": true
+        },
+        "minimax-m2.7": {
+          "disabled": true
+        },
+        "minimax-m3": {
+          "disabled": true
+        },
+        "mistral-large-4": {
+          "disabled": true
+        },
+        "muse-ember-1.0": {
+          "disabled": true
+        },
+        "muse-spark-1.2": {
+          "disabled": true
+        },
+        "muse-spark-1.3": {
+          "disabled": true
+        },
+        "muse-wonder-1.0": {
+          "disabled": true
+        },
+        "nemotron-3.5-lightning-free": {
+          "disabled": false
+        },
+        "nemotron-3.5-super-vl-free": {
+          "disabled": false
+        },
+        "qwen3.5-plus": {
+          "disabled": true
+        },
+        "qwen3.6-plus": {
+          "disabled": true
+        },
+        "qwen3.8-flash": {
+          "disabled": true
+        },
+        "qwen3.8-max": {
+          "disabled": true
+        }
+      }
+    },
+    "opencode-go": {
+      "models": {
+        "beam-free": {
+          "disabled": false,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "cat-jam-free": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "claude-haiku-5-5": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          }
+        },
+        "crouton-alpha-free": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 270000
+          }
+        },
+        "deepseek-v4-pro": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 384000
+          }
+        },
+        "deepseek-v4.1-flash": {
+          "disabled": false,
+          "limit": {
+            "context": 272000,
+            "output": 384000
+          }
+        },
+        "gemini-4-argon": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 65536
+          }
+        },
+        "gemini-4-argon-contributor": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 65536
+          }
+        },
+        "glm-5.2": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "glm-5.3": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "glm-5.3-flash": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "gpt-5.6-luna": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          }
+        },
+        "gpt-6-luna": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          }
+        },
+        "grok-4.7": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 500000
+          }
+        },
+        "hy3": {
+          "disabled": true,
+          "limit": {
+            "context": 256000,
+            "output": 128000
+          }
+        },
+        "hy4": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 65536
+          }
+        },
+        "hy4-flash-free": {
+          "disabled": false,
+          "limit": {
+            "context": 272000,
+            "output": 65536
+          }
+        },
+        "hy4-preview": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 64000
+          }
+        },
+        "iceman-contributor-free": {
+          "disabled": false,
+          "limit": {
+            "context": 262144,
+            "output": 131072
+          }
+        },
+        "kimi-k2.7-code": {
+          "disabled": true,
+          "limit": {
+            "context": 262144,
+            "output": 262144
+          }
+        },
+        "kimi-k3": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 1048576
+          }
+        },
+        "kimi-k3.1-pro": {
+          "disabled": false,
+          "limit": {
+            "context": 272000,
+            "output": 1048576
+          }
+        },
+        "longcat-2.0": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "longcat-2.5-free": {
+          "disabled": false,
+          "limit": {
+            "context": 272000,
+            "output": 262144
+          }
+        },
+        "longcat-2.5-preview-free": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "mimo-v2.5": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          }
+        },
+        "mimo-v2.5-pro": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 128000
+          }
+        },
+        "mimo-v2.6-flash": {
+          "disabled": false,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "mimo-v2.6-pro": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "minimax-m2.7": {
+          "disabled": true,
+          "limit": {
+            "context": 204800,
+            "output": 131072
+          }
+        },
+        "minimax-m3": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "minimax-m3.1-flash": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 512000
+          }
+        },
+        "minimax-m3.1-flash-free": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 512000
+          }
+        },
+        "muse-spark-1.2-contributor": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "muse-spark-1.3-contributor": {
+          "disabled": false,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "qwen3.7-plus": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 65536
+          }
+        },
+        "qwen3.8-flash": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "qwen3.8-max": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "qwen4-max": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 262144
+          }
+        },
+        "space-bunny": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 524288
+          }
+        },
+        "step-5-preview": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 65536
+          }
+        },
+        "step-5-preview-free": {
+          "disabled": true,
+          "limit": {
+            "context": 272000,
+            "output": 65536
+          }
+        }
+      }
+    },
+    "zai-coding-plan": {
+      "models": {
+        "glm-5.3": {
+          "disabled": false,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "glm-5.3-flash": {
+          "disabled": false,
+          "limit": {
+            "context": 272000,
+            "output": 131072
+          }
+        },
+        "glm-5.3-highspeed": {
+          "disabled": true
+        }
+      }
+    }
+  },
   "references": {},
   "share": "disabled",
   "shell": "fish",
