@@ -15,7 +15,7 @@
     "enabled": true,
     "keepRecentTokens": 20000,
     "modelOverrides": {},
-    "reserveTokens": 28000
+    "reserveTokens": 48000
   },
   "defaultModel": "glm-5.3-flash",
   "defaultProjectTrust": "never",
