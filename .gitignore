@@ -107,6 +107,8 @@ yarn/*
 !.yarn/sdks
 !.yarn/versions
 
+bun.lock
+
 ## Make sure subfolders also does not exist
 **/.grunt
 **/.npm

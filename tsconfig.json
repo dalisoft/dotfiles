@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "erasableSyntaxOnly": true,
+    "module": "esnext",
+    "noEmit": true,
+    "types": [
+      "@types/node"
+    ]
+  },
+  "include": [
+    "scripts"
+  ]
+}
