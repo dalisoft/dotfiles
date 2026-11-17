@@ -16,7 +16,9 @@
  * Agents (comma-separated, default: all):
  *   claude    .claude/settings.json env + .config/fish/config.fish env
  *   opencode  .config/opencode/opencode.json  providers.*.models.*.limit.context, compaction.buffer
+ *             (`max` removes each model's `limit` instead; restore with git checkout)
  *   pi        .pi/agent/models.json           providers.*.models[].contextWindow
+ *             (`max` removes models that set `contextWindow` instead; restore with git checkout)
  *             .pi/agent/settings.json         compaction.reserveTokens
  *   codex     ~/.codex/config.toml            model_context_window, model_auto_compact_token_limit
  *   cmd-code  no context-window setting exists (only compactMode default|fast); reports and skips
@@ -65,6 +67,7 @@ const presets = {
 
 type Preset = ( typeof presets )[ keyof typeof presets ];
 type Json = Record< string, any >;
+/** Set `obj[key]`; `undefined` deletes the key (array items are spliced out). */
 type Setter = ( obj: Json, key: string, value: unknown, path: string ) => void;
 
 const ROOT = join( import.meta.dirname, ".." );
@@ -124,6 +127,13 @@ const editJson = async (
 
   const changes: string[] = [];
   update( config, ( obj, key, value, path ) => {
+    if ( value === undefined ) {
+      if ( ! ( key in obj ) ) return;
+      changes.push( `  ${ path }: removed` );
+      if ( Array.isArray( obj ) ) obj.splice( Number( key ), 1 );
+      else delete obj[ key ];
+      return;
+    }
     if ( obj[ key ] === value ) return;
     changes.push( `  ${ path }: ${ obj[ key ] } → ${ value }` );
     obj[ key ] = value;
@@ -252,6 +262,11 @@ const agents = {
           );
         }
 
+        // `max` drops per-model limits so opencode uses each model's native limits.
+        // This is lossy (limit.output too): restore with `git checkout .config/opencode/opencode.json`.
+        const removeLimits = preset === presets.max;
+        let withLimit = 0;
+
         for ( const [ providerId, provider ] of Object.entries< Json >(
           config.providers ?? {},
         ) ) {
@@ -259,13 +274,23 @@ const agents = {
             provider.models ?? {},
           ) ) {
             if ( typeof model.limit?.context !== "number" ) continue;
-            set(
-              model.limit,
-              "context",
-              preset.context,
-              `providers.${ providerId }.models.${ modelId }.limit.context`,
-            );
+            withLimit++;
+            const path = `providers.${ providerId }.models.${ modelId }.limit`;
+            if ( removeLimits ) set( model, "limit", undefined, path );
+            else
+              set(
+                model.limit,
+                "context",
+                preset.context,
+                `${ path }.context`,
+              );
           }
+        }
+
+        if ( withLimit === 0 && ! removeLimits ) {
+          console.warn(
+            "  opencode: no model has a `limit` (removed by `max`?); restore with `git checkout .config/opencode/opencode.json`",
+          );
         }
       },
       dryRun,
@@ -291,18 +316,51 @@ const agents = {
     await editJson(
       ".pi/agent/models.json",
       ( config, set ) => {
+        // `max` drops context-limited model overrides so pi uses each model's built-in limits.
+        // Restore with `git checkout .pi/agent/models.json`.
+        const removeLimited = preset === presets.max;
+        let limited = 0;
+
         for ( const [ providerId, provider ] of Object.entries< Json >(
           config.providers ?? {},
         ) ) {
-          for ( const model of ( provider.models ?? [] ) as Json[] ) {
+          const models = ( provider.models ?? [] ) as Json[];
+          // Walk backwards so removing an entry doesn't shift the ones still to visit
+          for ( let index = models.length - 1; index >= 0; index-- ) {
+            const model = models[ index ];
             if ( typeof model.contextWindow !== "number" ) continue;
+            limited++;
+            const path = `providers.${ providerId }.models[${ model.id }]`;
+            if ( removeLimited )
+              set( models, String( index ), undefined, path );
+            else
+              set(
+                model,
+                "contextWindow",
+                preset.context,
+                `${ path }.contextWindow`,
+              );
+          }
+
+          // pi rejects a provider whose only key is an empty `models` list
+          if (
+            removeLimited &&
+            models.length === 0 &&
+            Object.keys( provider ).every( ( key ) => key === "models" )
+          ) {
             set(
-              model,
-              "contextWindow",
-              preset.context,
-              `providers.${ providerId }.models[${ model.id }].contextWindow`,
+              config.providers,
+              providerId,
+              undefined,
+              `providers.${ providerId }`,
             );
           }
+        }
+
+        if ( limited === 0 && ! removeLimited ) {
+          console.warn(
+            "  pi: no model has a `contextWindow` (removed by `max`?); restore with `git checkout .pi/agent/models.json`",
+          );
         }
       },
       dryRun,
