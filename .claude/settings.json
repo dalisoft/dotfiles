@@ -165,6 +165,7 @@
     "FORCE_AUTOUPDATE_PLUGINS": "0",
     "OTEL_LOG_MESSAGE_CONTENT": "false",
     "OTEL_METRICS_INCLUDE_REPOSITORY": "0",
+    "OTEL_RESOURCE_INCLUDE_HOST": "0",
     "OTEL_SDK_DISABLED": "true"
   },
   "externalEditorContext": false,
