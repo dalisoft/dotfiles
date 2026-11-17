@@ -107,7 +107,7 @@
       "max_width": 2000
     }
   },
-  "model": "opencode-go/deepseek-v4.1-flash",
+  "model": "opencode-go/deepseek-v4.1-flash#high",
   "permissions": [
     {
       "action": "shell",
