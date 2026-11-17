@@ -1,5 +1,8 @@
 {
   "type": "module",
+  "scripts": {
+    "ai-context": "node ./scripts/ai-context.ts"
+  },
   "devDependencies": {
     "@types/node": "^26.6.6"
   }

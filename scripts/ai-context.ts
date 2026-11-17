@@ -4,6 +4,7 @@
  * Apply a context-window preset to AI coding agents.
  *
  * Usage:
+ *   bun run ai-context [--preset <name>] [--agent a,b,...] [--dry-run]   # or npm run ai-context -- …
  *   node ./scripts/ai-context.ts [--preset <name>] [--agent a,b,...] [--dry-run]
  *
  * Presets (default: econom):
