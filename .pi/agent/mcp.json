@@ -4,7 +4,10 @@
       "args": [
         "mcp"
       ],
-      "command": "/Users/dalisoft/.bun/bin/browse"
+      "command": "/Users/dalisoft/.bun/bin/browse",
+      "env": {
+        "OPENCODE_BROWSER_RUNTIME": "auto-update"
+      }
     },
     "context7": {
       "url": "https://mcp.context7.com/mcp"

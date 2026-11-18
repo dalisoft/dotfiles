@@ -103,7 +103,7 @@
           "/Users/dalisoft/.bun/bin/browse",
           "mcp"
         ],
-        "cwd": "/Users/dalisoft",
+        "cwd": "/Users/dalisoft/Desktop",
         "environment": {
           "OPENCODE_BROWSER_RUNTIME": "auto-update"
         },
