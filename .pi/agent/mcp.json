@@ -1,3 +1,16 @@
 {
-  "mcpServers": {}
+  "mcpServers": {
+    "browse": {
+      "args": [
+        "mcp"
+      ],
+      "command": "/Users/dalisoft/.bun/bin/browse"
+    },
+    "context7": {
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "firecrawl": {
+      "url": "https://mcp.firecrawl.dev/v2/mcp-search"
+    }
+  }
 }

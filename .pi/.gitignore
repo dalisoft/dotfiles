@@ -2,3 +2,4 @@ auth.json
 sessions
 models-store.json
 agent/npm
+mcp-auth.json
