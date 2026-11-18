@@ -26,6 +26,14 @@ Configuration mostly should be compatible with 5 last previous versions.
 | OpenCode    | [`.config/opencode/opencode.json`](.config/opencode/opencode.json) | v2.3.0   | v2.2.0 and later   |
 | Pi          | [`.pi/agent/settings.json`](.pi/agent/settings.json)               | v1.5.2   | v1.0.2 and later   |
 
+### AI MCP Auth
+
+| Agent      | Command                   | Guide                                                                             |
+| ---------- | ------------------------- | --------------------------------------------------------------------------------- |
+| `claude`   | `/mcp` command ->         | [Guide](https://code.claude.com/docs/en/mcp#authenticate-with-remote-mcp-servers) |
+| `opencode` | `opencode mcp auth <mcp>` | [Guide](https://opencode.ai/docs/mcp-servers/#oauth)                              |
+| `pi`       | `pi mcp login <mcp>`      | [Guide](https://docs.pi.dev/latest/mcp#authenticate-with-oauth)                   |
+
 ## License
 
 Apache-2.0 License
