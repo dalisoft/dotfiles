@@ -186,6 +186,12 @@
   "maxEffortLevel": "max",
   "model": "opus",
   "modelSettings": {
+    "claude-fable-5-1": {
+      "effortLevel": "high"
+    },
+    "claude-fable-5-2": {
+      "effortLevel": "medium"
+    },
     "claude-haiku-5-5": {
       "effortLevel": "xhigh"
     },
