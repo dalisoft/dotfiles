@@ -327,3 +327,6 @@ typings/
 
 # OpenChamber
 .config/openchamber
+
+# OpenCode Browse
+.config/browse
