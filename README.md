@@ -22,8 +22,8 @@ Configuration mostly should be compatible with 5 last previous versions.
 | Name        | Reference                                                          | Version  | Compatible         |
 | ----------- | ------------------------------------------------------------------ | -------- | ------------------ |
 | Claude Code | [`.claude/settings.json`](.claude/settings.json)                   | v2.1.326 | v2.1.317 and later |
-| CommandCode | [`.commandcode`](.commandcode)                                     | v1.89.2  | v1.87.3 and later  |
-| OpenCode    | [`.config/opencode/opencode.json`](.config/opencode/opencode.json) | v2.3.0   | v2.2.0 and later   |
+| CommandCode | [`.commandcode`](.commandcode)                                     | v1.90.0  | v1.88.1 and later  |
+| OpenCode    | [`.config/opencode/opencode.json`](.config/opencode/opencode.json) | v2.3.2   | v2.2.1 and later   |
 | Pi          | [`.pi/agent/settings.json`](.pi/agent/settings.json)               | v1.5.2   | v1.0.2 and later   |
 
 ### AI MCP Auth
