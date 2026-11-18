@@ -97,7 +97,28 @@
   "instructions": [],
   "lsp": false,
   "mcp": {
-    "servers": {}
+    "servers": {
+      "browse": {
+        "command": [
+          "/Users/dalisoft/.bun/bin/browse",
+          "mcp"
+        ],
+        "cwd": "/Users/dalisoft",
+        "environment": {
+          "OPENCODE_BROWSER_RUNTIME": "auto-update"
+        },
+        "pool": true,
+        "type": "local"
+      },
+      "context7": {
+        "type": "remote",
+        "url": "https://mcp.context7.com/mcp"
+      },
+      "firecrawl": {
+        "type": "remote",
+        "url": "https://mcp.firecrawl.dev/v2/mcp-search"
+      }
+    }
   },
   "media": {
     "image": {
