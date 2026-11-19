@@ -1,11 +1,17 @@
 alias reload_ssh_agent='ssh-add -D; killall ssh-agent; eval (ssh-agent -c)'
 alias sshg='ssh-keygen -o -a 100 -t ed25519 -C commercial@dalisoft.uz '
 
-function sshf --argument-names app
+# Usage: `sshf github-oss ~/ssh/personal/github-oss`
+function sshf --argument-names app file
     set -l provider "$HOMEBREW_PREFIX/opt/openssh-sk-provider/lib/sk-libfido2.dylib"
 
     if not test -f "$app"
         echo "App ID is required. Example: github-oss, rpi-fido" >&2
+        return 1
+    end
+
+    if not test -f "$file"
+        echo "Output file path required. Example: ~/ssh/personal/github-oss" >&2
         return 1
     end
 
@@ -21,7 +27,7 @@ function sshf --argument-names app
         -O verify-required \
         -O "application=ssh:$app" \
         -C commercial@dalisoft.uz \
-        $argv
+        -f "$file"
 end
 
 function sshgs
