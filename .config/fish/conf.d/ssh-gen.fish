@@ -1,8 +1,8 @@
 alias reload_ssh_agent='ssh-add -D; killall ssh-agent; eval (ssh-agent -c)'
-alias sshg='ssh-keygen -o -a 100 -t ed25519 -C commercial@dalisoft.uz '
+alias ssh_gen_key='ssh-keygen -o -a 100 -t ed25519 -C commercial@dalisoft.uz '
 
-# Usage: `sshf github-oss ~/ssh/personal/github-oss`
-function sshf --argument-names app file
+# Usage: `ssh_gen_fido github-oss ~/ssh/personal/github-oss`
+function ssh_gen_fido --argument-names app file
     set -l provider "$HOMEBREW_PREFIX/opt/openssh-sk-provider/lib/sk-libfido2.dylib"
 
     if test -z "$app"
@@ -30,12 +30,12 @@ function sshf --argument-names app file
         -f "$file"
 end
 
-function sshgs
+function ssh_gen_sec
     argparse f/force -- $argv
     or return 2
 
     if test (count $argv) -gt 1
-        echo "Usage: sshgs [-f] [path]" >&2
+        echo "Usage: ssh_gen_sec [-f] [path]" >&2
         return 2
     end
 
