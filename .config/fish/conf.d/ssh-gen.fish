@@ -1,8 +1,13 @@
 alias reload_ssh_agent='ssh-add -D; killall ssh-agent; eval (ssh-agent -c)'
 alias sshg='ssh-keygen -o -a 100 -t ed25519 -C commercial@dalisoft.uz '
 
-function sshf
+function sshf --argument-names app
     set -l provider "$HOMEBREW_PREFIX/opt/openssh-sk-provider/lib/sk-libfido2.dylib"
+
+    if not test -f "$app"
+        echo "App ID is required. Example: github-oss, rpi-fido" >&2
+        return 1
+    end
 
     if not test -f "$provider"
         echo "FIDO2 provider not found: $provider" >&2
@@ -14,6 +19,7 @@ function sshf
         -t ed25519-sk \
         -O resident \
         -O verify-required \
+        -O "application=ssh:$app" \
         -C commercial@dalisoft.uz \
         $argv
 end
