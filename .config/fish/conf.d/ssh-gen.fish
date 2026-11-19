@@ -26,6 +26,7 @@ function sshf --argument-names app file
         -O resident \
         -O verify-required \
         -O "application=ssh:$app" \
+        -O "-O user=dalisoft" \
         -C commercial@dalisoft.uz \
         -f "$file"
 end
