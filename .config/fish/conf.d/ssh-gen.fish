@@ -5,12 +5,12 @@ alias sshg='ssh-keygen -o -a 100 -t ed25519 -C commercial@dalisoft.uz '
 function sshf --argument-names app file
     set -l provider "$HOMEBREW_PREFIX/opt/openssh-sk-provider/lib/sk-libfido2.dylib"
 
-    if not test -f "$app"
+    if test -z "$app"
         echo "App ID is required. Example: github-oss, rpi-fido" >&2
         return 1
     end
 
-    if not test -f "$file"
+    if test -z "$file"
         echo "Output file path required. Example: ~/ssh/personal/github-oss" >&2
         return 1
     end
@@ -25,7 +25,7 @@ function sshf --argument-names app file
         -t ed25519-sk \
         -O verify-required \
         -O "application=ssh:$app" \
-        -O "-O user=$USER" \
+        -O "user=$USER" \
         -C commercial@dalisoft.uz \
         -f "$file"
 end
