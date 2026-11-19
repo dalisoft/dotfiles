@@ -34,7 +34,12 @@ function sshgs
         trap '\''exit 1'\'' 1 2 3 15
 
         cd "$dir"
-        ssh-keygen -C "commercial@dalisoft.uz" -w /usr/lib/ssh-keychain.dylib -K -N ""
+        ssh-keygen -w /usr/lib/ssh-keychain.dylib -K -N ""
+
+        awk -v comment="commercial@dalisoft.uz" \
+            \'{print $1, $2, comment}\' \
+            id_ecdsa_sk_rk.pub > id_ecdsa_sk_rk.pub.tmp
+        mv id_ecdsa_sk_rk.pub.tmp id_ecdsa_sk_rk.pub
 
         test -f id_ecdsa_sk_rk
         test -f id_ecdsa_sk_rk.pub
