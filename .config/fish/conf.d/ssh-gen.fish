@@ -23,10 +23,9 @@ function sshf --argument-names app file
     env SSH_SK_PROVIDER="$provider" \
         ssh-keygen -o -a 100 \
         -t ed25519-sk \
-        -O resident \
         -O verify-required \
         -O "application=ssh:$app" \
-        -O "-O user=dalisoft" \
+        -O "-O user=$USER" \
         -C commercial@dalisoft.uz \
         -f "$file"
 end
