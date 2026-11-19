@@ -6,11 +6,9 @@
 switch (uname -s)
     case Darwin
         # Apple's Secure Enclave SSH provider
-        set -l provider /usr/lib/ssh-keychain.dylib
-
-        if test -f $provider
-            set -gx SSH_SK_PROVIDER $provider
-        end
+        set -gx SSH_ENCLAVE_PROVIDER /usr/lib/ssh-keychain.dylib
+        # FIDO SSH provider
+        set -gx SSH_FIDO_PROVIDER "$HOMEBREW_PREFIX/opt/openssh-sk-provider/lib/sk-libfido2.dylib"
 
     case Linux
         # WSL: preserve the existing Windows-agent bridge
