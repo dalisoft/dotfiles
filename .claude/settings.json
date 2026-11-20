@@ -260,14 +260,16 @@
     "enabled": true,
     "enableWeakerNestedSandbox": false,
     "excludedCommands": [
-      "docker *"
+      "docker *",
+      "pnpm *"
     ],
     "failIfUnavailable": true,
     "filesystem": {
       "allowManagedReadPathsOnly": false,
       "allowRead": [],
       "allowWrite": [
-        "~/.gnupg"
+        "~/.gnupg",
+        "~/Library/pnpm"
       ],
       "denyRead": [
         "~/.ssh"
@@ -280,7 +282,9 @@
     "network": {
       "allowedDomains": [
         "*.npmjs.org",
-        "github.com"
+        "github.com",
+        "*.github.com",
+        "raw.githubusercontent.com"
       ],
       "allowLocalBinding": true,
       "allowUnixSockets": [
