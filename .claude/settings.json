@@ -1,5 +1,6 @@
 {
   "$schema": "https://www.schemastore.org/claude-code-settings.json",
+  "advisorModel": "fable",
   "agentPushNotifEnabled": true,
   "allowAllClaudeAiMcps": false,
   "allowClaudeInChromeWithManagedMcp": false,
@@ -187,10 +188,10 @@
   "model": "opus",
   "modelSettings": {
     "claude-fable-5-1": {
-      "effortLevel": "high"
+      "effortLevel": "medium"
     },
     "claude-fable-5-2": {
-      "effortLevel": "medium"
+      "effortLevel": "low"
     },
     "claude-haiku-5-5": {
       "effortLevel": "xhigh"
