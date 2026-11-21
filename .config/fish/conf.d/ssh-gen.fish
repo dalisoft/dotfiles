@@ -1,5 +1,13 @@
-alias reload_ssh_agent='ssh-add -D; killall ssh-agent; eval (ssh-agent -c)'
 alias ssh_gen_key='ssh-keygen -o -a 100 -t ed25519 -C commercial@dalisoft.uz '
+
+function reload_ssh_agent
+    ssh-add -D
+    killall ssh ssh-agent
+    killall gpg gpg-agent
+
+    eval (ssh-agent -c)
+    ssh-add -l
+end
 
 # Usage: `ssh_gen_fido github-oss ~/ssh/personal/github-oss`
 function ssh_gen_fido --argument-names app file
