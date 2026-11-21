@@ -19,18 +19,19 @@
     "vision": "deepseek/deepseek-v4.1-flash"
   },
   "firstMessageSent": true,
+  "goalAutoContinue": false,
   "ideContextEnabled": true,
   "installed": true,
   "language": "en",
-  "model": "zai-org/GLM-5.3",
+  "model": "deepseek/deepseek-v4.1-flash",
   "onDemandToolDescriptions": true,
   "peekRecapDelayMinutes": "0",
   "peekRecapDiagram": false,
   "provider": "command-code",
   "reasoningEffort": {
-    "deepseek/deepseek-v4-flash": "max",
-    "deepseek/deepseek-v4-pro": "max",
-    "deepseek/deepseek-v4.1-flash": "max",
+    "deepseek/deepseek-v4-flash": "high",
+    "deepseek/deepseek-v4-pro": "high",
+    "deepseek/deepseek-v4.1-flash": "high",
     "z-ai/glm-5.3-flash": "max",
     "zai-org/GLM-5.3": "max"
   },
