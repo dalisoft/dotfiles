@@ -412,6 +412,11 @@ set -gx CPPFLAGS "-I$HOMEBREW_PREFIX/opt/llvm/include"
 
 ########## init scripts ###########
 
+# **** Secure Enclave SSH ****
+if status is-login
+    ssh-add -q -K -S /usr/lib/ssh-keychain.dylib
+end
+
 # **** starship ****
 if type -q starship
     starship init fish --print-full-init | source
