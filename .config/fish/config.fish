@@ -413,7 +413,7 @@ set -gx CPPFLAGS "-I$HOMEBREW_PREFIX/opt/llvm/include"
 ########## init scripts ###########
 
 # **** Secure Enclave SSH ****
-if status is-login
+if status is-login; and test (uname) = Darwin
     env SSH_ASKPASS=/usr/bin/true SSH_ASKPASS_REQUIRE=force \
         ssh-add -q -K -S /usr/lib/ssh-keychain.dylib
 end
