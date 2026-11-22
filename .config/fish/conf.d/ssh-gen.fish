@@ -38,58 +38,59 @@ function ssh_gen_fido --argument-names app file
         -f "$file"
 end
 
-function ssh_gen_sec
-    argparse f/force -- $argv
-    or return 2
+function ssh_gen_sec --argument-names app file
+    set -l provider /usr/lib/ssh-keychain.dylib
+    set -l mail "commercial@dalisoft.uz"
+    set -l comment "commercial@dalisoft.uz"
 
-    if test (count $argv) -gt 1
-        echo "Usage: ssh_gen_sec [-f] [path]" >&2
-        return 2
+    if test -z "$app"
+        echo "App ID is required. Example: github-oss, rpi-se" >&2
+        return 1
     end
 
-    set -l target id_ecdsa_sk_rk
-    if test (count $argv) -eq 1
-        set target $argv[1]
+    if not test -f "$provider"
+        echo "Secure Enclave provider not found: $provider" >&2
+        return 1
     end
 
-    set target (path resolve -- $target)
+    sc_auth create-ctk-identity \
+        -k p-256-ne \
+        -t bio \
+        -E "$mail" \
+        -N "$app" \
+        -l "$app" \
+        -C "$comment"
 
-    if not set -q _flag_force
-        if test -e "$target"; or test -e "$target.pub"
-            echo "Key already exists: $target" >&2
-            return 1
+    env SSH_SK_PROVIDER="$provider" \
+        ssh-add -q -K -S /usr/lib/ssh-keychain.dylib
+
+    set -l fingerprints (sc_auth list-ctk-identities -t ssh -e b64 | \
+        while read -l key_type fingerprint protection label rest
+            if test "$label" = "$app"
+                echo "$fingerprint"
+            end
+        end)
+
+    set -l agent_keys (ssh-add -L)
+    or return 1
+
+    for public_key in $agent_keys
+        set -l details (printf '%s\n' "$public_key" | ssh-keygen -lf -)
+        set -l fields (string split -n ' ' -- "$details")
+
+        if test (count $fields) -ge 2; and test "$fields[2]" = "$fingerprints[1]"
+            set -l key_fields (string split -n ' ' -- "$public_key")
+            if test (count $key_fields) -lt 2
+                echo "Invalid public key returned by agent." >&2
+                return 1
+            end
+
+            printf '%s %s %s\n' "$key_fields[1]" "$key_fields[2]" "$comment" >"$file.pub"
+            or return 1
+
+            echo "Saved public key: $file.pub"
+            return 0
         end
     end
 
-    command sh -c '
-        set -eu
-
-        target=$1
-        force=$2
-        dir=$(mktemp -d)
-        trap '\''rm -rf -- "$dir"'\'' 0
-        trap '\''exit 1'\'' 1 2 3 15
-
-        cd "$dir"
-        ssh-keygen -w /usr/lib/ssh-keychain.dylib -K -N ""
-
-        awk -v comment="commercial@dalisoft.uz" \
-            \'{print $1, $2, comment}\' \
-            id_ecdsa_sk_rk.pub > id_ecdsa_sk_rk.pub.tmp
-        mv id_ecdsa_sk_rk.pub.tmp id_ecdsa_sk_rk.pub
-
-        test -f id_ecdsa_sk_rk
-        test -f id_ecdsa_sk_rk.pub
-
-        if [ "$force" = 1 ]; then
-            mv -f id_ecdsa_sk_rk "$target"
-            mv -f id_ecdsa_sk_rk.pub "$target.pub"
-        else
-            mv -n id_ecdsa_sk_rk "$target"
-            mv -n id_ecdsa_sk_rk.pub "$target.pub"
-        fi
-
-        chmod 600 "$target"
-        chmod 644 "$target.pub"
-    ' sh "$target" (set -q _flag_force; and echo 1; or echo 0)
 end
