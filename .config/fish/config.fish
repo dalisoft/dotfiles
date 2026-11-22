@@ -414,7 +414,8 @@ set -gx CPPFLAGS "-I$HOMEBREW_PREFIX/opt/llvm/include"
 
 # **** Secure Enclave SSH ****
 if status is-login
-    ssh-add -q -K -S /usr/lib/ssh-keychain.dylib
+    env SSH_ASKPASS=/usr/bin/true SSH_ASKPASS_REQUIRE=force \
+        ssh-add -q -K -S /usr/lib/ssh-keychain.dylib
 end
 
 # **** starship ****
