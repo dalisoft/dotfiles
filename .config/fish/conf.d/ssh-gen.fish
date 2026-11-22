@@ -87,6 +87,7 @@ function ssh_gen_sec --argument-names app file
 
             printf '%s %s %s\n' "$key_fields[1]" "$key_fields[2]" "$comment" >"$file.pub"
             or return 1
+            chmod 600 "$file.pub"
 
             echo "Saved public key: $file.pub"
             return 0
