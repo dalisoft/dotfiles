@@ -53,7 +53,7 @@
     "autoResize": true,
     "blockImages": false
   },
-  "lastChangelogVersion": "1.5.2",
+  "lastChangelogVersion": "1.6.1",
   "markdown": {
     "codeBlockIndent": "  ",
     "mermaid": "off"
@@ -61,6 +61,12 @@
   "modelThinkingLevels": {
     "zai/glm-5.3": "max",
     "zai/glm-5.3-flash": "max"
+  },
+  "notices": {
+    "cacheMisses": true,
+    "cacheWarming": true,
+    "compactionCosts": true,
+    "reasoningDrops": true
   },
   "npmCommand": [
     "npm"
@@ -84,7 +90,6 @@
   },
   "sessionDir": "~/.pi/agent/sessions",
   "sessionShareDestination": "auto",
-  "showCacheMissNotices": true,
   "showHardwareCursor": false,
   "skills": [],
   "steeringMode": "all",
