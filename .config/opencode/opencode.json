@@ -98,20 +98,7 @@
   "instructions": [],
   "lsp": false,
   "mcp": {
-    "servers": {
-      "browse": {
-        "command": [
-          "/Users/dalisoft/.bun/bin/browse",
-          "mcp"
-        ],
-        "cwd": "/Users/dalisoft/Desktop",
-        "environment": {
-          "OPENCODE_BROWSER_RUNTIME": "auto-update"
-        },
-        "pool": true,
-        "type": "local"
-      }
-    }
+    "servers": {}
   },
   "media": {
     "image": {
